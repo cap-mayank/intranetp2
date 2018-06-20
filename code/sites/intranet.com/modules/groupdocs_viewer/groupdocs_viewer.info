@@ -1,0 +1,24 @@
+name = Embedded Groupdocs Viewer
+description = An embedded Document field using GroupDocs
+dependencies[] = libraries
+dependencies[] = field
+dependencies[] = field_ui
+dependencies[] = lightbox2
+dependencies[] = jquery_update(==7.x-2.3)
+version = 7.x-1.8
+core = 7.x
+configure = admin/groupdocs_viewer/config
+
+; Information added by Drupal.org packaging script on 2014-04-14
+version = "7.x-1.8"
+core = "7.x"
+project = "groupdocs_viewer"
+datestamp = "1397500456"
+
+
+; Information added by Drupal.org packaging script on 2015-04-01
+version = "7.x-1.8"
+core = "7.x"
+project = "groupdocs_viewer"
+datestamp = "1427890470"
+

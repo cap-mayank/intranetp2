@@ -1,0 +1,37 @@
+<?php
+/**
+ * @file
+ * Install, update, and uninstall functions for the groupdocs_viewer module.
+ */
+
+/**
+ * Implements hook_field_schema().
+ *
+ * groupdocs_embedded_code: new field for content that will store
+ * GUID of document from GroupDocs account.
+ */
+function groupdocs_viewer_field_schema($field) {
+  $columns = array(
+    'groupdocs_embedded_code' => array(
+      'type' => 'varchar',
+      'length' => 104,
+      'not null' => FALSE),
+  );
+  $indexes = array(
+    'groupdocs_embedded_code' => array('groupdocs_embedded_code'),
+  );
+  return array(
+    'columns' => $columns,
+    'indexes' => $indexes,
+  );
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Remove variable defined on module configuration page.
+ */
+function groupdocs_viewer_uninstall() {
+  variable_del('groupdocs_client_login');
+  variable_del('groupdocs_client_password');
+}

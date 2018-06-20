@@ -1,0 +1,1312 @@
+<?php
+
+/**
+ * @file
+ * Enables poll result to display in graphical represantation. overwride Poll
+ * teaser view layout to display in a graphical lahyout.
+ */
+
+/**
+ * Implements hook_view().
+ */
+ global $file_global_upload_max_size;
+ $file_global_upload_max_size=variable_get('file_global_upload_max_size', 2);
+ //module_load_include('inc', 'sakal_utility', 'sakal_utility.whistle_blower');
+
+function sakal_utility_admin_content($form, $form_state) {
+	 print_R( $form['admin']['options']);die;
+ }
+ 
+function sakal_utility_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'poll') {
+    $node->content['poll_view_results']['#markup'] =
+      sakal_utility_graph_view($node);
+  } 
+
+  if ($node->type == 'filedepot_folder') {    
+    if( arg(2)!='' && arg(1)!='') {
+      
+      $nid=arg(1);
+      $fid=arg(2);
+      $rec= db_select('filedepot_files', 'ff')
+      ->fields('ff')
+      ->condition('ff.fid', $fid, '=')
+      ->execute()
+      ->fetchAssoc(); 
+      if (count($rec)>0) {
+        if ($rec['downloadroles']!='')
+          $download_access=check_downloadaccess($rec['downloadroles']);
+        else
+          $download_access=0;
+        
+        if ($rec['readroles']!='')
+          $readonly_access=check_downloadaccess($rec['readroles']);
+        else
+          $readonly_access=0;    
+
+        if ($rec['extension']=='pdf' && $download_access==0) {
+          //display pdf
+          $node_files=$node->content['filedepot_folder_file']['#items'];
+          $new_nodel_file=array();
+          foreach ($node_files as $key => $value) {
+            if ($value['fid']==$rec['drupal_fid']) {
+              $new_nodel_file[]=$value;        
+            }
+          }
+          $node->filedepot_folder_file['und']=$new_nodel_file;
+         $node->content['filedepot_folder_file']['#items']=$new_nodel_file; 
+        }
+        else {
+           if(arg(0)!='search' && arg(1)!='reports' && arg(2)!='status'){
+              drupal_goto('filedepot_download/' . $nid . '/' . $fid);
+
+           }
+        } 
+      }//record count >0
+    }// if( arg(2)!='' && arg(1)!='') {
+    else {
+      
+        if( arg(1)!='' && arg(2)==''){
+          $nid=arg(1);
+          $node=get_filedepot_files_list($nid,$node);
+        }      
+    }
+  }//$node->type == 'filedepot_folder'
+  
+  if ($node->type == 'holiday_calendar') {   
+    $newArr=$node->content['field_holiday']['#items'];
+    //usort($newArr, 'holiday_date_compare');    
+    //$content['field_holiday']['#items']=$newArr;  
+    //$content['field_holiday']['#object']->field_holiday['und']=$newArr;
+    
+    $newArr1=array();
+    foreach($newArr as $key => $value){
+      $newArr1[]=$node->content['field_holiday'][$key];
+    }
+    module_load_include('inc', 'sakal_utility', 'sakal_utility.views');
+    usort($newArr1, 'holiday_date_compare_pattern_two');
+    foreach($newArr1 as $key => $value){      
+      $node->content['field_holiday'][$key]=$newArr1[$key];
+    }
+  }
+}
+
+function get_filedepot_files_list($nid,$node){
+   global $user; 
+
+   $query=db_select('filedepot_files', 'ff')
+         ->fields('ff',array('fid','drupal_fid'));
+    $query->leftJoin('filedepot_categories', 'c', 'c.cid = ff.cid');   
+    $query->leftJoin('filedepot_access', 'fa', 'fa.catid = c.cid');    
+    $query->condition('c.nid', $nid, '=');
+    
+          $rids = array_keys($user->roles);    
+    $subexpression=array();
+    foreach ($rids as $key => $values) {
+      $subexpression[]= "IF( 
+      IF(
+      ff.readroles IS NULL, 0,
+      FIND_IN_SET(
+      '" . $values . "',ff.readroles
+      )
+      )>0,1,0
+      )";
+    }
+    $subexpression=implode(' , ', $subexpression);
+    //$query->addField('', 'IF(GREATEST(' . $subexpression . ')>0,1,0)', 'readonly');
+    $query->addExpression('IF(GREATEST(' . $subexpression . ')>0,1,0)', 'readonly');
+     
+    $subexpression=array();
+    foreach ($rids as $key => $values) {
+      $subexpression[]= "IF(
+      IF(
+      ff.downloadroles IS NULL,0, 
+      FIND_IN_SET(
+      '" . $values . "',ff.downloadroles
+      )
+      )>0,1,0)";
+    }
+    $subexpression=implode(' , ', $subexpression);
+   //$query->add_field('', 'IF(GREATEST(' . $subexpression . ')>0,1,0)', 'downloadroles');
+
+    $query->addExpression('IF(GREATEST(' . $subexpression . ')>0,1,0)', 'downloadroles');   
+    
+    //folder access
+    $query->condition('fa.permid', $rids, 'IN');
+    
+    $query->having('downloadroles=1 OR readonly=1');
+     
+ 
+   $finalResult= $query->execute()->fetchAll();     
+
+     $displayIds=array();
+    if(count($finalResult>0)) {
+      $displayIds=array();
+      foreach($finalResult as $key=>$value)
+      {
+        $displayIds[]=$value->drupal_fid;
+      }
+    }
+    $nodeFieldArray=$node->filedepot_folder_file['und'];
+    if(isset($node->content['filedepot_folder_file']['#items']))
+    {
+    $nodeItemArray=$node->content['filedepot_folder_file']['#items'];
+    foreach($node->content['filedepot_folder_file']['#items'] as $key=>$value){
+      $node->content['filedepot_folder_file'][$key]['#theme']='file_link';     
+      
+      $node->content['filedepot_folder_file'][$key]['#file']=(object)$value;
+      unset($value['#theme']);
+      if(!empty($displayIds))
+      {
+        if(!in_array($value['fid'],$displayIds)){
+          unset($node->content['filedepot_folder_file']['#items'][$key]);
+          unset($node->content['filedepot_folder_file'][$key]);
+        }
+      }
+      
+    }
+   }
+   else
+   {
+      if(count($node->filedepot_folder_file['und'])>0){
+        foreach($node->filedepot_folder_file['und'] as $key=>$value){
+          if(in_array($value['fid'],$displayIds)){
+            $node->content['filedepot_folder_file'][$key]['#theme']='file_link';
+            $node->content['filedepot_folder_file'][$key]['#file']=(object)$value;
+          }        
+        }
+      }
+   }
+    //file_default
+    $node->content['filedepot_folder_file']['#formatter']='file_default';
+    return $node;
+}
+
+/*
+ * Function to check dowanlod permission with user permission
+ */
+function check_downloadaccess($allowedroles='') {
+  global $user;
+  if (strpos($allowedroles, ",")>0) {
+    $rec['downloadroles']=explode(",", $allowedroles);
+   }
+   else {
+    $rec['downloadroles']=array('0' => $allowedroles);
+   }
+   $roles=array_keys($user->roles);  
+   $download_access=count(array_intersect($roles, $rec['downloadroles']));
+   if ($download_access > 0) $download_access = 1;  
+   return $download_access;
+}
+
+ 
+/**
+ * Implements hook_block_info().
+ */
+function sakal_utility_block_info() {
+  $blocks['recent_poll']['info'] = t('Poll Block');
+  $blocks['recent_poll']['properties']['administrative'] = TRUE;
+  
+  $blocks['all_applications']['info'] = t('All Applications');
+  $blocks['all_applications']['properties']['administrative'] = TRUE;
+  
+  $blocks['whistle_blower']['info'] = t('Whistle Blower');
+  $blocks['whistle_blower']['properties']['administrative'] = TRUE;
+  
+  $blocks['user_info']['info'] = t('User Account Information');
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ * Generates a block containing the latest poll.
+ */
+function sakal_utility_block_view($delta = '' ) {
+  global $base_url;
+  $block = array();
+  if (user_access('access content')) {
+    switch ($delta) {
+      case 'recent_poll':
+        // Retrieve the latest poll
+        $select = db_select('node', 'n');
+        $select->join('poll', 'p', 'p.nid = n.nid');
+        $select->fields('n', array('nid'))
+        ->condition('n.status', 1)
+        ->condition('p.active', 1)
+        ->orderBy('n.created', 'DESC')
+        ->range(0, 1)
+        ->addTag('node_access');
+        $record = $select->execute()->fetchObject();
+        if ($record) {
+          $poll = node_load($record->nid);
+          if ($poll->nid) {
+            $poll = sakal_utility_block_latest_poll_view($poll);
+            $block['subject'] = t('Poll Result');
+            $block['content'] = $poll->content;
+          }
+        }
+        break; 
+      case 'all_applications': 
+        $block= array();
+        // Retrieve all applications link        
+        $query  = new EntityFieldQuery();
+        $record = $query->entityCondition('entity_type', 'node')
+          ->entityCondition('bundle', 'cluster_of_links') 
+          ->fieldCondition('field_linktype', 'value', 'All Applications', '=') 
+          ->range(0, 1)
+          ->execute();
+        if ($record) {
+          $nids = array_keys($record['node']);
+          $nid = $nids[0];
+          if ($nid) {
+            $node = node_load($nid);
+            $input=$node->field_link_details['und'];
+            $view_link='';
+            $node->title='';
+            $block_record_limit=variable_get('block_record_limit', 4);
+            if (count($input) > $block_record_limit) {
+              $first3Records = array_slice($input, 0, $block_record_limit);
+              $node->field_link_details['und']=$first3Records;
+              $link_txt=l("View All", $base_url . '/node/' . $node->nid );
+              $view_link= array(
+                '#type' => 'html_tag',
+                '#tag' => 'div',
+                '#attributes' => array('class' => 'view-header'),
+                '#value' => $link_txt     
+              );
+            }
+            $block['subject'] = t('All Applications');
+            $node_view=node_view($node);
+            $block['content'] =  render($view_link) . render($node_view);
+          }
+        }
+        break;
+      case 'whistle_blower':
+        // get whistle_blower content
+        ctools_include('modal');
+        ctools_modal_add_js();
+        $block['subject'] = variable_get('whistle_blower_title');
+        $whistle_blower_content = variable_get('whistle_blower_content');
+        $whistle_blower_content= (is_array($whistle_blower_content)) ? $whistle_blower_content["value"] : $whistle_blower_content;
+        drupal_add_js(array(
+          'my-modal-style' => array(
+            'modalSize' => array(
+            'type' => 'dynamic',
+            'width' => 550,
+            'height' => 450,
+            ),
+          ),
+        ), 'setting');
+        $link_txt=l("Report Incident", 'whistle_blower_comment/nojs', array('attributes' => array('class' => 'ctools-use-modal ctools-modal-my-modal-style')));
+        $whistle_block= array(
+          '#type' => 'html_tag',
+          '#tag' => 'div',
+          '#attributes' => array('class' => 'whistle_block'),
+          '#value' => $whistle_blower_content,    
+          );
+        $whistle_button= array(
+          '#type' => 'html_tag',
+          '#tag' => 'div',
+          '#attributes' => array('id' => 'whistle_button'),
+          '#value' => l("Report Incident", 'whistle_blower_comment/nojs', array('attributes' => array('class' => 'ctools-use-modal ctools-modal-my-modal-style'))),
+          );
+        $message= array(
+          '#type' => 'html_tag',
+          '#tag' => 'div',
+          '#attributes' => array('id' => 'posted-data'),
+          '#value' => ''
+          );
+        $block['content'] =render($whistle_block) . render($whistle_button) . render($message);
+        break; 
+      case 'user_info':
+        $block['content'] = user_account_info();
+        break;
+    }
+  return $block;
+  }
+}
+
+/**
+ * Return content for 'latest poll' block.
+ * @param $node
+ * The node object to load.
+ */
+function sakal_utility_block_latest_poll_view($node) {
+  $output = '';
+
+  // This is necessary for shared objects because PHP doesn't copy objects, but
+  // passes them by reference.  So when the objects are cached it can result in
+  // the wrong output being displayed on subsequent calls.  The cloning and
+  // unsetting of $node->content prevents the block output from being the same
+  // as the node output.
+  $node = clone $node;
+  unset($node->content);
+  // No 'read more' link.
+  $node->readmore = FALSE;
+  $node->teaser = '';
+  $links = array(); 
+  if (!empty($node->allowvotes)) {
+    $node->content['poll_view_voting'] =
+      drupal_get_form('poll_view_voting', $node, TRUE);
+    $node->content['links'] = array(
+      '#theme' => 'links',
+      '#weight' => 5,
+    );
+  }
+  else {
+    $node->content['poll_view_results'] = array(
+      '#markup' => sakal_utility_graph_view($node)
+    );
+  }
+  return $node;
+}
+
+function sakal_utility_graph_view(&$node) {
+  $labels = $data = array();
+  $anseredUsers=0;
+  foreach ($node->choice as $i => $choice) {
+    if(strlen($choice['chtext'])>30){
+      $chtext = substr($choice['chtext'],0,28).'..';
+      $labels[]=$chtext;
+    }
+    else    
+    $labels[] = $choice['chtext'];
+    
+    $data[] = (int) $choice['chvotes'];
+    $anseredUsers+=(int) $choice['chvotes']; 
+  }
+  // Include required files with pChart library.
+  $name = "pPie";
+  pchart_add($name);
+  
+  // Create and populate the pData object.
+  $MyData = new pData(); 
+  $title=wordwrap($node->title, 55, "\n"); 
+  $MyData->addPoints($data, $title);
+  $MyData->addPoints($labels, "Labels");
+  $MyData->setAbscissa("Labels");
+
+  // Create the pChart object.
+  $myPicture = new pImage(370, 340, $MyData);
+  $myPicture->setFontProperties(array(
+    "FontName" => "sites/intranet.com/libraries/pchart/fonts/verdana.ttf", "FontSize" => 8
+    )
+  );
+
+  /* Create the pPie object */ 
+  $PieChart = new pPie($myPicture, $MyData);
+  $PieChart->setSliceColor(0,array("R" => 0, "G" => 100, "B" => 200));
+  $myPicture->drawLegend(10, 10, array("BoxSize" => 5, "R" => 255, "G" => 255, "B"=> 255, "Surrounding" => 20, "FontSize" => 10));
+  /* Draw an AA pie chart */ 
+
+  $PieChart->draw2DPie(180, 150, array(
+    "WriteValues" => TRUE, 
+    "ValuePosition" => PIE_VALUE_INSIDE, 
+    "Radius" => 70, 
+    "DrawLabels" => TRUE, 
+    "LabelStacked" => FALSE, 
+    "Border" => TRUE, 
+    "ValueR" => "0", 
+    "ValueG" => "0", 
+    "ValueB" => "0"
+    )
+  );
+
+  $PieChart->drawPieLegend(15, 260,array("Mode" => LEGEND_VERTICAL));
+  
+  $TextSettings = array("DrawBox"=>TRUE,"BoxRounded"=>TRUE,"Angle"=>0,"FontSize"=>8,"BoxR"=>160,"BoxG"=>160,"BoxB"=>160);
+  //$anseredUsers=10000;
+  $myPicture->drawText(230,267,"Answered Users:-".$anseredUsers,$TextSettings);
+  /* Write the legend box */ 
+  $myPicture->setShadow(FALSE);
+  file_unmanaged_delete('sites/intranet.com/files/piechart.png');
+  $output = file_create_filename('piechart.png', 'sites/intranet.com/files');
+  $myPicture->Render($output);
+  $variables = array(
+	  'path' => $output,
+  );
+  $img = theme('image', $variables);
+  $piechart_output= array(
+          '#type' => 'html_tag',
+          '#tag' => 'div',
+          '#attributes' => array('id' => 'pchart'),
+          '#value' => render($img),
+  );
+  return render($piechart_output);
+}
+/**
+ * Implements hook_form_alter().
+ * For user login Form
+ * to add field 'file_global_upload_max_size' in file system admin configuration file 
+ */
+function sakal_utility_form_alter(&$form, &$form_state, $form_id) {
+  global $user;
+  include_file_validation_js_function();
+  if ($form['#id'] == 'user-login') {
+    $form['name']['#title'] = '';
+    $form['name']['#description'] = '';
+    $form['name']['#attributes']['placeholder'] = 'Login Id';
+    $form['pass']['#description'] = '';
+    $form['pass']['#title'] = '';
+    $form['pass']['#attributes']['placeholder'] = 'Password';
+  }
+
+  if (isset($form['#node']) && $form['#node']->type . '_node_form' == $form_id) { 
+    $form['actions']['submit']['#submit'][]= 'sakal_utility_node_form_submit_handler';
+  }
+  $disable_all_option_arr=array('announcement_node_form','company_news_node_form');
+  
+  if(in_array($form_id,$disable_all_option_arr)){
+    $new_form_id='disable_all_option_form';
+  }
+  else{
+    $new_form_id=$form_id;
+  }
+  
+  switch ($new_form_id) {
+    case 'photo_gallery_node_form':
+      $form['#after_build'][] = 'sakal_utility_after_build';
+      break;
+    case 'system_file_system_settings':
+      $form['file_global_upload_max_size'] = array(
+      '#type' => 'textfield',
+      '#title' => t('File Global Upload Max Size (in MB)'),
+      '#default_value' => variable_get('file_global_upload_max_size', 2),
+      '#size' => 2,
+      '#maxlength' => 2,
+      '#element_validate' => array('element_validate_integer_positive'),
+      '#description' => t('Global Upload Max File Size (in MB).'),
+      '#required' => TRUE,
+      );
+      $form['maximum_temp_file_age'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Maximum temporary file age (in Second)'),
+      '#default_value' => variable_get('maximum_temp_file_age', DRUPAL_MAXIMUM_TEMP_FILE_AGE),
+      '#size' => 5,
+      '#maxlength' => DRUPAL_MAXIMUM_TEMP_FILE_AGE,
+      '#element_validate' => array('element_validate_integer_positive'),
+      '#description' => t('Maximum temporary file age (in Second), Default reset this value to '.DRUPAL_MAXIMUM_TEMP_FILE_AGE.'.'),
+      '#required' => TRUE,
+      );
+      $form['#validate'][] = 'system_file_system_settings_validate';
+      return system_settings_form($form);
+      break;
+    case 'holiday_calendar_node_form':
+      foreach($form['field_holiday']['und'] as $key=>$value) {
+        if(is_numeric($key))
+          $form['field_holiday']['und'][$key]['field_location']['und']['#required']=1;
+      }
+      break;
+    case 'cluster_of_links_node_form':
+      foreach($form['field_link_details']['und'] as $key=>$value) {
+        if(is_numeric($key)) {
+          $form['field_link_details']['und'][$key]['field_clustor_link_icon']['und'][0]['#required']=1;
+          $form['field_link_details']['und'][$key]['field_link']['und'][0]['#required']=1;
+        }
+      }
+      break;
+    case 'node_admin_content':
+      if (isset($form['filter']['filters']['status']['filters']['type']['#options'])) {
+        $newTypeFilter=$form['filter']['filters']['status']['filters']['type']['#options'];
+        if (isset($newTypeFilter['filedepot_folder'])) {
+          unset($newTypeFilter['filedepot_folder']);
+          $form['filter']['filters']['status']['filters']['type']['#options']=$newTypeFilter;
+        }
+      }  
+      break;
+    case 'disable_all_option_form':
+      $options=$form['field_location']['und']['#options'];
+      foreach($options as $key => $value){
+        if($value=='All')
+          unset($options[$key]);
+        }
+      $form['field_location']['und']['#options']=$options;
+      break;
+    case 'block_admin_configure':
+      if(!in_array('administrator',$user->roles)){
+        hide($form['regions']);
+        hide($form['visibility']); //for the visibility region
+        hide($form['visibility_title']); //for the visibility region
+      }
+      break;
+    }
+}
+
+/*
+ * Validate system file form 
+ */
+function system_file_system_settings_validate($form, &$form_state) {  
+  $file_size_limit_in_bytes=human2byte($form_state['values']['file_global_upload_max_size'] . 'mb');
+  if ($file_size_limit_in_bytes > (parse_size(ini_get('upload_max_filesize')))) {
+  //if ($file_size_limit_in_bytes > (parse_size('8M'))) {  
+    form_set_error('file_global_upload_max_size', t('You are not allowed set size more than server upload maximum filesize limit'. ini_get('upload_max_filesize')));
+  }
+} 
+
+/*
+ * Implementation of hook_views_api()
+ */
+function sakal_utility_views_api($module = NULL, $api = NULL) {
+  return array("api" => "2.0");
+}
+
+/*
+ * Implementation of hook_node_validate()
+ * To restrict Authored date should be current time 
+ */
+function sakal_utility_node_validate($node, $form, &$form_state) {  
+  if (isset($form_state['values']['date']) && $form_state['values']['date']!='') {  
+    $created_date=gmdate("Y-m-d H:i", strtotime($form_state['values']['date']));
+    $today=gmdate("Y-m-d H:i", time());
+    if (strtotime($created_date)> strtotime($today)) {
+      form_set_error('date', t('Authored on should not be future time'));
+    }
+  }
+ /*
+  if($node->type=='holiday_calendar'){
+    if(count($form_state['values']['field_holiday']['und'])>0) {
+      foreach($form_state['values']['field_holiday']['und'] as $key=>$value){
+        if(isset($value['field_location']['und'][0]) && empty($value['field_location']['und'][0]['tid']) && $value!='Add another item'){
+         form_set_error('field_holiday[und]['.$key.'][field_location][und]', t('Please select location for every holiday'));
+        }
+      }   
+    }
+  }
+  
+   if($node->type=='cluster_of_links'){
+    if(count($form_state['values']['field_link_details']['und'])>0) {
+      foreach($form_state['values']['field_link_details']['und'] as $key=>$value){
+        if(isset($value['field_clustor_link_icon']['und'][0]) && $value['field_clustor_link_icon']['und'][0]['fid']==0 && $value!='Add another item'){
+         form_set_error('field_clustor_link_icon[und]['.$key.'][field_clustor_link_icon][und]', t('Please upload link icon'));
+        }
+      }
+    }
+  }*/
+}
+
+/**
+ * Implementation of hook_node_form_submit_handler()
+ * Redirect all form to home page after submiting
+ */
+function sakal_utility_node_form_submit_handler($form, &$form_state) {
+  if ($form['#node']->type == 'room_reservations_reservation') {
+    $form_state['redirect'] = '/room_reservations';
+  }
+  else { 
+    if ($form['#node']->type == 'holiday_calendar') {
+      if(isset($form['#node']->nid)){
+        $form_state['redirect'] = '/node/'.$form['#node']->nid;
+        $_GET['destination']='/node/'.$form['#node']->nid;
+      }
+    } 
+    //$form_state['redirect']  = $GLOBALS['base_url'];
+    // $_GET['destination']='/';
+  }
+}
+
+
+/**
+ * Implementation of hook_block_view_alter()
+ * To apply custom class to block
+ */
+function sakal_utility_block_view_alter(&$data, $block) {
+  if (isset($block->subject) && ($block->subject=='Alert' || $block->subject=='Alerts')) {
+    $block->homebox_classes=$block->homebox_classes . ' alert_widget';
+  }
+}
+
+/**
+ * Implementation of hook_after_build()
+ * To apply js form validation to check file upload size
+ */
+function sakal_utility_after_build($form, &$form_state) {
+  include_file_validation_js_function();
+  return $form;
+}
+
+/**
+ * Function to apply js form validation to check file upload size
+ */
+function include_file_validation_js_function() {
+  global $file_global_upload_max_size;
+  $path = drupal_get_path('theme', 'intranet');
+  $file_global_upload_max_size_bytes=human2byte($file_global_upload_max_size . 'mb');
+  drupal_add_js(array('intranet_settings' => array('file_global_upload_max_size' => $file_global_upload_max_size , 'file_global_upload_max_size_bytes' => $file_global_upload_max_size_bytes)) , array('type' => 'setting'));
+  drupal_add_js("$path/js/validation.js");
+}
+
+/**
+ * Function to convert bytes size into KB,MB
+ */
+function human2byte($value) {
+  return preg_replace_callback('/^\s*(\d+)\s*(?:([kmgt]?)b?)?\s*$/i', function ($m) {
+    switch (strtolower($m[2])) {
+      case 't': $m[1] *= 1024;
+      case 'g': $m[1] *= 1024;
+      case 'm': $m[1] *= 1024;
+      case 'k': $m[1] *= 1024;
+    }
+    return $m[1];
+  }, $value);
+}
+
+/**
+ * Implementation of hook_node_form_submit_handler()
+ * Redirect all form to home page after submiting
+ */
+function sakal_utility_node_submit($node, $form, &$form_state) {
+ // $form_state['redirect'] = '/';
+}
+
+/**
+ * Implements hook_libraries_info().
+ */
+function sakal_utility_libraries_info() {
+  $libraries = array();
+  $libraries['fullcalendar'] = array(
+    'name' => 'fullcalendar',
+    'vendor url' => 'http://fullcalendar.io/',
+    'download url' => 'https://github.com/arshaw/fullcalendar/releases/download/v2.6.0/fullcalendar-2.6.0.zip',
+    'version callback' => 'short_circuit_version',
+    'files' => array(
+      'js' => array(
+				'lib/moment.min.js',
+        'fullcalendar.js',
+				
+      ),
+			'css' => array(
+        'fullcalendar.css',
+      ),
+    ),
+  );
+	
+	$libraries['qtip'] = array(
+    'name' => 'qtip',
+    'description' => 'qTip2 - Pretty powerful tooltips',
+    'vendor url' => 'http://craigsworks.com/projects/qtip2',
+    'download url' => 'https://github.com/Craga89/qTip2/tarball/master',
+    'version arguments' => array(
+      'file' => 'jquery.qtip.min.js',
+      'pattern' => '@v([0-9a-zA-Z\.-]+)@',
+    ),
+    'dependencies' => array(
+      //'jquery (>=1.4.2)'
+    ),
+    'files' => array(
+      'js' => array('jquery.qtip.min.js'),
+      'css' => array('jquery.qtip.min.css'),
+    ),
+    'variants' => array(
+      'with-imagesloaded' => array(
+        'files' => array(
+          'js' => array('jquery.qtip.min.js', 'imagesloaded.min.js'),
+          'css' => array('jquery.qtip.min.css'),
+        ),
+      ),
+      'source' => array(
+        'files' => array(
+          'js' => array('jquery.qtip.js'),
+          'css' => array('jquery.qtip.css'),
+        ),
+      ),
+      'source-with-imagesloaded' => array(
+        'files' => array(
+          'js' => array('jquery.qtip.js', 'imagesloaded.min.js'),
+          'css' => array('jquery.qtip.css'),
+        ),
+      ),
+    ),
+  );
+	
+  return $libraries;
+}
+/**
+* Short-circuit the version argument.
+*/
+function short_circuit_version() { 
+  return TRUE;
+}
+/**
+ * Implements hook_menu().
+ * Added menu link to whistle blower configuration page, poup callback page & comment form
+ */
+function sakal_utility_menu() {
+  $items = array();
+
+
+  $items['admin/config/content/whistle_blower'] = array(
+    'title' => 'Whistle Blower',
+    'description' => 'Configuration for Whistle Blower module',
+    'file' => 'sakal_utility.whistle_blower.inc',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('whistle_blower_admin_form'),
+    'access arguments' => array('access administration pages'),
+    'theme callback' => 'sakal_utitlity_node_configuration_theme',
+    'type' => MENU_NORMAL_ITEM,
+    
+  );
+   $items['whistle_blower_comment'] = array(
+    'file' => 'sakal_utility.whistle_blower.inc',
+    'page callback' => 'whistle_blower_comment_page',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['whistle_blower_comment/%ctools_js'] = array(
+    'file' => 'sakal_utility.whistle_blower.inc',
+    'page callback' => 'whistle_blower_comment_callback',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  ); 
+  $items['admin/config/content/page_title'] = array(
+    'title' => 'Configure Page Title',
+    'description' => 'Configuration for content page title',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('page_title_admin_form'),
+    'access arguments' => array('access administration pages'),
+    'type' => MENU_NORMAL_ITEM,
+    
+  );
+  $items['admin/batch'] = array(
+        'title' => 'Convert to Tax Batch',
+        'description' => 'Run batch operations.',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('sakal_utility_form'),
+        'access arguments' => array('administer site configuration'),
+        'type' => MENU_NORMAL_ITEM,
+    );
+	 $items['admin/update_user_location'] = array(
+        'title' => 'Convert to Tax Batch',
+        'description' => 'change_field',
+        'page callback' => 'change_field',
+        'access arguments' => array('administer site configuration'),
+        'type' => MENU_NORMAL_ITEM,
+    );
+  /* $items['admin/map_unit_location'] = array(
+        'title' => 'Map Unit',
+        'description' => 'map unit location',
+        'page callback' => 'map_unit_location',
+        'access arguments' => array('administer site configuration'),
+        'type' => MENU_NORMAL_ITEM,
+    ); */
+   $items['calendar'] = array(
+        'title' => 'Calendar',
+        'description' => 'Display calendar',
+        'page callback' => 'show_calendar',
+       // 'page arguments' => array('year'),
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    $items['admin/update_unit'] = array(
+        'title' => 'Convert to Tax Batch',
+        'page callback' => 'update_units',
+        'access arguments' => array('administer site configuration'),
+        'type' => MENU_NORMAL_ITEM,
+    );
+  return $items;
+}
+/**
+ * Callback function to retruen custom theme for node * 
+ */
+function sakal_utitlity_node_configuration_theme(){
+  return 'intranet';
+}
+
+function update_units() {
+   // Query all of the nids of a particular content type.
+  $nids = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->condition('type', 'units', '=')
+    ->execute()
+    ->fetchCol();
+  
+  // Get all of the article nodes.
+  $nodes = node_load_multiple($nids);
+  foreach($nodes as $node) {
+    $node->field_establishment_detail['und']['0']['value'] = $node->field_establishment_details['und']['0']['value'];
+    node_save($node);
+  }
+}
+/**
+ * Implemented hook_theme
+ * To set whistle blower mail template
+ */
+function sakal_utility_theme($existing, $type, $theme, $path) {
+  // Ex 1: the "story" node edit form.
+   $items['whistle_mail_template'] = array(
+    'render element' => 'element',
+    'template' => 'whistle-mail-template',
+    'veriables' => array('params' => array()),   
+    'path' => drupal_get_path('theme', 'intranet') . '/tpl',
+  );
+   $items['calendar'] = array(
+    'render element' => 'element',
+    'template' => 'holiday_calender',
+    'veriables' => array('params' => array()),   
+    'path' => drupal_get_path('theme', 'intranet') . '/tpl',
+  );
+   
+  return $items;
+}
+
+/*
+ *  Implementation of hook_mail()
+ *  To sent the mail to whistle blower team 
+ */
+function sakal_utility_mail($key, &$message, $params) {
+  global  $base_path;
+  $theme_path=path_to_theme();
+  $base_url= $_SERVER['SERVER_NAME'] . base_path() . $theme_path;
+  $options = array(
+    'langcode' => $message['language']->language,
+  );
+  $params['base_url']=$base_url;
+  switch ($key) {
+    case 'whistle_blower':
+      $message['subject'] = t($params['subject']);
+      $message['headers']['mime-version'] = '1.0';
+      $message['headers']['content-type'] = 'multipart/mixed;';
+      $message['headers']['content-type'] = 'text/html;';
+      $variables = array(
+        'params' => $params    
+      );
+      $message['body'][] = theme('whistle_mail_template', $variables);
+    break;
+  }
+}
+
+/**
+ * Implement hook_content_alter_oprations.
+ * Hide publish options from /admin/content for authore user role.
+ * 
+ * @param $comment
+ *   Array of Oprations.
+ * @return
+ *    Array of Oprations.
+ */
+function sakal_utility_node_alter_operations($operations) {
+  if (!user_access('moderate content from needs_review to published')) {
+    unset($operations['publish']);
+  }
+  return $operations;
+}
+/**
+ * Implements hook_cron().
+ */
+function sakal_utility_cron() {
+  // Task 1: Gathering birthday and anniversary as well as office anniversary information and storing to json file.
+    $events = array();
+    $users = entity_load('user');
+    if (!$users) {
+      return FALSE;
+    }
+    foreach ($users as $user) {
+      ctools_include('ajax');
+      ctools_include('modal');
+      $uri = 'public://';
+      global $base_url;
+      $field_birthday = field_get_items('user', $user, 'birthdays');
+      $field_joining_date = field_get_items('user',$user,'field_employee_joining_date');
+      $user_picture = !empty($user->picture) ? file_create_url($user->picture->uri) : file_create_url($uri) . 'detail-user.png';
+      $first_name = !empty($user->field_first_name['und'][0]['value'])?$user->field_first_name['und'][0]['value']:'user';
+      $last_name = !empty($user->field_last_name['und'][0]['value'])?$user->field_last_name['und'][0]['value']:'';
+      //$location =  field_get_items('user', $user, 'field__work_location');
+      $location = !empty($user->field_locations['und'][0]['tid'])?$user->field_locations['und'][0]['tid']:'0';
+      $user_name="<a target='_blank' href='".$base_url."/user/".$user->uid."'><span>".$first_name." <br/>".$last_name."</span></a>";
+      $user_picture = "<a target='_blank' href='".$base_url."/user/".$user->uid."'>"."<img src='".$user_picture."'/></a>";
+      if (!$field_joining_date && !$field_birthday) {
+        continue;
+      }
+      else if (!$field_joining_date) {
+        $eventDate = date('Y').'-'.str_pad($field_birthday[0]['month'], 2, '0', STR_PAD_LEFT).'-'.str_pad($field_birthday[0]['day'], 2, '0', STR_PAD_LEFT);
+        $href = 'wish/nojs/'.$user->mail.'/birth';
+        $event= array(
+          "id" => "event-birth",
+          "start" => $eventDate, 
+          "className" => "calendarBirthday",
+          "username" => $user_name,
+          "userpicture" => $user_picture,
+          "location" => $location,
+          "wishLink" => ctools_modal_text_button('Wish', $href, t('Wish'), 'ctools-modal-happy-modal-style ctools-use-modal'),
+        );
+        array_push($events,$event);
+        continue;
+      }
+      else if (!$field_birthday) {
+        $eventDate = date('Y').'-'.str_pad($field_joining_date[0]['month'], 2, '0', STR_PAD_LEFT).'-'.str_pad($field_joining_date[0]['day'], 2, '0', STR_PAD_LEFT);
+        $href = 'wish/nojs/'.$user->mail.'/ann';
+        $event= array(
+          "id" => "event-ann",
+          "start" => $eventDate, 
+          "className" => "calendarAnniversary",
+          "username" => $user_name,
+          "userpicture" => $user_picture,
+          "location" => $location,
+          "wishLink" => ctools_modal_text_button('Wish', $href, t('Wish'), 'ctools-modal-happy-modal-style ctools-use-modal'),
+        );
+        array_push($events,$event);
+        continue;
+      }
+      else {
+        $eventDate = date('Y').'-'.str_pad($field_birthday[0]['month'], 2, '0', STR_PAD_LEFT).'-'.str_pad($field_birthday[0]['day'], 2, '0', STR_PAD_LEFT);
+        $href = 'wish/nojs/'.$user->mail.'/birth';
+        $event= array(
+          "id" => "event-birth",
+          "start" => $eventDate, 
+          "className" => "calendarBirthday",
+          "username" => $user_name,
+          "userpicture" => $user_picture,
+          "location" => $location,
+          "wishLink" => ctools_modal_text_button('Wish', $href, t('Wish'), 'ctools-modal-happy-modal-style ctools-use-modal'),
+        );
+        array_push($events,$event);
+        $eventDate = date('Y').'-'.str_pad($field_joining_date[0]['month'], 2, '0', STR_PAD_LEFT).'-'.str_pad($field_joining_date[0]['day'], 2, '0', STR_PAD_LEFT);
+        $href = 'wish/nojs/'.$user->mail.'/ann';
+        $event= array(
+          "id" => "event-ann",
+          "start" => $eventDate, 
+          "className" => "calendarAnniversary",
+          "username" => $user_name,
+          "userpicture" => $user_picture,
+          "location" => $location,
+          "wishLink" => ctools_modal_text_button('Wish', $href, t('Wish'), 'ctools-modal-happy-modal-style ctools-use-modal'),
+        );
+        array_push($events,$event);
+      }
+    }
+  
+    /* holiday calender */
+      $query  = new EntityFieldQuery();
+      $records = $query->entityCondition('entity_type', 'node')
+             ->entityCondition('bundle', 'holiday_calendar') 
+             ->propertyCondition('status', 1) 
+              ->fieldCondition('field_calendar_year','value',date("Y").'-01-01 00:00:00','=')             
+             ->execute();
+      $holidays_json=array();
+      if ($records) {
+        $nodes = node_load_multiple(array_keys($records['node']));
+          foreach ($nodes as $node){
+            foreach ($node->field_holiday['und'] as $key=>$data) {
+              $holiday_json = array();          
+              $holiday_json['id'] =    'event-hol' ; 
+              $holiday_json['title'] = $data['field_holiday_name']['und'][0]['value'];
+              $holiday_json['location'] = !empty($data['field_location']['und'])? $data['field_location']['und'][0]['tid']:'0';
+              $holiday_json['start'] = $data['field_publishing_date']['und'][0]['value'];
+              $holiday_json['className']='holClass';
+              array_push($holidays_json,$holiday_json);
+              if($data['field_publishing_date']['und'][0]['value']!='')
+                array_push($events,$holiday_json);
+            }
+          }
+      } 
+      //$variables['holidays_json']=$holidays_json; 
+    
+      
+      /* office anniversary */
+    $query  = new EntityFieldQuery();
+    $records = $query->entityCondition('entity_type', 'node')
+          ->entityCondition('bundle', 'units') 
+          ->propertyCondition('status', 1)     
+          ->execute();
+    $units_json=array();
+    if ($records) {
+      $nodes = node_load_multiple(array_keys($records['node']));
+      foreach ($nodes as $node){
+        if(isset($node->field_anniversary_date['und'][0]['value']) && $node->field_anniversary_date['und'][0]['value']!='') {
+          $unit_json = array();
+          $unit_json['id'] = 'event-unit' ; 
+          $unit_json['title'] = $node->title;
+          $unit_json['location'] = !empty($node->field_location['und'])? $node->field_location['und'][0]['tid']:'0';
+          $unit_date = $node->field_anniversary_date['und'][0]['value'];
+          $unit_json['className']='unitAnniversary';
+          $unit_json['start']=date('Y').date('-m-d',strtotime($unit_date));             
+          array_push($events,$unit_json);
+        }
+      }         
+    } 
+  $path = drupal_realpath($uri);
+  $fp = fopen($path.'/event_birth_anniversary.json', 'w');     
+  $birth_anniversary_string = json_encode($events);
+  $replaceStr='},'."\n";
+  $birth_anniversary_string=str_replace('},',$replaceStr,$birth_anniversary_string);
+  fwrite($fp, $birth_anniversary_string);
+  fclose($fp);  
+  
+  // Task 2: deleting room_reservation_room nodes which are more than 6 months old.
+  /*$six_month_older_date = date("Y-m-d H:i:s", strtotime("-6 months"));
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'room_reservations_reservation')
+    ->propertyCondition('status', 1)
+    ->fieldCondition('reservation_date', 'value', '2016-03-29 00:00:00', '<');
+  $result = $query->execute();
+  if (isset($result['node'])) {
+    foreach ($result['node'] as $record) {
+      if (isset($record->nid)) {
+        node_delete($record->nid);
+      }
+    }
+  }*/
+}
+/* Admin Confiugration page to set page title
+ * 
+ */
+function page_title_admin_form($form, &$form_state) {
+  $types = node_type_get_types();
+  $types= array_keys($types);
+  if (count($types)>0) {
+    foreach ($types as $key => $value) {
+      $field_name='page_title_' . $value;
+      $label= ucfirst(str_replace("_", " ", $value));
+      $form[$field_name] = array(
+        '#type' => 'textfield',
+        '#title' => t(check_plain($label) . ' Page Title'),
+        '#default_value' => variable_get($field_name, $label),
+        '#size' => 50,
+        '#maxlength' => 50,
+        '#required' => FALSE,
+      );
+    }
+  }  
+  return system_settings_form($form);
+}
+
+function sakal_utility_field_widget_select_or_other_buttons_form_alter(&$element, &$form_state, $context) {
+  print('got you ');die;
+  $element['#select_ajax'] = array(
+     'callback' => 'my_module_ajax_callback',
+  );     
+}
+
+function sakal_utility_custom_theme() {
+	global $user;
+    // if we're on the user edit page
+    if (arg(0) == 'user' && is_numeric(arg(1)) && arg(2) == 'edit') {
+      // if the user is editing his own profile
+      if (arg(1) == $user->uid) {
+        return 'intranet';
+      }
+      else if(arg(0) == 'node' && arg(2) == 'edit') {
+        return 'intranet';
+      }
+      // if editing someone else's profile
+      else {
+
+           //return variable_get('admin_theme');
+      }
+    }
+}
+
+function change_field(){
+	$taxonomy = taxonomy_vocabulary_machine_name_load('location');
+	$vid = $taxonomy->vid;; // vocab ID
+	$users = entity_load('user');
+
+	foreach($users as $user){
+		 $user->uid;
+		$user->field__work_location['und'][0]['value'];
+		if($user->field__work_location['und'][0]['value'] != '') {
+		$edit = array('vid' => $vid, 'name' => $user->field__work_location['und'][0]['value']);
+
+		$terms = taxonomy_get_term_by_name($edit['name'], 'location');
+    
+		if (!empty($terms)) {
+		  // term already exists
+		  $first_item = array_shift($terms);
+		  $tid = $first_item->tid;
+		}
+		elseif(!empty($edit['vid']) && !empty($edit['name'])) {      
+		  // add term and get the tid
+		  $status = taxonomy_term_save((object)$edit);
+      $terms=taxonomy_get_term_by_name($edit['name'], 'location');
+      $first_item = array_shift($terms);
+		  $tid = $first_item->tid;
+		 
+		}
+		$user->field_locations['und'][0]['tid'] = $tid;
+		user_save($user);
+		}
+   
+	}
+
+}
+
+function map_unit_location(){
+    $query  = new EntityFieldQuery();
+      $result = $query->entityCondition('entity_type', 'node')
+        ->entityCondition('bundle', 'units') 
+        ->propertyCondition('status', 1)     
+        ->execute();
+      if (!isset($result['node'])) {
+    echo "No nodes to process.";
+
+    }
+
+  foreach($result['node'] as $nid => $stub_node) {
+    // Load the full node and wrap it with entity_metadata_wrapper().
+    $node = node_load($nid);
+    $node_wrapper = entity_metadata_wrapper('node', $node);
+
+    if($node_wrapper->field_location->value()->tid==17)
+    {
+      $node_wrapper->field_location->set(15);
+      $node_wrapper->save();
+      echo "<br>Processed nid=".$node->nid." title: ".$node->title;
+    }
+
+    if($node_wrapper->field_location->value()->tid==20)
+    {
+      $node_wrapper->field_location->set(17);
+      $node_wrapper->save();
+      echo "<br>Processed nid=".$node->nid." title: ".$node->title;
+    }
+     if($node_wrapper->field_location->value()->tid==19)
+    {
+      $node_wrapper->field_location->set(20);
+      $node_wrapper->save();
+      echo "<br>Processed nid=".$node->nid." title: ".$node->title;
+    }
+    if($node_wrapper->field_location->value()->tid==21)
+    {
+      $node_wrapper->field_location->set(19);    
+      $node_wrapper->save();
+      echo "<br>Processed nid=".$node->nid." title: ".$node->title;
+    }
+   
+    if($node_wrapper->field_location->value()->tid==22)
+    {
+      $node_wrapper->field_location->set(21);
+      $node_wrapper->save();
+      echo "<br>Processed nid=".$node->nid." title: ".$node->title;
+    }
+
+  }
+
+}
+
+/**
+ * Implements hook_magnific_popup_thumbnail_schemes().
+ */
+function sakal_utility_magnific_popup_thumbnail_schemes() {
+  $thumbnail_schemes = array(
+    'custom_magnific_popup_thumbnail' => 'unit_image_295X150',
+  );
+  return $thumbnail_schemes;
+}
+
+/*
+ * Block that provides welcome user mesage.
+ */
+function user_account_info() {
+  global $user;
+  $user_info = user_load($user->uid);
+  if (isset($user_info->field_first_name['und'][0]['value']) && isset($user_info->field_last_name['und'][0]['value'])) {
+    $text = $user_info->field_first_name['und'][0]['value'].' '.$user_info->field_last_name['und'][0]['value'];
+  }
+  else if(isset($user_info->field_first_name['und'][0]['value'])) {
+    $text = $user_info->field_first_name['und'][0]['value'];
+  }
+  else if(isset($user_info->field_last_name['und'][0]['value'])) {
+    $text = $user_info->field_last_name['und'][0]['value'];
+  }
+  else {
+    $text = 'user';
+  }
+  $text = '<span class="welcomeText">Welcome </span>'.l($text,'user/'.$user->uid,array('attributes'=>array('class'=>array('userAccountInfo'))));
+  $block = array(
+    'message' => array(
+      '#type' => 'markup',
+      '#markup' => $text,
+      '#suffix' => '',
+    ),
+  );
+  return $block;
+}
+
+function show_calendar(){
+  $variables['location_options'] = theme('select', array('element' => array('#options' => options_of_selected_taxonomy('location'), '#attributes' => array("id" => "event_location"))));
+  return theme('calendar',$variables);
+}
+
+function sakal_utility_file_entity_update_index($file){
+  $nexcloud = filedepot_nexcloud();
+  $text = '';
+  $tags='';
+  $title='';
+  $fid='';
+  //watchdog('file_update_index', $file->fid);  
+  $query = db_select('filedepot_files', 'f');
+  $query->condition('f.drupal_fid', $file->fid,'=');
+  $query->fields('f',array('fid','title'));
+  $query->range(0,1);
+  $result = $query->execute();
+  $record = $result->fetchAssoc();
+  if (!empty($record)) {    
+    $fid=$record['fid'];
+    $title=$record['title'];
+  }  
+  if ($fid!='') {    
+    if($title!=''){     
+      $title= preg_replace('/\\.[^.\\s]{3,4}$/','',$title);
+    }    
+    $tags = $nexcloud->get_itemtags($fid);
+  }
+  // watchdog('file_update_index', 'tags---'.$tags,WATCHDOG_ERROR);
+  $tags=str_replace(',',' ',$tags);
+  
+  // Save the creation time of the most recent indexed file, for the search
+  // results half-life calculation.
+  variable_set('file_entity_cron_last', $file->timestamp);
+
+   // Render the file.
+  $build = file_view($file, 'search_index');
+  unset($build['#theme']);
+  $file->rendered = drupal_render($build);
+    
+  $text = '';
+  $filename=$file->filename;
+  $filename=str_replace('.',' ',$filename);
+  $filename=str_replace('_',' ',$filename);
+  $text.=' '.$filename;  
+  if ($tags!='') {
+    $text.=' '.$tags;
+  }
+  if ($title!='') {
+    $text.=' '.$title;
+  }
+  // Update index
+  list($scheme, $target) = explode('://', $file->uri, 2);
+  watchdog('file_update_index', $file->filename.$scheme);
+  if ($scheme !== 'temporary') {
+    search_index($file->fid, 'file', $text);
+  }
+  else
+  {
+    db_delete('search_dataset')
+    ->condition('sid', $file->fid)
+    ->condition('type', 'file')
+    ->execute();
+
+    db_delete('search_index')
+    ->condition('sid', $file->fid)
+    ->condition('type', 'file')
+    ->execute();      
+  }
+  return $text;
+  
+}
+function sakal_utility_query_alter(QueryAlterableInterface &$query) {
+  if ( $query->hasTag('node_admin_filter') ) {
+    $query->condition('n.type', 'filedepot_folder', '!=');
+  }  
+}
+function sakal_utility_menu_alter(&$items) {
+  $items['admin/structure/block/manage/%/%/configure']['theme callback'] = 'sakal_utitlity_node_configuration_theme';
+}
+
+/**
+ * Implements hook_user_insert().
+ */
+function sakal_utility_user_insert(&$edit, $account, $category) {
+   $account->roles[4] = 'employee';
+}

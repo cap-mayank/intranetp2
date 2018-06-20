@@ -1,0 +1,3 @@
+field_emp_id,field_first_name,field_last_name,field_position,mail,field_employee_joining_date,field_pers_area,field_emp_group,field_department,field_per_s_area,field_vertical,field_sub_vertical,birthdays,field_employee_function,pass,roles,picture
+122,AVINASH,GADEKAR,Librarian-Editorial,AVINASH.GADEKAR@ESAKAL.COM,01.11.1975,Pune,WAGE BOARD,Editorial - Library, Pune Main , SAKAL , Sak-Pune , 11.11.1956 , Editorial ,122,employee,317.jpg
+125,AJIT,GANDHI,Telephone-Operator-Admin,AJIT.GANDHI@ESAKAL.COM,06.05.1975,Pune,WAGE BOARD,Admin - Telephone Operator, Pune Main , SAKAL , Sak-Pune , 20.03.1956 , Admin. (Tele. Operator) ,125,employee,202060.jpg

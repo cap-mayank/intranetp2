@@ -1,0 +1,583 @@
+field_emp_id,name,field_first_name,field_middle_name,field_last_name,mail,field_mobile_no,field_offiice_phone_no,field__work_location,field_emp_sub_location,field_department,field_designation,field_employee_joining_date,birthdays,field_employee_function,pass,picture
+991,rego.carmo,Carmo,,Rego,carmo.rego@esakal.com,,,Goa, Corlim ,Production - Parcel,Asst. Parcel Mukadam,01.11.1992,30.03.1965,Circulation,991,991.jpg
+993,francisco.xavier.de.oliveira,Xavier,De,Francisco,xavier.francisco@esakal.com,,,Goa, Panaji ,Production - Parcel,Paster and Plate Maker,01.05.1993,03.12.1961,Circulation,993,993.jpg
+994,raut.maruti,Maruti,,Raut,maruti.raut@esakal.com,,,Goa, Delhi ,Editorial,Sub Editor,05.11.1992,06.01.1965,Editorial,994,994.jpg
+995,appugol.vinayak,Vinayak,,Appugol,vinayak.appugol@esakal.com,,,Goa, Corlim ,Production,Machine Operator,01.12.1992,12.02.1971,Production,995,995.jpg
+996,prabhugaonkar.suhasini,Suhasini,,Prabhugaonkar,suhasini.prabhugaonkar@esakal.com,,,Goa, Panaji ,Editorial,Reporter,15.01.1993,14.01.1960,Editorial,996,996.jpg
+997,gavandi.vijay,Vijay,,Gavandi,vijay.gavandi@esakal.com,,,Goa, Corlim ,Production,Assistant Machineman (Printing),01.02.1993,01.06.1958,Production,997,997.jpg
+998,naik.dilip,Dilip,,Naik,dilip.naik@esakal.com,,,Goa, Corlim ,Production - Parcel,Asst. Parcel Mukadam,01.02.1993,24.08.1959,Circulation,998,998.jpg
+1001,prabhugaonkar.dayanand,Dayanand,,Prabhugaonkar,dayanand.prabhugaonkar@esakal.com,,,Goa, Panaji ,Admin - Locations,Unit Manager (Goa Unit),31.12.1994,28.02.1964,Admin. (Unit Admin.),1001,1001.jpg
+1011,petkar.kishor,Kishor,,Petkar,kishor.petkar@esakal.com,,,Goa, Panaji ,Editorial,Chief Sub Editor (Sports),15.02.2001,13.04.1975,Editorial,1011,1011.jpg
+1012,powar.bharat,Bharat,,Powar,bharat_powar@dainikgomantak.com,,,Goa, Panaji ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.04.2001,19.06.1974,Circulation,1012,1012.jpg
+1035,sawant.nandkishor,Nandkishor,,Sawant,nandkishor.sawant@esakal.com,,,Pune, Media Centre ,Retail Department,Driver,01.03.2008,28.04.1964,Retail,1035,1035.jpg
+1036,thopte.nitin,Nitin,,Thopte,nitin.thopte@esakal.com,,020-24405604,Pune, Pune Main ,Parcel - Driver,Driver,01.03.2008,20.04.1964,Circulation,1036,1036.jpg
+1039,bathe.mangesh,Mangesh,,Bathe,mangesh.bathe@esakal.com,,,Pune, Dive Ghat ,Production - Parcel,Helper (Parcel),01.03.2008,12.01.1972,Circulation,1039,1039.jpg
+1040,bhosale.ashok,Ashok,,Bhosale,ashok.bhosale@esakal.com,,,Pune, Pune Main ,Admin - Locations,Watchman,01.03.2008,02.06.1956,Admin. (Watchmen),1040,1040.jpg
+1041,hagawane.bhanudas,Bhanudas,,Hagawane,bhanudas.hagawane@esakal.com,,,Pune, Pune Main ,Admin - Locations,Helper,01.03.2008,07.06.1968,Admin. (Helper),1041,1041.jpg
+1042,pardeshi.santosh,Santosh,,Pardeshi,santosh.pardeshi@esakal.com,8308244281,,Pune, Pune Main ,Admin - Office Boy,Office Boy,01.03.2008,09.09.1977,Admin. (Office Boy),1042,1042.jpg
+1043,shirkar.dynaneshwar,Dynaneshwar,,Shirkar,dynaneshwar.shirkar@esakal.com,9049078178,,Pune, Pune main ,Admin - Office Boy,Office Boy,01.03.2008,19.09.1968,Admin. (Office Boy),1043,1043.jpg
+1044,gaikwad.sanjay,Sanjay,,Gaikwad,sanjaygaikwad@esakal.com,9881098294,,Pune, Shivaji Nagar ,Admin - Office Boy,Office Boy,01.03.2008,19.09.1973,Admin. (Office Boy),1044,1044.jpg
+1045,bade.kailas,Kailas,,Bade,kailas.bade@esakal.com,9881718850,,Pune, Pune Main ,Admin - Office Boy,Office Boy,01.03.2008,21.10.1977,Admin. (Office Boy),1045,1045.jpg
+1046,devane.rajan,Rajan,,Devane,rajan.devane@esakal.com,9922419277,020-24405843,Pune, Pune main ,Admin - Office Boy,Office Boy,01.03.2008,25.11.1964,Admin. (Office Boy),1046,1046.jpg
+1047,waghe.ramakant,Ramakant,,Waghe,ramakant.waghe@esakal.com,8554880087,,Pune, Pune Main ,Admin - Office Boy,Office Boy,01.03.2008,03.02.1977,Admin. (Office Boy),1047,1047.jpg
+1048,lohakare.rajesh,Rajesh,,Lohakare,rajesh.lohakare@esakal.com,,,Pune, Pune Main ,Admin - Office Boy,Office Boy,01.03.2008,24.12.1974,Admin. (Office Boy),1048,1048.jpg
+1049,wanjale.rahul,Rahul,,Wanjale,rahul.wanjale@esakal.com,,,Pune, Pune Main ,Admin - Office Boy,Office Boy,01.03.2008,13.08.1977,Admin. (Office Boy),1049,1049.jpg
+1050,gaikwad.umesh,Umesh,,Gaikwad,umesh.gaikwad@esakal.com,9922421536,,Pune, Pune main ,Admin - Office Boy,Office Boy,01.03.2008,08.11.1976,Admin. (Office Boy),1050,1050.jpg
+1051,jadhav.ramesh,Ramesh,,Jadhav,rameshjadhav@esakal.com,,,Pune, Pune Main ,Production - Electrical,Electrician (Production),01.03.2008,23.04.1972,IT,1051,1051.jpg
+1052,pawar.rajendra,Rajendra,,Pawar,rajendra.pawar@esakal.com,,,Pune, Dive Ghat ,Production - Parcel,Helper (Parcel),01.03.2008,14.07.1969,Circulation,1052,1052.jpg
+1053,makhare.vishwanath,Vishwanath,,Makhare,vishwanath.makhare@esakal.com,,,Pune, Dive Ghat ,Production - Parcel,Helper (Parcel),01.03.2008,01.06.1970,Circulation,1053,1053.jpg
+1054,naikare.ganpat,Ganpat,,Naikare,ganpat.naikare@esakal.com,,,Pune, Dive Ghat ,Production - Parcel,Helper (Parcel),01.03.2008,01.12.1965,Circulation,1054,1054.jpg
+1055,sabale.maruti,Maruti,,Sabale,maruti.sabale@esakal.com,,,Pune, Dive Ghat ,Production - CTP,Operator,01.03.2008,16.08.1971,Production,1055,1055.jpg
+1056,bagal.vitthal,Vitthal,,Bagal,vitthal.bagal@esakal.com,,,Pune, Dive Ghat ,Production - CTP,Operator,01.03.2008,02.05.1973,Production,1056,1056.jpg
+1057,wagh.shirish,Shirish,,Wagh,shirish.wagh@esakal.com,,,Pune, Dive Ghat ,Production - CTP,Operator,01.03.2008,17.12.1978,Production,1057,1057.jpg
+1058,shigvan.vijay,Vijay,,Shigvan,vijay.shigvan@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Machine Operator,01.03.2008,24.04.1976,Production,1058,1058.jpg
+1059,lole.shantaram,Shantaram,,Lole,shantaram.lole@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Operator,01.03.2008,28.12.1976,Production,1059,1059.jpg
+1060,shinde.sachin,Sachin,,Shinde,sachinshinde@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Machine Operator,01.03.2008,27.06.1980,Production,1060,1060.jpg
+1061,bodkhe.ashok,Ashok,,Bodkhe,ashok.bodkhe@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Machine Operator,01.03.2008,17.02.1978,Production,1061,1061.jpg
+1062,bhalerao.vasant,Vasant,,Bhalerao,vasant.bhalerao@esakal.com,,,Pune, Dive Ghat ,Production - Materials,Operator,01.03.2008,20.09.1975,Materials,1062,1062.jpg
+1063,sawant.ajay,Ajay,,Sawant,ajay.sawant@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Operator,01.03.2008,17.10.1978,Production,1063,1063.jpg
+1064,kedari.vinod,Vinod,,Kedari,vinod.kedari@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Operator,01.03.2008,26.05.1971,Production,1064,1064.jpg
+1065,khatpe.dilip,Dilip,,Khatpe,dilip.khatpe@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Operator,01.03.2008,01.01.1976,Production,1065,1065.jpg
+1066,dhumal.dattatray,Dattatray,,Dhumal,dattatray.dhumal@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Machine Operator,01.03.2008,07.08.1977,Production,1066,1066.jpg
+1067,gunjal.pravin,Pravin,,Gunjal,pravin.gunjal@esakal.com,8888849117,0251-2861315,Pune, Pune - Belapur ,Tanishka Forum,Jr. Executive (Commercial Events),01.03.2008,17.10.1972,Tanishka Forum,1067,1067.jpg
+1068,nimbalkar.prakash,Prakash,,Nimbalkar,prakashnimbalkar@esakal.com,9552583285,0233-2323131,Pune, Dive Ghat ,Production - Materials,Forklift Driver,01.03.2008,16.06.1976,Materials,1068,1068.jpg
+1069,pawar.jaywant,Jaywant,,Pawar,jaywant.pawar@esakal.com,,,Pune, Dive Ghat ,Production - Parcel,Helper (Parcel),01.03.2008,13.05.1978,Circulation,1069,1069.jpg
+1070,more.tukaram,Tukaram,,More,tukaram.more@esakal.com,,,Pune, Dive Ghat ,Production - Parcel,Helper (Parcel),01.03.2008,06.06.1972,Circulation,1070,1070.jpg
+1071,jadhav.shashikant,Shashikant,,Jadhav,shashikant.jadhav@esakal.com,,,Pune, Dive Ghat ,Production - Parcel,Helper (Parcel),01.03.2008,10.05.1980,Circulation,1071,1071.jpg
+1072,jirwankar.padmakar,Padmakar,,Jirwankar,padmakar.jirwankar@esakal.com,,,Pune, Dive Ghat ,Production - Parcel,Helper (Parcel),01.03.2008,12.09.1965,Circulation,1072,1072.jpg
+1073,gogawale.amar,Amar,,Gogawale,amar.gogawale@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Operator,01.03.2008,15.07.1979,Production,1073,1073.jpg
+1074,telang.parag,Parag,,Telang,parag.telang@esakal.com,,,Pune, Dive Ghat ,Production - Parcel,Helper (Parcel),01.03.2008,07.03.1977,Circulation,1074,1074.jpg
+1075,gaikwad.harishchandra,Harishchandra,,Gaikwad,harishchandra.gaikwad@esakal.com,,,Pune, Dive Ghat ,Production - CTP,CTP Operator,01.03.2008,06.03.1982,Production,1075,1075.jpg
+1076,pawar.vishal,Vishal,,Pawar,vishal.pawar@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Machine Operator,01.03.2008,27.05.1984,Production,1076,1076.jpg
+1078,mokashi.kiran,Kiran,,Mokashi,kiran.mokashi@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Machine Operator,01.03.2008,01.06.1982,Production,1078,1078.jpg
+1079,modak.natha,Natha,,Modak,natha.modak@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Machine Operator,01.03.2008,15.06.1974,Production,1079,1079.jpg
+1080,borkar.ramkurshna,Ramkurshna,,Borkar,ramkurshna.borkar@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Machine Operator,01.03.2008,15.11.1974,Production,1080,1080.jpg
+1081,gole.baburao,Baburao,,Gole,baburao.gole@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Machine Operator,01.03.2008,20.10.1981,Production,1081,1081.jpg
+1082,idhate.laxman,Laxman,,Idhate,laxman.idhate@esakal.com,,,Pune, Dive Ghat ,Production - Electrical,Electrician (Production),01.03.2008,05.10.1985,IT,1082,1082.jpg
+200002,gade.anandkumar,Anandkumar,,Gade,anandkumar.gade@esakal.com,,,Pune, Pune Main ,Editorial,News Editor,01.02.2006,10.05.1971,Agrowon,200002,200002.jpg
+200004,mundale.mandar,Mandar,,Mundale,mandar.mundale@esakal.com,,,Pune, Pune Main ,Editorial,Dy. Chief Sub Editor,01.02.2006,06.06.1972,Agrowon,200004,200004.jpg
+200010,wede.jitendra,Jitendra,,Wede,jitendra.wede@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Manager (Production),13.02.2006,10.10.1978,Production,200010,200010.jpg
+200016,ambika.prasad.shaligram.,Ambika,Prasad,Shaligram,ambika.shaligram@esakal.com,9011093963,,Pune, Shivaji Nagar ,Editorial,Chief Sub Editor,20.03.2006,25.02.1980,ST,200016,200016.jpg
+200024,gadre.amit,Amit,,Gadre,amit.gadre@esakal.com,,,Pune, Pune Main ,Editorial,Chief Sub Editor,01.04.2006,23.05.1976,Agrowon,200024,200024.jpg
+200026,shindikar.prabodh,Prabodh,,Shindikar,prabodh.shindikar@esakal.com,,,Pune, Shrirampur ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.04.2006,04.08.1972,ADVT SALES,200026,200026.jpg
+200027,deshmukh.deepak,Deepak,,Deshmukh,deepak.deshmukh@esakal.com,,,Pune, Ahmednagar ,"Advt - Sales, Marketing & Other",Sr. Manager (Advt. Sales),01.04.2006,27.11.1976,ADVT SALES,200027,200027.jpg
+200028,bidwai.makarand,Makarand,,Bidwai,makarand.bidwai@esakal.com,9881098291,,Pune, Ahmednagar ,Production - Pagination,Asst. Manager (Prepress),01.04.2006,13.08.1973,IT,200028,200028.jpg
+200029,nigade.yogesh,Yogesh,,Nigade,yogesh.nigade@esakal.com,,,Pune, Pune Main ,Circulation - Sales & Marketing,Manager (Circulation - District),01.04.2006,19.09.1974,Circulation,200029,200029.jpg
+200031,kudale.santosh,Santosh,,Kudale,santosh.kudale@esakal.com,,,Pune, Pune Main ,Circulation - Sales & Marketing,Manager (Circulation Sales),01.04.2006,18.04.1975,Circulation,200031,200031.jpg
+200032,bhujbal.milind,Milind,,Bhujbal,milind.bhujbal@esakal.com,9850151005,020-27420323,Pune, Pimpri ,"Advt - Sales, Marketing & Other",Sr. Manager (Advt. Sales),01.04.2006,25.07.1975,ADVT SALES,200032,200032.jpg
+200034,pandhare.narendra,Narendra,,Pandhare,narendra.pandhare@esakal.com,,,Pune, Pune Main ,Purchase & Materials,Asst. Manager (Materials),01.04.2006,01.06.1971,Materials,200034,200034.jpg
+200035,devade.mahendra,Mahendra,,Devade,mahendra.devade@esakal.com,9922419270,,Pune, Pimpri ,Advt - Scheduling & Support,Asst. Manager (Advt. Scheduling & Support),01.04.2006,06.04.1973,ADVT SCHEDULING,200035,200035.jpg
+200049,parkhe.camil,Camil,,Parkhe,camil.parkhe@sakaaltimes.com,9922419274,,Pune, Shivaji Nagar ,Editorial,Assistant Editor,01.05.2006,18.08.1959,ST,200049,200049.jpg
+200058,vidyadhar.vithal.chaini,Vidyadhar,Vithal,Chaini,mukund.bhute@sakaaltimes.com,,,Pune, Shivaji Nagar ,Editorial - Photographer,Chief Photographer,01.05.2006,14.09.1974,ST,200058,200058.jpg
+200061,bhute.mukund,Mukund,,Bhute,mukund.bhute@esakal.com,,,Pune, Shivaji Nagar ,Editorial - Photographer,Chief Photographer,01.05.2006,02.06.1967,ST,200061,200061.jpg
+200062,jadhav.parag,Parag,,Jadhav,parag.jadhav@esakal.com,9822549458,,Pune, Shivaji Nagar ,Editorial - Photographer,Principal Photographer,01.05.2006,13.03.1973,ST,200062,200062.jpg
+200077,gokhale.madhav,Madhav,,Gokhale,prasad.nyayadhish@sakaaltimes.com,9881098340,020-24405726,Pune, Pune Main ,Editorial,News Editor (Sakal),01.05.2006,04.06.1966,Editorial,200077,200077.jpg
+200080,juwale.vrunda,Vrunda,,Juwale,vaibhav.thombare@sakaaltimes.com,9881098321,,Pune, Shivaji Nagar ,Editorial,Assistant Editor (Features),01.05.2006,09.02.1966,ST,200080,200080.jpg
+200083,roy.tania,Tania,,Roy,kirti.patil@sakaaltimes.com,9822475091,,Pune, Shivaji Nagar ,Editorial,Assistant Editor,01.05.2006,17.08.1971,ST,200083,200083.jpg
+200094,joshi.kishor,Kishor,,Joshi,kailas.jadhav@sakaaltimes.com,,,Pune, Dive Ghat ,Purchase & Materials,Jr. Executive (Materials),01.06.2006,31.07.1964,Materials,200094,200094.jpg
+200104,yadav.dilipsinh,Dilipsinh,,Yadav,dilipsinh.yadav@esakal.com,,,Kolhapur, Kolhapur Main ,Production - Pagination,Sr. Executive (Pagination),01.03.2006,30.08.1975,IT,200104,200104.jpg
+200108,shegokar.atul,Atul,,Shegokar,atul.shegokar@esakal.com,,,Mumbai, Navi Mumbai ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.07.2006,13.03.1975,Circulation,200108,200108.jpg
+200115,shedolkar.sunil,Sunil,,Shedolkar,sunil.shedolkar@esakal.com,9850975754,,Aurangabad, Aurangabad Main ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),01.05.2006,25.07.1964,TV,200115,200115.jpg
+200118,dadage.kisan,Kisan,,Dadage,kisan.dadage@esakal.com,9881133123,0217-2600896/97,Solapur, Solapur City ,Admin - Locations,Unit Manager (Solapur),01.04.2006,16.07.1976,Admin. (Unit Admin.),200118,200118.jpg
+200123,salvi.ganesh,Ganesh,,Salvi,ganesh.salvi@esakal.com,9850687528,,Satara, Satara Main ,Production - Pagination,Sr. Executive (Pagination),01.04.2006,20.02.1973,IT,200123,200123.jpg
+200124,suryawanshi.milind,Milind,,Suryawanshi,milind.suryawanshi@esakal.com,,,Kolhapur, Kolhapur Main ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),15.04.2006,26.10.1978,ADVT SALES,200124,200124.jpg
+200127,jagtap.vijay,Vijay,,Jagtap,vijay.jagtap@esakal.com,,,Satara, Satara Main ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),01.04.2012,28.04.1980,ADVT SALES,200127,200127.jpg
+200151,ghongade.umesh,Umesh,,Ghongade,umesh.ghongade@esakal.com,,,Pune, Pune Main ,Editorial,Principal Correspondent,01.08.2006,18.02.1973,Editorial,200151,200151.jpg
+200161,nagarkar.neha,Neha,,Nagarkar,neha.nagarkar@esakal.com,,,Pune, Pune Main ,Brand Promotion,Chief Manager (Brand Promotion & Madhurangan Events),01.09.2006,25.03.1962,Brand Promotion,200161,200161.jpg
+200174,chaudhari.kailash,Kailash,,Chaudhari,kailash.chaudhari@esakal.com,,,Pune, Pune Main ,Advt - Billing & Recovery,Asst. Manager (Advt. Recovery),20.09.2006,01.06.1966,Finance (Advt. Accounts),200174,200174.jpg
+200184,kusumbe.anil,Anil,,Kusumbe,anil.kusumbe@esakal.com,8108111208,022-66843524,Mumbai, Navi Mumbai ,Editorial - Artists,Artist,01.09.2006,10.10.1976,Editorial,200184,200184.jpg
+200191,gaikwad.vijay,Vijay,,Gaikwad,vijay.gaikwad@esakal.com,9870447750,022-66843764,Mumbai, Fort ,Editorial,Reporter,02.10.2006,20.01.1981,Agrowon,200191,200191.jpg
+200200,phadnis.manjiri,Manjiri,,Phadnis,manjiri.phadnis@esakal.com,9922419136,,Pune, Shivaji Nagar ,Editorial,Assistant Editor (Tanishka),01.11.2006,21.07.1976,Magazine,200200,200200.jpg
+200207,khandudi.harishchandra,Harishchandra,,Khandudi,harishchandra.khandudi@esakal.com,,,Mumbai, Fountain ,"Advt - Sales, Marketing & Other",Chief Manager (Advt. Sales),17.11.2006,30.10.1974,ADVT SALES,200207,200207.jpg
+200235,kadam.sarika,Sarika,,Kadam,sarika.kadam@esakal.com,,,Pune, Pune Main ,IT - Software,Sr. Manager (IT - Software),01.12.2006,29.08.1978,IT,200235,200235.jpg
+200238,syed.shehbaz,Shehbaz,,Syed,shehbaz.syed@esakal.com,,,Pune, Pune Main ,IT - Software,Asst. Manager (Software),01.12.2006,02.07.1977,IT,200238,200238.jpg
+200244,mugali.mallikarjun,Mallikarjun,,Mugali,mallikarjun.mugali@esakal.com,9986111459,0831-2424651,Kolhapur, Belgaum ,Editorial,Dy. Chief Reporter,01.01.2007,14.05.1977,Editorial,200244,200244.jpg
+200245,inchekar.shripad,Shripad,,Inchekar,shripad.inchekar@esakal.com,,,Aurangabad, Jalna ,Production - Electrical,Manager (Electrical),01.01.2007,15.02.1968,IT,200245,200245.jpg
+200246,wani.devidas,Devidas,,Wani,devidas.wani@esakal.com,,,Jalgaon, Jalgaon City ,Editorial,Reporter,01.01.2007,18.11.1972,Editorial,200246,200246.jpg
+200247,karale.murlidhar,Murlidhar,,Karale,murlidhar.karale@esakal.com,,,Pune, Ahmednagar ,Editorial,Sr. Sub Editor,02.01.2007,01.06.1974,Editorial,200247,200247.jpg
+200251,pendharkar.amit,Amit,,Pendharkar,amit.pendharkar@esakal.com,,,Pune, Pune Main ,Purchase & Materials,Manager (Materials),01.02.2007,15.05.1968,Materials,200251,200251.jpg
+200261,rode.-.nigudkar.vaishali,Vaishali,,Rode,vaishali.rode@esakal.com,9870108450,022-66843533,Mumbai, Navi Mumbai ,Editorial,Sr. Sub Editor,01.02.2007,09.06.1968,Editorial,200261,200261.jpg
+200263,deshmukh.sambhaji,Sambhaji,,Deshmukh,sambhaji.deshmukh@esakal.com,,,Aurangabad, Latur ,Tanishka Forum,Sub Editor Cum Reporter,01.03.2007,18.01.1977,Tanishka Forum,200263,200263.jpg
+200273,mahadik.deepak,Deepak,,Mahadik,deepak.mahadik@esakal.com,,,Pune, Pune Main ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.03.2007,06.09.1974,Circulation,200273,200273.jpg
+200277,chandorkar.nilesh,Nilesh,,Chandorkar,nilesh.chandorkar@esakal.com,9922913237,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Chief Manager (Advt. Sales),02.04.2007,06.02.1979,ADVT SALES,200277,200277.jpg
+200278,pawangadkar.makarand,Makarand,,Pawangadkar,makarand.pawangadkar@esakal.com,,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Sr. Manager (Advt. Sales),02.04.2007,22.08.1970,ADVT SALES,200278,200278.jpg
+200279,bhosale.jaywant,Jaywant,,Bhosale,jaywant.bhosale@sakaaltimes.com,9922913538,,Pune, Shivaji Nagar ,Editorial - Artists,Asst. Manager (Design),02.04.2007,06.08.1967,ST,200279,200279.jpg
+200287,sonawane.nitin,Nitin,,Sonawane,nitin.sonawane@esakal.com,9881136036,(0257) 2273054,Jalgaon, Jalgaon Main ,HR - Personnel & Admin,Manager (Personnel & Admin.),01.04.2007,25.03.1973,HR,200287,200287.jpg
+200288,shirpurkar.chetan,Chetan,,Shirpurkar,chetan.shirpurkar@esakal.com,9881136035,,Jalgaon, Jalgaon City ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),01.04.2007,28.09.1970,ADVT SALES,200288,200288.jpg
+200293,more.rajesh,Rajesh,,More,rajeshmore@esakal.com,9975574551,0231-2669020,Mumbai, Thane ,Editorial,Sr. Reporter,16.04.2007,30.07.1975,Editorial,200293,200293.jpg
+200295,jadhav.ghanashyam,Ghanashyam,,Jadhav,ghanashyam.jadhav@esakal.com,,,Pune, Pune Main ,Circulation - Sales & Marketing,Manager (Circulation Sales),01.04.2007,19.08.1968,Circulation,200295,200295.jpg
+200297,kakade.manoj,Manoj,,Kakade,manoj.kakade@esakal.com,,,Pune, Baramati ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.04.2007,08.04.1979,Circulation,200297,200297.jpg
+200299,tare.sachin,Sachin,,Tare,sachin.tare@esakal.com,9922913288,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Chief Manager (Advt. Sales),01.05.2007,20.08.1968,ADVT SALES,200299,200299.jpg
+200307,pereira.norman,Norman,,Pereira,norman.pereira@sakaaltimes.com,,,Pune, Shivaji Nagar ,Editorial,Asst. News Editor,01.05.2007,13.09.1968,ST,200307,200307.jpg
+200313,mahabale.vinod,Vinod,,Mahabale,vinod.mahabale@esakal.com,8888849153,022-99643522,Mumbai, Navi Mumbai ,Editorial - Artists,Artist,01.05.2007,17.11.1969,Editorial,200313,200313.jpg
+200315,joshi.arun,Arun,,Joshi,arun.joshi@esakal.com,9850028508,,Aurangabad, Aurangabad Main ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),01.05.2007,11.03.1965,ADVT SALES,200315,200315.jpg
+200317,gaikwad.tanaji,Tanaji,,Gaikwad,tanaji.gaikwad@esakal.com,,,Satara, Satara Main ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.04.2007,04.11.1971,Circulation,200317,200317.jpg
+200332,kumbhar.swapnil,Swapnil,,Kumbhar,swapnil.kumbhar@sakaaltimes.com,9881718819,,Pune, Shivaji Nagar ,Editorial - Artists,Manager (Design),01.05.2007,26.07.1984,ST,200332,200332.jpg
+200333,tiwari.vinodkumar,Vinodkumar,,Tiwari,vinodkumar.tiwari@esakal.com,,,Pune, Delhi ,Admin - Office Boy,Office Boy,01.05.2007,30.12.1973,Admin. (Office Boy),200333,200333.jpg
+200336,dhebe.pandurang,Pandurang,,Dhebe,pandurang.dhebe@esakal.com,9922913244,020-24405802,Pune, Pune Main ,Finance and Accounts,Asst. Manager (Accounts),01.05.2007,01.06.1981,Finance,200336,200336.jpg
+200339,jadhav.kailas,Kailas,,Jadhav,kailas.jadhav@esakal.com,,,Pune, Shivaji Nagar ,Editorial - Artists,Asst. Manager (Design),01.06.2007,07.12.1973,ST,200339,200339.jpg
+200347,kadam.sanjay,Sanjay,,Kadam,sanjay.kadam@esakal.com,,,Satara, Satara Main ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),01.05.2007,08.04.1968,ADVT SALES,200347,200347.jpg
+200348,sankpal.amol,Amol,,Sankpal,amol.sankpal@esakal.com,,,Pune, Pune Main ,Advt - Scheduling & Support,Sr. Executive (Advt. Scheduling & Support),01.05.2007,22.07.1981,ADVT SCHEDULING,200348,200348.jpg
+200349,sonar.pradeep,Pradeep,,Sonar,pradeep.sonar@esakal.com,9881129239,0230-2468383,Kolhapur, Kolhapur Main ,Commercial Printing,Chief Manager (CPD Division),01.05.2007,24.08.1975,Commercial Print,200349,200349.jpg
+200358,deshmukh.mahendra,Mahendra,,Deshmukh,mahendra.deshmukh@esakal.com,8888744777/9167022104,022-27411106/07,Mumbai, Navi Mumbai ,Production - Electrical,Manager (Electrical),01.06.2007,03.12.1979,IT,200358,200358.jpg
+200359,chafe.rupesh,Rupesh,,Chafe,rupesh.chafe@esakal.com,9702901919,022-27411106/07,Mumbai, Navi Mumbai ,Production - Electrical,Asst. Manager (Electrical),01.06.2007,31.12.1980,IT,200359,200359.jpg
+200362,joshi.omkar,Omkar,,Joshi,omkar.joshi@esakal.com,9881098290,,Pune, Shivaji Nagar ,Editorial,Sr. Sub Editor,01.06.2007,28.03.1976,ST,200362,200362.jpg
+200364,dhaybar.santosh,Santosh,,Dhaybar,santosh.dhaybar@esakal.com,9881242616,,Pune, Pune Main ,Editorial,Sub Editor,01.06.2007,02.04.1978,Editorial,200364,200364.jpg
+200365,bhalerao.kalyan,Kalyan,,Bhalerao,kalyan.bhalerao@esakal.com,9922913578,,Pune, Pune Main ,Editorial,Jr. Executive (Editorial),01.06.2007,15.07.1978,Editorial,200365,200365.jpg
+200367,patil.shailendra,Shailendra,,Patil,shailendra.patil@esakal.com,9881133085,,Satara, Satara Main ,Editorial,Reporter,01.06.2007,01.03.1975,Editorial,200367,200367.jpg
+200368,salunkhe.sanjay,Sanjay,,Salunkhe,sanjay.salunkhe@esakal.com,9881133088,,Satara, Satara Main ,Editorial,Reporter,01.06.2007,04.03.1970,Editorial,200368,200368.jpg
+200369,deshpande.suhas,Suhas,,Deshpande,suhas.deshpande@esakal.com,9850784184,,Pune, Ahmednagar ,Editorial,Sr. Reporter,01.06.2007,07.11.1966,Editorial,200369,200369.jpg
+200375,temghare.shankar,Shankar,,Temghare,shankar.temghare@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor,01.06.2007,28.03.1977,Editorial,200375,200375.jpg
+200384,memane.vinay,Vinay,,Memane,vinay.memane@esakal.com,9922419241,020-24405809,Pune, Pune Main ,Finance and Accounts,Manager (Accounts),01.06.2007,26.10.1980,Finance,200384,200384.jpg
+200389,jadhav.amit,Amit,,Jadhav,amit.jadhav@esakal.com,9922913342,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),02.07.2007,31.07.1980,ADVT SALES,200389,200389.jpg
+200390,bhusari.sandeep,Sandeep,,Bhusari,sandeep.bhusari@esakal.com,,,Nagpur, Chandrapur ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),02.07.2007,07.12.1970,ADVT SALES,200390,200390.jpg
+200396,suryawanshi.sanjay,Sanjay,,Suryawanshi,sanjay.suryawanshi@esakal.com,,,Kolhapur, Belgaum ,Editorial,Sub Editor,01.07.2007,01.06.1977,Editorial,200396,200396.jpg
+200402,avachat.satish,Satish,,Avachat,satish.avachat@esakal.com,,,Pune, Pune Main ,Editorial - Artists,Asst. Manager (Design),16.07.2007,18.03.1958,Brand Promotion,200402,200402.jpg
+200405,miskin.sanjay,Sanjay,,Miskin,sanjay.miskin@esakal.com,9870108447,022-66843764,Mumbai, Mumbai (Parel) ,Editorial,Principal Correspondent,16.07.2007,24.04.1979,Editorial,200405,200405.jpg
+200408,divekar.sagar,Sagar,,Divekar,sagar.divekar@esakal.com,,,Pune, Pune Main ,IT - Software,Manager (Software),01.07.2007,26.09.1983,IT,200408,200408.jpg
+200409,jadhav.rajendra,Rajendra,,Jadhav,rajendrajadhav@esakal.com,9881129289,0231-2669020,Kolhapur, Sangli ,Tanishka Forum,Asst. Manager (TSPA),01.07.2007,15.08.1964,Tanishka Forum,200409,200409.jpg
+200412,kadam.deepali,Deepali,,Kadam,deepali.kadam@esakal.com,9870900393,022-66843767,Mumbai, Mumbai (Parel) ,Editorial,Sr. Reporter,01.07.2007,03.05.1978,Editorial,200412,200412.jpg
+200417,kamble.sharada,Sharada,,Kamble,sharada.kamble@esakal.com,,,Mumbai, Mumbai (Parel) ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),01.07.2007,12.12.1980,ADVT SALES,200417,200417.jpg
+200444,shelke.umesh,Umesh,,Shelke,umesh.shelke@esakal.com,,,Pune, Pune Main ,Editorial,Principal Correspondent,01.08.2007,27.12.1970,Editorial,200444,200444.jpg
+200445,kulkarni.avadhut,Avadhut,,Kulkarni,avadhut.kulkarni@esakal.com,,,Pune, Pune Main ,Editorial,Reporter,01.08.2007,06.10.1974,Editorial,200445,200445.jpg
+200456,diwate.nandkumar,Nandkumar,,Diwate,nandkumar.diwate@esakal.com,,,Kolhapur, Kolhapur Main ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),01.08.2007,10.11.1965,ADVT SALES,200456,200456.jpg
+200462,gaikwad.prashant,Prashant,,Gaikwad,prashant.gaikwad@esakal.com,8888871373,,Pune, Pimpri ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),16.08.2007,14.06.1977,ADVT SALES,200462,200462.jpg
+200467,varghese.cibi,Cibi,,Varghese,cibi.varghese@esakal.com,,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Sr. Manager (Advt. Sales),16.08.2007,02.12.1976,ADVT SALES,200467,200467.jpg
+200495,shaligram.santosh,Santosh,,Shaligram,santosh.shaligram@esakal.com,,,Pune, Pune Main ,Editorial,Principal Correspondent,01.09.2007,11.01.1976,Editorial,200495,200495.jpg
+200496,chavan.mahesh,Mahesh,,Chavan,mahesh.chavan@esakal.com,9822033811,,Pune, Shivaji Nagar ,Circulation - Sales & Marketing,Manager (Circulation Sales),01.09.2007,10.03.1965,ST,200496,200496.jpg
+200497,jamadar.nazim,Nazim,,Jamadar,nazim.jamadar@esakal.com,,,Mumbai, Fountain ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.09.2007,07.10.1977,ADVT SALES,200497,200497.jpg
+200506,dhopeshwarkar.nilesh,Nilesh,,Dhopeshwarkar,nilesh.dhopeshwarkar@esakal.com,9821164970,022-66843531,Mumbai, Navi Mumbai ,Editorial,Sr. Sub Editor,01.09.2007,17.07.1972,Editorial,200506,200506.jpg
+200511,jagtap.mahesh,Mahesh,,Jagtap,mahesh.jagtap@esakal.com,,,Pune, Pune Main ,IT - Electronics & Hardware,Manager (Hardware),01.09.2007,05.09.1983,IT,200511,200511.jpg
+200518,chavan.anil,Anil,,Chavan,anil.chavan@esakal.com,9881129233,0231-2669020,Kolhapur, Kolhapur Main ,Production - Pagination,Artist,01.09.2007,18.09.1973,IT,200518,200518.jpg
+200519,khairnar.vikas,Vikas,,Khairnar,vikas.khairnar@esakal.com,,,Pune, Pune Main ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),17.09.2007,04.12.1982,Agrowon,200519,200519.jpg
+200522,birajdar.shreyas,Shreyas,,Birajdar,shreyas.birajdar@esakal.com,9850577505,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),17.09.2007,22.10.1981,ADVT SALES,200522,200522.jpg
+200523,mahalle.sachin,Sachin,,Mahalle,sachin.mahalle@esakal.com,9922913510,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),17.09.2007,23.12.1979,ADVT SALES,200523,200523.jpg
+200526,ayare.shailesh,Shailesh,,Ayare,shailesh.ayare@esakal.com,,,Mumbai, Thane ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),17.09.2007,30.03.1976,ADVT SALES,200526,200526.jpg
+200530,kamble.umesh,Umesh,,Kamble,umesh.kamble@esakal.com,,,Kolhapur, Kolhapur MIDC ,Production - Printing,Sr. Executive (Production),01.09.2007,01.06.1975,Production,200530,200530.jpg
+200531,suryavanshi.mahesh,Mahesh,,Suryavanshi,mahesh.suryavanshi@esakal.com,,,Kolhapur, Kolhapur Main ,IT - Electronics & Hardware,Manager (Electrical),01.09.2007,22.06.1973,IT,200531,200531.jpg
+200545,desai.shivprasad,Shivprasad,,Desai,shivprasad.desai@esakal.com,,,Kolhapur, Savantwadi ,Editorial,Sr. Sub Editor,01.09.2007,07.07.1977,Editorial,200545,200545.jpg
+200549,bhavsar.kamlesh,Kamlesh,,Bhavsar,kamlesh.bhavsar@esakal.com,,,Mumbai, Navi Mumbai ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.10.2007,14.03.1981,ADVT SALES,200549,200549.jpg
+200551,patil.prakash,Prakash,,Patil,prakash.patil@esakal.com,8149700446,0231-2669020,Pune, Pune Main ,Editorial,Sub Editor,01.10.2007,25.04.1965,Editorial,200551,200551.jpg
+200552,dakare.mahesh,Mahesh,,Dakare,mahesh.dakare@esakal.com,9881099112,0231-2669020,Pune, Dive Ghat ,Production,Sr. Executive (Production),01.10.2007,30.07.1984,Production,200552,200552.jpg
+200559,nyayadhish.prasad,Prasad,,Nyayadhish,prasad.nyayadhish@esakal.com,,,Pune, Shivaji Nagar ,Editorial - Artists,Sr. Design Manager,15.10.2007,16.01.1968,ST,200559,200559.jpg
+200561,hiwale.jitendra,Jitendra,,Hiwale,jitendra.hiwale@esakal.com,,,Aurangabad, Aurangabad Main ,Production,Asst. Manager (Production),01.10.2007,13.12.1974,Production,200561,200561.jpg
+200562,kale.krishna,Krishna,,Kale,krishna.kale@esakal.com,,,Aurangabad, Aurangabad Main ,Production,Asst. Manager (Production),01.10.2007,25.11.1980,Production,200562,200562.jpg
+200563,kale.pramod,Pramod,,Kale,pramod.kale@esakal.com,,,Aurangabad, Aurangabad Main ,Production,Jr. Executive (Production),01.10.2007,12.04.1980,Production,200563,200563.jpg
+200564,kale.pravin,Pravin,,Kale,pravin.kale@esakal.com,,,Aurangabad, Jalna ,Production - Printing,Asst. Manager (Pre Press),01.10.2007,27.04.1980,Production,200564,200564.jpg
+200567,kale.umesh,Umesh,,Kale,umesh.kale@esakal.com,,,Aurangabad, Aurangabad Main ,Editorial,Chief Sub Editor,01.10.2007,05.03.1967,Editorial,200567,200567.jpg
+200569,waghmare.bhimashankar,Bhimashankar,,Waghmare,bhimashankar.waghmare@esakal.com,9881300486,0231-2669020,Kolhapur, Kolhapur Main ,Editorial,Reporter,01.10.2007,15.05.1986,Editorial,200569,200569.jpg
+200571,gawada.gopal,Gopal,,Gawada,gopal.gawada@esakal.com,,,Kolhapur, Belgaum ,Editorial,Associate Editor,01.10.2007,20.05.1978,Editorial,200571,200571.jpg
+200572,tugaonkar.hari,Hari,,Tugaonkar,hari.tugaonkar@esakal.com,,,Aurangabad, Latur ,Editorial,Reporter,01.10.2007,22.07.1973,Editorial,200572,200572.jpg
+200582,chougale.achyut,Achyut,,Chougale,achyut.chougale@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Sr. Executive (Maintenance),01.11.2007,03.09.1982,Production,200582,200582.jpg
+200583,dongale.sachin,Sachin,,Dongale,sachin.dongale@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Sr. Executive (Production),01.11.2007,12.02.1977,Production,200583,200583.jpg
+200599,pawar.shirish,Shirish,,Pawar,shirish.pawar@esakal.com,8888849227,022-66843519,Mumbai, Navi Mumbai ,Editorial,Sr. Sub Editor,15.11.2007,16.03.1971,Editorial,200599,200599.jpg
+200600,sawarkar.vaibhav,Vaibhav,,Sawarkar,vaibhav.sawarkar@esakal.com,,,Mumbai, Mumbai (Parel) ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),15.11.2007,16.06.1975,ADVT SALES,200600,200600.jpg
+200603,patil.vijaykumar,Vijaykumar,,Patil,vijaykumar.patil@esakal.com,,,Pune, Dive Ghat ,Production,Sr. Executive (Maintenance),15.11.2007,27.02.1980,Production,200603,200603.jpg
+200612,nanivadekar.mrunalini,Mrunalini,,Nanivadekar,mrunalini.nanivadekar@esakal.com,9821503041,022-66843765,Mumbai, Fort ,Editorial,Associate Editor,15.11.2007,09.01.1972,Editorial,200612,200612.jpg
+200620,shete.manoj,Manoj,,Shete,manoj.shete@esakal.com,9922419197,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.12.2007,30.12.1982,ADVT SALES,200620,200620.jpg
+200632,topale.gajanan,Gajanan,,Topale,gajanan.topale@esakal.com,,,Nashik, Nashik Main ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.12.2007,05.07.1977,Circulation,200632,200632.jpg
+200637,tonape.dattatray,Dattatray,,Tonape,dattatray.tonape@esakal.com,,,Kolhapur, Ichalkaranji ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.12.2007,12.10.1974,ADVT SALES,200637,200637.jpg
+200642,chopade.deepak,Deepak,,Chopade,deepak.chopade@esakal.com,99300004610,022-27411106/07,Mumbai, Taloja ,Production,Sr. Executive (Production),01.01.2008,16.11.1978,Production,200642,200642.jpg
+200646,karamalkar.rajkumar,Rajkumar,,Karamalkar,rajkumar.karamalkar@esakal.com,,,Pune, Dive Ghat ,Production,Sr. Executive (Production),01.01.2008,17.05.1984,Production,200646,200646.jpg
+200647,karambale.sandip,Sandip,,Karambale,sandip.karambale@esakal.com,,,Pune, Dive Ghat ,Production,Sr. Executive (Production),01.01.2008,11.03.1982,Production,200647,200647.jpg
+200663,kale.prashant,Prashant,,Kale,prashant.kale@esakal.com,9881250089,,Pune, Pimpri ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),12.01.2008,10.06.1973,Circulation,200663,200663.jpg
+200665,agashe.niranjan,Niranjan,,Agashe,niranjan.agashe@esakal.com,,,Pune, Pune Main ,Editorial,Assistant Editor (Content),07.01.2008,10.05.1964,Editorial,200665,200665.jpg
+200669,mahamunkar.sunita,Sunita,,Mahamunkar,sunita.mahamunkar@esakal.com,9821372602,022-24104564/69/72,Mumbai, Mumbai (Parel) ,Editorial,Reporter,18.01.2008,17.09.1971,Editorial,200669,200669.jpg
+200677,badade.mahendra,Mahendra,,Badade,mahendra.badade@esakal.com,,,Pune, Pune Main ,Editorial,Sr. Reporter,17.01.2008,07.07.1973,Editorial,200677,200677.jpg
+200682,thombare.vaibhav,Vaibhav,,Thombare,vaibhav.thombare@esakal.com,,,Pune, Shivaji Nagar ,Editorial - Photographer,Principal Photographer,01.02.2008,07.12.1981,ST,200682,200682.jpg
+200686,gadgil.ketan,Ketan,,Gadgil,ketan.gadgil@esakal.com,9922040100,,Pune, Shivaji Nagar ,IT - Electronics & Hardware,Asst. Manager (IT Support),01.02.2008,06.02.1980,IT,200686,200686.jpg
+200687,bhogale.arun,Arun,,Bhogale,arun.bhogale@esakal.com,,,Kolhapur, Gadhinglaj ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.02.2008,05.01.1981,Circulation,200687,200687.jpg
+200689,vyas.mandar,Mandar,,Vyas,mandar.vyas@esakal.com,,,Pune, Pune Main ,Production - Electrical,Asst. Manager (Electrical),01.02.2008,23.11.1976,IT,200689,200689.jpg
+200690,chavan.sumit,Sumit,,Chavan,sumit.chavan@esakal.com,,,Pune, Pune Main ,Information Technology,Manager (IT Support),01.02.2008,25.03.1987,IT,200690,200690.jpg
+200691,patankar.shubhangi,Shubhangi,,Patankar,shubhangi.patankar@saamtv.com,9870230687,022-66843729,Pune, Fort (Pune) ,"Advt - Sales, Marketing & Other",Sr. Manager (Sales),01.02.2008,06.11.1980,TV,200691,200691.jpg
+200698,bade.gajendra,Gajendra,,Bade,gajendra.bade@esakal.com,,,Pune, Pune Main ,Editorial,Principal Correspondent,08.02.2008,02.07.1975,Editorial,200698,200698.jpg
+200701,bhute.vaishali,Vaishali,,Bhute,vaishali.bhute@esakal.com,9822553549,,Pune, Pimpri ,Editorial,Reporter Cum Sub Editor (Balmitra & NIE),01.04.2008,25.12.1978,NIE / YB,200701,200701.jpg
+200703,kunte.darshana,Darshana,,Kunte,darshana.kunte@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor,01.04.2008,13.07.1982,Editorial,200703,200703.jpg
+200706,shashwat.gupta.ray.,Shashwat,Gupta,Ray,shashwat_ray@gomantaktimes.com.com,9011074370,,Pune, Goa ,Editorial,Resident Editor (Gomantak Times),18.02.2008,25.03.1976,Editorial,200706,200706.jpg
+200717,patil.nilesh,Nilesh,,Patil,nilesh.patil@esakal.com,9821881590,022-66843534,Mumbai, Navi Mumbai ,Editorial,Sr. Sub Editor,01.03.2008,04.06.1974,Editorial,200717,200717.jpg
+200724,sutar.prafull,Prafull,,Sutar,prafull.sutar@esakal.com,9923336502,0231-2669020,Kolhapur, Kolhapur Main ,Editorial,Sub Editor,15.03.2008,18.06.1977,Editorial,200724,200724.jpg
+200726,patil.kirti,Kirti,,Patil,kirti.patil@esakal.com,9890088583,,Pune, Shivaji Nagar ,Editorial,Assistant Editor (Sports),15.03.2008,06.02.1971,ST,200726,200726.jpg
+200753,kulkarni.satish,Satish,,Kulkarni,satish.kulkarni@esakal.com,8888854450,,Pune, Pune Main ,Editorial,Sub Editor ,24.03.2008,01.06.1977,Agrowon,200753,200753.jpg
+200757,nand.sunil,Sunil,,Nand,sunil.nand@esakal.com,,,Aurangabad, Aurangabad Main ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),01.04.2008,17.04.1975,ADVT SALES,200757,200757.jpg
+200760,dhobekar.purushottam,Purushottam,,Dhobekar,purushottam.dhobekar@esakal.com,,,Aurangabad, Aurangabad Main ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.04.2008,20.09.1971,ADVT SALES,200760,200760.jpg
+200764,pawar.sanjay,Sanjay,,Pawar,sanjay.pawar@esakal.com,9922444228,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Sr. Manager (Advt. Sales),01.04.2008,19.01.1974,ADVT SALES,200764,200764.jpg
+200771,manjrekar.sukesh,Sukesh,,Manjrekar,sukesh.manjrekar@esakal.com,,,Pune, Fort (Pune) ,"Advt - Sales, Marketing & Other",Chief Manager (Advt. Sales),01.04.2008,18.06.1976,ADVT SALES,200771,200771.jpg
+200773,renapurkar.arvind,Arvind,,Renapurkar,arvind.renapurkar@esakal.com,,,Pune, Pune Main ,Editorial,Sr. Sub Editor,02.04.2008,14.06.1975,Editorial,200773,200773.jpg
+200779,tumram.sanjay,Sanjay,,Tumram,sanjay.tumram@saamtv.com,,,Pune, Pune - Chandrap ,Editorial,Reporter (T.V.Division),01.04.2008,04.01.1973,TV,200779,200779.jpg
+200781,daf.sanjay,Sanjay,,Daf,sanjay.daf@esakal.com,9850209734,"99881099413,2564116,2428052,86",Pune, Pune - Nagpur ,Editorial,Reporter (T.V.Division),01.04.2008,29.03.1981,TV,200781,200781.jpg
+200784,kalse.devendra,Devendra,,Kalse,devendra.kalse@esakal.com,,,Pune, Pune Main ,Brand Promotion,Sr. Executive (Design),01.04.2008,03.10.1982,Brand Promotion,200784,200784.jpg
+200790,muke.pravin,Pravin,,Muke,pravin.muke@esakal.com,,,Aurangabad, Aurangabad Main ,Editorial,Chief Sub Editor,01.04.2008,07.09.1979,Editorial,200790,200790.jpg
+200792,gaikwad.arun,Arun,,Gaikwad,arun.gaikwad@esakal.com,9881098443,,Pune, Pimpri ,Editorial - Photographer,Photographer,01.04.2008,22.07.1974,Editorial,200792,200792.jpg
+200793,kandolkar.reema,Reema,,Kandolkar,reema.kandolkar@esakal.com,,,Goa, Panaji ,Finance and Accounts,Sr. Executive (Accounts),01.04.2008,04.02.1982,Finance,200793,200793.jpg
+200795,shelke.anand,Anand,,Shelke,anand.shelke@esakal.com,9822133004,0231-2669020,Kolhapur, Kolhapur Main ,"Advt - Sales, Marketing & Other",Chief Manager (Advt. Sales),10.04.2008,02.06.1969,ADVT SALES,200795,200795.jpg
+200800,sequira.evelyn,Evelyn,,Sequira,evelyn.sequira@esakal.com,,,Goa, Panaji ,Editorial,Assistant Editor (Features),01.04.2008,05.04.1970,Editorial,200800,200800.jpg
+200806,komarpant.soiru,Soiru,,Komarpant,soiru.komarpant@esakal.com,,,Goa, Margaon ,Editorial - Photographer,Photographer,01.04.2008,02.05.1967,Editorial,200806,200806.jpg
+200807,naik.atish,Atish,,Naik,atish_naik@gomantaktimes.com.com,,,Goa, Panaji ,Editorial - Photographer,Principal Photographer,01.04.2008,25.06.1981,Editorial,200807,200807.jpg
+200810,sukhadkar.vithal,Vithal,,Sukhadkar,vithal.sukhadkar@esakal.com,,,Goa, Panaji ,Editorial,Reporter,01.04.2008,30.08.1963,Editorial,200810,200810.jpg
+200812,mulik.digambar,Digambar,,Mulik,digambar.mulik@esakal.com,,,Pune, Dive Ghat ,Production - Parcel,Asst. Manager (Parcel),01.04.2008,14.06.1978,Circulation,200812,200812.jpg
+200814,jyoti.amar,Amar,,Jyoti,amar.jyoti@esakal.com,,,Goa, Corlim ,Production,Manager (Production),01.04.2008,01.01.1978,Production,200814,200814.jpg
+200818,waghadare.rajendra,Rajendra,,Waghadare,rajendra.waghadare@esakal.com,,,Goa, Panaji ,Advt - Scheduling & Support,Sr. Executive (Advt. Scheduling & Support),01.04.2008,26.04.1964,ADVT SCHEDULING,200818,200818.jpg
+200822,bagale.avit,Avit,,Bagale,avit.bagale@esakal.com,,,Goa, Panaji ,Editorial,Sr. Reporter,01.04.2008,25.03.1973,Editorial,200822,200822.jpg
+200828,ramgir.ashutosh,Ashutosh,,Ramgir,ashutosh.ramgir@esakal.com,9850936383,,Pune, Shivaji Nagar ,Books & Publication,Dy. General Manager (Magazine Division),01.04.2008,30.01.1978,Books & Pub,200828,200828.jpg
+200829,deshpande.uday,Uday,,Deshpande,uday.deshpande@esakal.com,98550121007,0233-2323131,Kolhapur, Sangli ,"Advt - Sales, Marketing & Other",Sr. Manager (Advt. Sales),15.04.2008,01.03.1967,ADVT SALES,200829,200829.jpg
+200835,fadte.hema,Hema,,Fadte,hema.fadte@esakal.com,,,Goa, Panaji ,Editorial,Assistant to Editor,01.04.2008,18.09.1968,Editorial,200835,200835.jpg
+200841,surlikar.siddesh,Siddesh,,Surlikar,siddesh_surlikar@dainikgomantak.com,,,Goa, Corlim ,Production - Printing,Sr. Executive (Production),01.04.2008,26.12.1978,Production,200841,200841.jpg
+200844,hiswankar.arun,Arun,,Hiswankar,arun.hiswankar@esakal.com,,,Aurangabad, Parbhani ,Production - Pagination,Sr. Executive (Pre Press),01.04.2008,06.07.1978,IT,200844,200844.jpg
+200845,palimkar.ravindra,Ravindra,,Palimkar,ravindra.palimkar@esakal.com,,,Aurangabad, Beed ,Production - Pagination,Jr. Executive (Pre Press),01.04.2008,26.02.1976,IT,200845,200845.jpg
+200846,deshmukh.santosh,Santosh,,Deshmukh,santosh.deshmukh@esakal.com,,,Aurangabad, Aurangabad Main ,IT - DTP,Sr. Executive (Pre Press),01.04.2008,22.09.1971,IT,200846,200846.jpg
+200847,bhandarge.netaji,Netaji,,Bhandarge,netaji.bhandarge@esakal.com,,,Aurangabad, Latur ,IT - DTP,Sr. Executive (Pre Press),01.04.2008,01.03.1977,IT,200847,200847.jpg
+200848,kulkarni.amol,Amol,,Kulkarni,amol.kulkarni@esakal.com,,,Aurangabad, Osmanabad ,IT - DTP,Sr. Executive (Pre Press),01.04.2008,01.01.1977,IT,200848,200848.jpg
+200849,jamkar.bhaskar,Bhaskar,,Jamkar,bhaskar.jamkar@esakal.com,,,Aurangabad, Nanded ,IT - DTP,Jr. Executive (Pre Press),01.04.2008,05.06.1969,IT,200849,200849.jpg
+200850,joshi.milind,Milind,,Joshi,milind.joshi@esakal.com,,,Aurangabad, Jalna ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.04.2008,23.02.1976,Circulation,200850,200850.jpg
+200851,choudhri.pramod,Pramod,,Choudhri,pramod.choudhri@esakal.com,,,Aurangabad, Aurangabad Main ,Editorial,Reporter,01.04.2008,06.05.1971,Editorial,200851,200851.jpg
+200852,vaidya.ganesh,Ganesh,,Vaidya,ganesh.vaidya@esakal.com,,,Aurangabad, Aurangabad Main ,IT - DTP,Jr. Executive (Pre Press),01.04.2008,01.09.1973,IT,200852,200852.jpg
+200853,kulkarni.ganesh,Ganesh,,Kulkarni,ganesh.kulkarni@esakal.com,,,Aurangabad, Aurangabad Main ,IT - DTP,Jr. Executive (Pre Press),01.04.2008,26.03.1964,IT,200853,200853.jpg
+200854,parati.sanjay,Sanjay,,Parati,sanjay.parati@esakal.com,,,Aurangabad, Aurangabad Main ,IT - DTP,Jr. Executive (Pre Press),01.04.2008,10.10.1974,IT,200854,200854.jpg
+200855,pawar.pravin,Pravin,,Pawar,pravin.pawar@esakal.com,,,Nashik, Nashik Main ,Production - Process,Associate,01.04.2008,04.06.1980,Production,200855,200855.jpg
+200856,gaikwad.bansi,Bansi,,Gaikwad,bansi.gaikwad@esakal.com,,,Aurangabad, Nanded ,Production - Printing,Sr. Executive (Production),01.04.2008,05.02.1973,Production,200856,200856.jpg
+200857,nawal.shantaram,Shantaram,,Nawal,shantaram.nawal@esakal.com,,,Aurangabad, Jalna ,Production - Process,Jr. Executive (Pre Press),01.04.2008,20.10.1974,Production,200857,200857.jpg
+200860,shaikh.akbar,Akbar,,Shaikh,akbar.shaikh@esakal.com,,,Aurangabad, Aurangabad Main ,IT - DTP,Jr. Executive (Pre Press),01.04.2008,25.05.1973,IT,200860,200860.jpg
+200861,wayal.dattasaheb,Dattasaheb,,Wayal,dattasaheb.wayal@esakal.com,,,Aurangabad, Aurangabad Main ,IT - DTP,Sr. Executive (Pre Press),01.04.2008,01.01.1973,IT,200861,200861.jpg
+200863,kulkarni.pramod,Pramod,,Kulkarni,pramod.kulkarni@esakal.com,,,Aurangabad, Latur ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.04.2008,05.10.1975,Circulation,200863,200863.jpg
+200864,danekar.ashok,Ashok,,Danekar,ashok.danekar@esakal.com,,,Aurangabad, Aurangabad Main ,IT - DTP,Jr. Executive (Pre Press),01.04.2008,03.05.1973,IT,200864,200864.jpg
+200866,kulakjaikar.abhay,Abhay,,Kulakjaikar,abhay.kulakjaikar@esakal.com,,,Aurangabad, Nanded ,Editorial,Reporter,01.04.2008,10.08.1975,Editorial,200866,200866.jpg
+200870,khaire.nishant,Nishant,,Khaire,nishant.khaire@esakal.com,9881718840,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Sr. Manager (Advt. Sales),01.04.2008,15.03.1976,ADVT SALES,200870,200870.jpg
+200875,jadhav.vijay,Vijay,,Jadhav,vijayjadhav@esakal.com,,,Aurangabad, Aurangabad Main ,IT - DTP,Sr. Executive (Prepress),01.04.2008,17.11.1972,IT,200875,200875.jpg
+200879,kulkarni.ram,Ram,,Kulkarni,ram.kulkarni@esakal.com,,,Aurangabad, Aurangabad Main ,Finance and Accounts,Sr. Executive (Accounts),01.04.2008,13.04.1967,Finance,200879,200879.jpg
+200881,badve.santosh,Santosh,,Badve,santosh.badve@esakal.com,,,Aurangabad, Osmanabad ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.04.2008,01.09.1975,Circulation,200881,200881.jpg
+200885,kulkarni.pravin,Pravin,,Kulkarni,pravinkulkarni@esakal.com,9860525216,0231-2669020,Aurangabad, Parbhani ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.04.2008,06.11.1975,Circulation,200885,200885.jpg
+200894,patki.girish,Girish,,Patki,girish.patki@esakal.com,8805023200,0217-2600896/97,Solapur, Solapur City ,Finance and Accounts,Asst. Manager (Accounts),01.05.2008,19.03.1973,Finance,200894,200894.jpg
+200895,kathawate.santosh,Santosh,,Kathawate,santosh.kathawate@esakal.com,,,Pune, Pune Main ,Information Technology,Sr. Executive (IT),01.05.2008,22.07.1977,IT,200895,200895.jpg
+200907,luley.vishwanath,Vishwanath,,Luley,vishwanath.luley@esakal.com,,,Nagpur, Nagpur City ,Advt - Scheduling & Support,Asst. Manager (Advt. Scheduling & Support),01.04.2008,17.09.1978,ADVT SCHEDULING,200907,200907.jpg
+200909,rao.makrand,Makrand,,Rao,makrand.rao@esakal.com,,,Nagpur, Nagpur City ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.04.2008,30.10.1975,ADVT SALES,200909,200909.jpg
+200910,kalmegh.tejas,Tejas,,Kalmegh,tejas.kalmegh@esakal.com,9850209957,"99881099413,2564116,2428052,58",Nagpur, Nagpur City ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),01.04.2008,23.03.1973,ADVT SALES,200910,200910.jpg
+200915,chhanwal.niranjan,Niranjan,,Chhanwal,niranjan.chhanwal@esakal.com,,,Aurangabad, Aurangabad Main ,Editorial,Chief Reporter,01.05.2008,09.12.1975,Editorial,200915,200915.jpg
+200923,gawade.ramchandra,Ramchandra,,Gawade,ramchandra.gawade@esakal.com,,,Pune, Pune Main ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),15.05.2008,01.06.1978,Circulation,200923,200923.jpg
+200926,sawant.prashant,Prashant,,Sawant,prashant.sawant@esakal.com,,,Pune, Fort (Pune) ,Editorial - Photographer,Chief Photographer,15.05.2008,04.12.1961,ST,200926,200926.jpg
+200929,yeole.yogesh,Yogesh,,Yeole,yogesh.yeole@esakal.com,9371612238,,Jalgaon, Jalgaon Main ,Finance and Accounts,Manager (Accounts),14.05.2008,30.05.1981,Finance,200929,200929.jpg
+200931,pawar.vishwajeet,Vishwajeet,,Pawar,vishwajeet.pawar@esakal.com,,,Pune, Pune Main ,Editorial - Photographer,Photographer,15.05.2008,14.10.1981,Editorial,200931,200931.jpg
+200944,ghag.yogesh,Yogesh,,Ghag,yogesh.ghag@esakal.com,,,Pune, Pune Main ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.05.2008,13.07.1979,Circulation,200944,200944.jpg
+200956,kodde.amol,Amol,,Kodde,amol.kodde@esakal.com,9850209694,"99881099413,2564116,2428052,60",Nagpur, Nagpur City ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),01.05.2008,05.06.1981,ADVT SALES,200956,200956.jpg
+200957,jadhav.mohan,Mohan,,Jadhav,mohan.jadhav@esakal.com,9850209691,"99881099413,2564116,2428052,64",Nagpur, Nagpur City ,Circulation - Sales & Marketing,Manager (Circulation Sales),01.05.2008,03.05.1965,Circulation,200957,200957.jpg
+200959,lokhande.darshana,Darshana,,Lokhande,darshana.lokhande@esakal.com,9011290688,"99881099413,2564116,2428052,59",Nagpur, Nagpur City ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),01.05.2008,15.08.1976,ADVT SALES,200959,200959.jpg
+200961,kshirsagar.rajendra,Rajendra,,Kshirsagar,rajendra.kshirsagar@esakal.com,,,Nagpur, Nagpur City ,Editorial - Artists,Artist,01.05.2008,20.08.1981,Editorial,200961,200961.jpg
+200962,lohe.milind,Milind,,Lohe,milind.lohe@esakal.com,,,Nagpur, Nagpur City ,Production - Pagination,Sr. Executive (Prepress),01.05.2008,21.01.1975,IT,200962,200962.jpg
+200963,kumbhar.suryakant,Suryakant,,Kumbhar,suryakant.kumbhar@esakal.com,,,Nagpur, Nagpur Main ,Production - Printing,Sr. Executive (Production),01.05.2008,29.09.1980,Production,200963,200963.jpg
+200964,pisal.arvind,Arvind,,Pisal,arvind.pisal@esakal.com,,,Nagpur, Nagpur Main ,Production - Printing,Jr. Executive (Production),01.05.2008,01.10.1975,Production,200964,200964.jpg
+200965,dhote.sanjay,Sanjay,,Dhote,sanjay.dhote@esakal.com,,,Nagpur, Nagpur Main ,Production - Process,Sr. Executive (Process),01.05.2008,12.07.1967,Production,200965,200965.jpg
+200966,jadhav.sagar,Sagar,,Jadhav,sagar.jadhav@esakal.com,9850851784,"99881099413,2564116,2428052,91",Nagpur, Nagpur City ,Editorial - Proofreader,Proof Reader,01.05.2008,25.08.1975,Editorial,200966,200966.jpg
+200976,shelke.naresh,Naresh,,Shelke,naresh.shelke@esakal.com,9850209729,"99881099413,2564116,2428052,82",Nagpur, Nagpur City ,Editorial,Chief Sub Editor,01.05.2008,05.07.1969,Editorial,200976,200976.jpg
+200986,chaware.nitin,Nitin,,Chaware,nitin.chaware@esakal.com,9881195661,"99881099413,2564116,2428052,67",Nagpur, Nagpur City ,Circulation - Support,Sr. Executive (Circulation Accounts),01.05.2008,04.06.1968,Finance (Cir. Accounts),200986,200986.jpg
+200987,deshpande.vilas,Vilas,,Deshpande,vilas.deshpande@esakal.com,9881143161,"071042-236396,9881099412",Nagpur, Nagpur Main ,Admin - Locations,Sr. Executive (Office Administration),01.05.2008,14.01.1972,Admin. (Personnel),200987,200987.jpg
+200989,jain.arun,Arun,,Jain,arun.jain@esakal.com,9850209931,9881099203,Nagpur, Buldhana ,Editorial,Sr. Reporter,01.05.2008,12.10.1972,Editorial,200989,200989.jpg
+200997,peshettiwar.shrikant,Shrikant,,Peshettiwar,shrikant.peshettiwar@esakal.com,,,Nagpur, Chandrapur ,Editorial,Sub Editor Cum Reporter,01.05.2008,06.02.1979,Editorial,200997,200997.jpg
+200998,mahajan.chandrashekhar,Chandrashekhar,,Mahajan,chandrashekhar.mahajan@esakal.com,9850209710,"99881099413,2564116,2428052,91",Nagpur, Nagpur City ,Editorial,Sr. Sub Editor,01.05.2008,12.06.1977,Editorial,200998,200998.jpg
+201000,marotkar.rajendra,Rajendra,,Marotkar,rajendra.marotkar@esakal.com,9850209718,"99881099413,2564116,2428052,91",Nagpur, Nagpur City ,Editorial,Sub Editor,01.05.2008,28.05.1963,Editorial,201000,201000.jpg
+201025,vanarase.vaibhav,Vaibhav,,Vanarase,vaibhav.vanarase@esakal.com,,,Pune, Pune Main ,Editorial - Artists,Artist,02.06.2008,29.03.1974,Editorial,201025,201025.jpg
+201031,mahale.mangesh,Mangesh,,Mahale,mangesh.mahale@esakal.com,,,Pune, Pune Main ,Editorial,Reporter,01.06.2008,27.01.1976,Editorial,201031,201031.jpg
+201032,bhujbal.sonal,Sonal,,Bhujbal,sonal.bhujbal@esakal.com,,,Mumbai, Mumbai (Parel) ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),02.06.2008,26.10.1984,ADVT SALES,201032,201032.jpg
+201037,shinde.kailas,Kailas,,Shinde,kailas.shinde@esakal.com,9168133249,,Jalgaon, Jalgaon City ,Editorial,Sr. Reporter,01.06.2008,01.06.1966,Editorial,201037,201037.jpg
+201040,deshmukh.dhananjay,Dhananjay,,Deshmukh,dhananjay.deshmukh@esakal.com,,,Kolhapur, Kolhapur Main ,Commercial Printing,Asst. Manager (Accounts),01.06.2008,16.06.1973,Commercial Print,201040,201040.jpg
+201045,lohar.pitambar,Pitambar,,Lohar,pitambar.lohar@esakal.com,,,Pune, Pune Main ,Editorial,Reporter,16.06.2008,01.06.1975,Editorial,201045,201045.jpg
+201049,londhe.vijaykumar,Vijaykumar,,Londhe,vijaykumar.londhe@esakal.com,,,Pune, Shivaji Nagar ,Editorial - Artists,Asst. Manager (Design),16.06.2008,01.07.1976,ST,201049,201049.jpg
+201050,yadav.anil,Anil,,Yadav,anil.yadav@esakal.com,,,Nagpur, Nagpur City ,Editorial,Asst. News Editor,01.06.2008,02.05.1973,Editorial,201050,201050.jpg
+201071,charpe.rajesh,Rajesh,,Charpe,rajesh.charpe@esakal.com,9922959363,"99881099413,2564116,2428052,75",Nagpur, Nagpur City ,Editorial,Chief Reporter,16.06.2008,15.06.1970,Editorial,201071,201071.jpg
+201072,kohale.onkar,Onkar,,Kohale,onkar.kohale@esakal.com,,,Nagpur, Nagpur Main ,Production,Sr. Executive (Production),01.06.2008,21.03.1981,Production,201072,201072.jpg
+201076,more.nitin,Nitin,,More,nitin.more@esakal.com,9881100055,022-66843755,Mumbai, Navi Mumbai ,Information Technology,Sr. Manager (IT),01.07.2008,21.10.1974,IT,201076,201076.jpg
+201078,bhure.dnyanesh,Dnyanesh,,Bhure,dnyanesh.bhure@esakal.com,,,Pune, Pune Main ,Editorial,Reporter (Sports Desk),01.07.2008,28.02.1971,Editorial,201078,201078.jpg
+201080,gund.vijay,Vijay,,Gund,vijay.gund@esakal.com,,,Pune, Pune Main ,IT - Electronics & Hardware,Asst. Manager (IT Support),01.07.2008,04.10.1985,IT,201080,201080.jpg
+201083,bawanthade.manoj,Manoj,,Bawanthade,manoj.bawanthade@esakal.com,,,Nagpur, Yavatmal ,Editorial,Sr. Reporter,01.07.2008,14.06.1974,Editorial,201083,201083.jpg
+201084,rahangdale.duliram,Duliram,,Rahangdale,duliram.rahangdale@esakal.com,,,Nagpur, Nagpur City ,Editorial,Sub Editor,01.07.2008,20.11.1970,Editorial,201084,201084.jpg
+201085,dharmadhikari.sumit,Sumit,,Dharmadhikari,sumit.dharmadhikari@esakal.com,9011017894,0230-2468383,Kolhapur, Kolhapur Main ,Production - Printing,Manager (Production),01.07.2008,26.09.1984,Production,201085,201085.jpg
+201087,sharma.sudhakar,Sudhakar,,Sharma,sudhakar.sharma@saamtv.com,8689942805,022-66843225,Pune, Pune - Belapur ,Graphics Department (TV),Creative Head - Graphics,01.07.2008,25.09.1975,TV,201087,201087.jpg
+201088,kulkarni.asawari,Asawari,,Kulkarni,asawari.kulkarni@saamtv.com,,,Pune, Pune Main ,Tanishka Forum,Asst. Manager  (Coordination - Tanishka Forum),04.07.2008,07.02.1969,Tanishka Forum,201088,201088.jpg
+201111,vyavhare.rajesh,Rajesh,,Vyavhare,rajesh.vyavhare@esakal.com,,,Nagpur, Nagpur City ,Advt - Billing & Recovery,Asst. Manager (Advt. Billing & Recovery),01.07.2008,12.01.1977,Finance (Advt. Accounts),201111,201111.jpg
+201136,mhasade.vijay,Vijay,,Mhasade,vijay.mhasade@esakal.com,,,Nashik, Nashik Main ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),07.08.2008,03.05.1975,Agrowon,201136,201136.jpg
+201144,keluskar.deepak,Deepak,,Keluskar,deepak.keluskar@saamtv.com,8888849154,022-66843205,Pune, Pune - Belapur ,Production (TV),Sr. Video Editor,20.08.2008,22.05.1987,TV,201144,201144.jpg
+201152,dalvi.rupesh,Rupesh,,Dalvi,rupesh.dalvi@saamtv.com,9969412426,022-66843208,Pune, Pune - Belapur ,Production (TV),Video Editor,01.09.2008,24.11.1982,TV,201152,201152.jpg
+201157,kazi.raj,Raj,,Kazi,raj.kazi@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor,15.09.2008,22.11.1960,Editorial,201157,201157.jpg
+201158,singh.anil.kumar,Anil,Kumar,Singh,anil.singh@saamtv.com,9223503659,022-66843706,Pune, Pune - Belapur ,Finance and Accounts,Manager (Accounts),08.09.2008,07.12.1965,TV,201158,201158.jpg
+201160,hongekar.udaysingh,Udaysingh,,Hongekar,udaysingh.hongekar@esakal.com,,,Kolhapur, Belgaum ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),15.09.2008,17.07.1971,ADVT SALES,201160,201160.jpg
+201162,pandit.akshay,Akshay,,Pandit,akshay.pandit@esakal.com,,,Mumbai, Fountain ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),15.09.2008,18.07.1983,ADVT SALES,201162,201162.jpg
+201163,nalawade.lumakant,Lumakant,,Nalawade,lumakant.nalawade@esakal.com,,,Kolhapur, Kolhapur Main ,Editorial,Reporter,01.09.2008,23.11.1977,Editorial,201163,201163.jpg
+201164,upadhye.sanjay,Sanjay,,Upadhye,sanjayupadhye@esakal.com,9343839496,0231-2669020,Kolhapur, Kolhapur Main ,Editorial,Sub Editor,01.09.2008,03.04.1972,Editorial,201164,201164.jpg
+201165,mohite.vishnu,Vishnu,,Mohite,vishnu.mohite@esakal.com,9881129281,0233-2323131,Kolhapur, Sangli ,Editorial,Reporter,01.09.2008,01.06.1970,Editorial,201165,201165.jpg
+201166,patil.yuvraj,Yuvraj,,Patil,yuvraj.patil@esakal.com,,,Kolhapur, Kolhapur Main ,Editorial,Reporter,01.09.2008,03.02.1977,Editorial,201166,201166.jpg
+201171,karajgar.sandeep,Sandeep,,Karajgar,sandeep.karajgar@esakal.com,,,Kolhapur, Kolhapur MIDC ,Commercial Printing,Asst. Manager (Marketing),01.09.2008,22.12.1962,Commercial Print,201171,201171.jpg
+201175,patil.prashant,Prashant,,Patil,prashant.patil@esakal.com,9922913658,,Pune, Pune Main ,Editorial,Jr. Executive (Web Edition),01.09.2008,29.11.1978,Editorial,201175,201175.jpg
+201183,chavan.dnyanesh,Dnyanesh,,Chavan,dnyanesh.chavan@esakal.com,9870338663,022-66843749/218,Mumbai, Mumbai (Parel) ,Editorial,Dy. Chief Reporter,01.09.2008,27.06.1982,Editorial,201183,201183.jpg
+201184,nawadkar.santosh,Santosh,,Nawadkar,santosh.nawadkar@esakal.com,9664234468,022-66843564,Mumbai, Navi Mumbai ,Circulation - Support,Sr. Executive (MIS),01.09.2008,03.03.1977,Circulation,201184,201184.jpg
+201185,telsang.pravin,Pravin,,Telsang,pravin.telsang@esakal.com,,,Solapur, Solapur City ,Information Technology,Asst. Manager (IT),01.09.2008,24.09.1984,IT,201185,201185.jpg
+201191,sonawane.vishnu,Vishnu,,Sonawane,vishnu.sonawane@esakal.com,9870901228,022-24104564/69/72,Mumbai, Mumbai (Parel) ,Editorial,Reporter,01.10.2008,01.06.1967,Editorial,201191,201191.jpg
+201194,kamble.madhukar,Madhukar,,Kamble,madhukar.kamble@esakal.com,,,Aurangabad, Aurangabad Main ,Editorial,Sr. Reporter,03.10.2008,01.06.1968,Editorial,201194,201194.jpg
+201198,khul.sanjay,Sanjay,,Khul,sanjay.khul@esakal.com,,,Kolhapur, Ichalkaranji ,Editorial,Reporter,01.10.2008,25.05.1971,Editorial,201198,201198.jpg
+201202,naik.pramod,Pramod,,Naik,pramod_naik@dainikgomantak.com,,,Goa, Panaji ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),28.10.2008,14.03.1971,Circulation,201202,201202.jpg
+201203,paradesi.deepak,Deepak,,Paradesi,deepak.paradesi@esakal.com,,,Pune, Pune Main ,Information Technology,Asst. Manager (Software),01.10.2008,22.11.1983,IT,201203,201203.jpg
+201205,sawant.amol,Amol,,Sawant,amol.sawant@esakal.com,9922649223,0231-2669020,Kolhapur, Kolhapur Main ,Editorial,Sub Editor,01.10.2008,01.05.1974,Editorial,201205,201205.jpg
+201206,gulhane.paresh,Paresh,,Gulhane,paresh.gulhane@esakal.com,,,Pune, Pune Main ,Advt - Billing & Recovery,Asst. Manager (Advt. Accounts),01.10.2008,20.05.1980,Finance (Advt. Accounts),201206,201206.jpg
+201208,giri.bhagwan,Bhagwan,,Giri,bhagwan.giri@esakal.com,,,Aurangabad, Nanded ,Production,Sr. Executive (Production),01.10.2008,05.04.1978,Production,201208,201208.jpg
+201212,kulkarni.sachin,Sachin,,Kulkarni,sachin.kulkarni@esakal.com,,,Pune, Pune Main ,IT - Telecommunication,Asst. Manager (Telecommunication),01.11.2008,02.05.1978,IT,201212,201212.jpg
+201213,patil.tushar,Tushar,,Patil,tushar.patil@esakal.com,9922637779,022-66843703,Mumbai, Navi Mumbai ,IT - Electronics & Hardware,Asst. Manager (IT),01.11.2008,15.06.1983,IT,201213,201213.jpg
+201216,gurav.yuvraj,Yuvraj,,Gurav,yuvraj.gurav@esakal.com,,,Kolhapur, Kolhapur Main ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.11.2008,29.04.1975,ADVT SALES,201216,201216.jpg
+201220,mane.shrimant,Shrimant,,Mane,shrimant.mane@esakal.com,9881079644,,Nashik, Nashik Main ,Editorial,Executive Editor (Sakal Nashik Edition),12.11.2008,04.01.1968,Editorial,201220,201220.jpg
+201227,deore.vitthal,Vitthal,,Deore,vitthal.deore@esakal.com,,,Pune, Dive Ghat ,Production,Associate,15.12.2008,01.06.1977,Production,201227,201227.jpg
+201229,gavali.ramesh,Ramesh,,Gavali,ramesh.gavali@esakal.com,9922419081,022-27411106/07,Mumbai, Taloja ,Production,Asst. Manager (Maintenance),01.12.2008,02.12.1979,Production,201229,201229.jpg
+201241,kulkarni.varsha,Varsha,,Kulkarni,varsha.kulkarni@esakal.com,9011087925,020-24405730,Pune, Pune Main ,Tanishka Forum,Associate Editor (Nagar Edition),01.08.2009,16.03.1968,Tanishka Forum,201241,201241.jpg
+201244,nilima.dennis.alex,Nilima,Dennis,Alex,nilima.alex@esakal.com,9011087854,,Pune, Shivaji Nagar ,Admin - Locations,Asst. Manager (Office Administration),11.08.2009,02.02.1973,CORPORATE EVENT SALES,201244,201244.jpg
+201246,vaidya.mohan,Mohan,,Vaidya,mohan.vaidya@esakal.com,9422088578,020-24405731,Pune, Pune Main ,Editorial,Assistant Editor,11.09.2009,05.09.1958,Editorial,201246,201246.jpg
+201247,dhamal.sunil,Sunil,,Dhamal,sunil.dhamal@esakal.com,,,Mumbai, Dombivali ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),05.10.2009,06.09.1966,ADVT SALES,201247,201247.jpg
+201256,waphgaonkar.vishal,Vishal,,Waphgaonkar,vishal.waphgaonkar@esakal.com,,,Pune, Dive Ghat ,Purchase & Materials,Sr. Executive (Materials),01.12.2009,10.06.1984,Materials,201256,201256.jpg
+201257,aher.santosh,Santosh,,Aher,santosh.aher@esakal.com,9881136032,,Jalgaon, Jalgaon Main ,Purchase & Materials,Asst. Manager (Materials),01.12.2009,01.06.1976,Materials,201257,201257.jpg
+201258,manoj.sitaram.achrekar,Manoj,Sitaram,Achrekar,manoj.achrekar@saamtv.com,9664090901,022-66843405,Pune, Pune - Belapur ,Circulation - Sales & Marketing,Manager (Distribution) (TV),01.01.2010,19.05.1972,TV,201258,201258.jpg
+201263,sameer.thakur,Sameer,,Thakur,sameer.thakur@esakal.com,9922940904,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Sr. Manager (Advt. Sales),01.02.2010,22.10.1974,ADVT SALES,201263,201263.jpg
+201264,jayprakash.kumar.kulkarni,Jayprakash,Kumar,Kulkarni,jayprakash.kulkarni@esakal.com,,,Pune, Media Centre ,Corporate Office,Sr. Research Analyst,01.02.2010,16.07.1977,NEW PROJECTS,201264,201264.jpg
+201265,moghe.ashish,Ashish,,Moghe,ashish.moghe@saamtv.com,8108171717,022-26458901,Pune, Pune - Belapur ,"Advt - Sales, Marketing & Other",Marketing Head  (Special Initiatives tv),01.02.2010,01.01.1979,ADVT SALES,201265,201265.jpg
+201268,sumiran.mehta,Sumiran,,Mehta,sumiran.mehta@esakal.com,9011044555,020-24405544,Pune, Pune Main ,Finance and Accounts,General Manager (Finance),01.01.2010,02.07.1983,Finance,201268,201268.jpg
+201271,sunil.madhukar.dahekar,Sunil,Madhukar,Dahekar,sunil.dahekar@esakal.com,9850208176,"99881099413,2564116,2428052,62",Nagpur, Nagpur City ,HR - Employee Relations,Manager (HR & Admin.),05.03.2010,20.01.1976,HR,201271,201271.jpg
+201272,harish.jadhav,Harish,,Jadhav,harish.jadhav@esakal.com,8888849240,0250-2520001,Mumbai, Virar ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),19.03.2010,28.01.1964,ADVT SALES,201272,201272.jpg
+201274,rajesha.makbulsha.makandar,Rajesha,Makbulsha,Makandar,rajesha.makandar@esakal.com,,,Pune, Pune Main ,Editorial - Proofreader,Proof Reader,01.04.2010,01.06.1968,Editorial,201274,201274.jpg
+201277,lambe.shriranjan,Shriranjan,,Lambe,shriranjan.lambe@esakal.com,9881133093,,Satara, Satara Main ,Admin - Locations,Asst. Manager (Office Administration),01.04.2010,17.12.1976,Admin. (Location),201277,201277.jpg
+201278,kulkarni.uday,Uday,,Kulkarni,uday.kulkarni@esakal.com,,,Aurangabad, Jalna ,Purchase & Materials,Asst. Manager (Materials),01.04.2010,21.11.1970,Materials,201278,201278.jpg
+201280,shende.snehalata.,Snehalata,,Shende,snehalata.shende@esakal.com,,,Nagpur, Nagpur Main ,Admin - Telephone Operator,Jr. Executive (Telecommunication),01.04.2010,06.10.1986,Admin. (Tele. Operator),201280,201280.jpg
+201281,shrikhande.harshal,Harshal,,Shrikhande,harshal.shrikhande@esakal.com,,,Nagpur, Amravati ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.04.2010,06.01.1981,Circulation,201281,201281.jpg
+201283,brahmane.pravin,Pravin,,Brahmane,pravin.brahmane@esakal.com,,,Jalgaon, Chalisgaon ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.04.2010,29.07.1979,ADVT SALES,201283,201283.jpg
+201285,pathak.prafull,Prafull,,Pathak,prafull.pathak@esakal.com,,,Jalgaon, Jalgaon City ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.04.2010,01.08.1969,ADVT SALES,201285,201285.jpg
+201287,nilakhe.rohit,Rohit,,Nilakhe,rohit.nilakhe@esakal.com,,,Satara, Satara Main ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),01.04.2010,12.06.1981,ADVT SALES,201287,201287.jpg
+201288,tarwari.munira,Munira,,Tarwari,munira.tarwari@esakal.com,9881154218,,Jalgaon, Jalgaon City ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.04.2010,02.09.1973,ADVT SALES,201288,201288.jpg
+201291,pathan.riyaz,Riyaz,,Pathan,riyaz.pathan@esakal.com,,,Pune, Ahmednagar ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.04.2010,20.09.1975,ADVT SALES,201291,201291.jpg
+201297,rasam.bhaskar,Bhaskar,,Rasam,bhaskar.rasam@esakal.com,,,Kolhapur, Kankawali ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),01.04.2010,08.02.1966,ADVT SALES,201297,201297.jpg
+201303,babre.vikas,Vikas,,Babre,vikas.babre@esakal.com,9922943556,"99881099413,2564116,2428052,64",Nagpur, Nagpur City ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.04.2010,10.11.1978,Circulation,201303,201303.jpg
+201305,rokade.nikhilkumar,Nikhilkumar,,Rokade,nikhilkumar.rokade@esakal.com,,,Nashik, Nashik Main ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.04.2010,13.08.1976,Circulation,201305,201305.jpg
+201307,chapekandi.anil,Anil,,Chapekandi,anil.chapekandi@esakal.com,,,Aurangabad, Aurangabad Main ,Circulation - Support,Asst. Manager (Circulation),01.04.2010,05.07.1977,Finance (Cir. Accounts),201307,201307.jpg
+201308,ukalkar.ashok,Ashok,,Ukalkar,ashok.ukalkar@esakal.com,,,Mumbai, Thane ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.04.2010,20.06.1973,Circulation,201308,201308.jpg
+201311,jagtap.shashikant,Shashikant,,Jagtap,shashikant.jagtap@esakal.com,,,Pune, Pune Main ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),01.04.2010,01.05.1976,Circulation,201311,201311.jpg
+201313,sawant.vinayak,Vinayak,,Sawant,vinayak.sawant@esakal.com,9922430691,0230-2468383,Kolhapur, Kolhapur MIDC ,Commercial Printing,Sr. Executive (Commercial Printing),01.04.2010,04.04.1980,Commercial Print,201313,201313.jpg
+201314,dinde.arun,Arun,,Dinde,arun.dinde@esakal.com,,,Kolhapur, Kolhapur MIDC ,Commercial Printing,Associate (Commercial Printing),01.04.2010,06.05.1962,Commercial Print,201314,201314.jpg
+201315,more.sadashiv,Sadashiv,,More,sadashiv.more@esakal.com,,,Kolhapur, Kolhapur MIDC ,Commercial Printing,Associate,01.04.2010,20.09.1980,Commercial Print,201315,201315.jpg
+201316,patil.maruti,Maruti,,Patil,maruti.patil@esakal.com,9975506534,0230-2468383,Kolhapur, Kolhapur MIDC ,Commercial Printing,Asst. Manager (Production),01.04.2010,01.06.1974,Commercial Print,201316,201316.jpg
+201319,joshi.jagdish,Jagdish,,Joshi,jagdish.joshi@esakal.com,9881129229,0231-2669020,Kolhapur, Kolhapur Main ,Editorial - Admin.,Sr. Executive (Editorial Admin.),01.04.2010,13.12.1971,Editorial,201319,201319.jpg
+201320,thombare.dattatray,Dattatray,,Thombare,dattatray.thombare@esakal.com,,,Nashik, Nashik Main ,Editorial - Admin.,Sr. Executive (Office Administration),01.04.2010,05.05.1977,Editorial,201320,201320.jpg
+201321,jadhav.pravin,Pravin,,Jadhav,pravin.jadhav@esakal.com,,,Satara, Satara Main ,Editorial,Sr. Correspondent,01.04.2010,21.12.1979,Editorial,201321,201321.jpg
+201322,gandmale.sambhaji,Sambhaji,,Gandmale,sambhaji.gandmale@esakal.com,9922416052,0231-2669020,Kolhapur, Kolhapur Main ,Editorial,Reporter,01.04.2010,13.04.1980,Editorial,201322,201322.jpg
+201324,dhopavkar.ajay,Ajay,,Dhopavkar,ajay.dhopavkar@esakal.com,,,Pune, Ahmednagar ,Editorial,Reporter,01.04.2010,20.06.1972,Editorial,201324,201324.jpg
+201325,sonawane.vijaykumar,Vijaykumar,,Sonawane,vijaykumar.sonawane@esakal.com,,,Solapur, Solapur City ,Editorial,Reporter,01.04.2010,01.06.1974,Editorial,201325,201325.jpg
+201326,bambare.umesh,Umesh,,Bambare,umesh.bambare@esakal.com,,,Satara, Satara Main ,Editorial,Reporter,01.04.2010,25.07.1973,Editorial,201326,201326.jpg
+201328,shelake.rajesh,Rajesh,,Shelake,rajesh.shelake@esakal.com,,,Kolhapur, Ratnagiri ,Editorial,Sr. Reporter,01.04.2010,13.04.1978,Editorial,201328,201328.jpg
+201330,ghorpade.amarsinh,Amarsinh,,Ghorpade,amarsinh.ghorpade@esakal.com,9552571499,0231-2669020,Kolhapur, Kolhapur Main ,Editorial,Sub Editor,01.04.2010,16.02.1973,Editorial,201330,201330.jpg
+201333,kamble.amar,Amar,,Kamble,amar.kamble@esakal.com,,,Pune, Pune Main ,Production - Pagination,Artist,01.04.2010,31.10.1976,IT,201333,201333.jpg
+201334,kulkarni.saurabh,Saurabh,,Kulkarni,saurabh.kulkarni@esakal.com,,,Pune, Pune Main ,Production - Pagination,Sr. Executive (Prepress),01.04.2010,26.01.1985,IT,201334,201334.jpg
+201337,solankar.vinita,Vinita,,Solankar,vinita.solankar@esakal.com,8378968788,020-24405803,Pune, Pune Main ,Finance and Accounts,Sr. Executive (Accounts),01.04.2010,09.10.1982,Finance,201337,201337.jpg
+201338,memane.renu,Renu,,Memane,renu.memane@esakal.com,,,Pune, Pune Main ,Finance and Accounts,Sr. Executive (Accounts),01.04.2010,04.06.1982,Finance,201338,201338.jpg
+201340,patil.yogesh,Yogesh,,Patil,yogesh.patil@esakal.com,9881063231,,Aurangabad, Aurangabad Main ,Information Technology,Manager (IT),01.04.2010,22.06.1978,IT,201340,201340.jpg
+201342,dhamande.pramod,Pramod,,Dhamande,pramod.dhamande@esakal.com,,,Nagpur, Nagpur Main ,Production,Sr. Executive (Production),01.04.2010,17.10.1975,Production,201342,201342.jpg
+201348,sangle.sameer,Sameer,,Sangle,sameer.sangle@esakal.com,,,Jalgaon, Jalgaon Main ,Production - Pagination,Sr. Executive (Pagination),01.04.2010,05.06.1980,IT,201348,201348.jpg
+201349,shinde.charudatta,Charudatta,,Shinde,charudatta.shinde@esakal.com,9881133075,,Satara, Satara Main ,Advt - Scheduling & Support,Sr. Executive (Pagination),01.04.2010,12.07.1976,ADVT SCHEDULING,201349,201349.jpg
+201351,gondhali.vidyadhar,Vidyadhar,,Gondhali,vidyadhar.gondhali@esakal.com,,,Kolhapur, Kolhapur Main ,Production - Pagination,Sr. Executive (Prepress),01.04.2010,01.01.1978,IT,201351,201351.jpg
+201352,rajguru.vilas,Vilas,,Rajguru,vilas.rajguru@esakal.com,,,Pune, Ahmednagar ,Production - Pagination,Jr. Executive (Pagination),01.04.2010,04.09.1970,IT,201352,201352.jpg
+201356,patil.santaji,Santaji,,Patil,santaji.patil@esakal.com,9922914960,0230-2468383,Kolhapur, Kolhapur MIDC ,Production - Printing,Sr. Executive (Production),01.04.2010,31.07.1988,Production,201356,201356.jpg
+201357,malage.jeevan,Jeevan,,Malage,jeevan.malage@esakal.com,,,Kolhapur, Kolhapur MIDC ,Production - Printing,Jr. Executive (Production),01.04.2010,12.01.1978,Production,201357,201357.jpg
+201359,dhere.pratap,Pratap,,Dhere,pratap.dhere@esakal.com,,,Kolhapur, Kolhapur MIDC ,Production - Printing,Jr. Executive (Production),01.04.2010,01.06.1979,Production,201359,201359.jpg
+201360,shendage.jagannath,Jagannath,,Shendage,jagannath.shendage@esakal.com,,,Kolhapur, Kolhapur MIDC ,Production - Printing,Sr. Executive (Production),01.04.2010,15.06.1986,Production,201360,201360.jpg
+201361,pawar.ashok,Ashok,,Pawar,ashokpawar@esakal.com,,,Aurangabad, Jalna ,Production - Printing,Associate,01.04.2010,01.05.1976,Production,201361,201361.jpg
+201362,chavan.sachin,Sachin,,Chavan,sachin.chavan@esakal.com,,,Kolhapur, Kolhapur MIDC ,Production - Printing,Sr. Executive (Production),01.04.2010,27.07.1982,Production,201362,201362.jpg
+201363,patil.ananda,Ananda,,Patil,ananda.patil@esakal.com,,,Kolhapur, Kolhapur MIDC ,Production - Printing,Associate,01.04.2010,01.06.1969,Production,201363,201363.jpg
+201364,tawale.sachin,Sachin,,Tawale,sachin.tawale@esakal.com,8888866436,,Pune, Ahmednagar ,Finance and Accounts,Jr. Executive (Accounts),01.04.2010,06.06.1976,Finance,201364,201364.jpg
+201365,chougule.vijay,Vijay,,Chougule,vijay.chougule@esakal.com,888210210,0230-2468383,Kolhapur, Kolhapur MIDC ,Production - Process,Sr. Executive (Pre Press),01.04.2010,02.09.1981,Production,201365,201365.jpg
+201367,masal.dnyanadev,Dnyanadev,,Masal,dnyanadev.masal@esakal.com,,,Kolhapur, Sangli ,"Advt - Sales, Marketing & Other",Manager (Agrowon Advt. Sales),01.04.2010,06.11.1981,Agrowon,201367,201367.jpg
+201368,sutar.sanjaykumar,Sanjaykumar,,Sutar,sanjaykumar.sutar@esakal.com,,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Sr. Executive (MIS),01.04.2010,14.02.1979,ADVT SALES,201368,201368.jpg
+201370,memane.nilesh,Nilesh,,Memane,nilesh.memane@esakal.com,9922913484,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Manager (CRM),01.04.2010,01.02.1981,ADVT SALES,201370,201370.jpg
+201373,shewalkar.mangesh,Mangesh,,Shewalkar,mangesh.shewalkar@esakal.com,,,Aurangabad, Hingoli ,Editorial,Reporter,01.04.2010,19.12.1974,Editorial,201373,201373.jpg
+201374,rannavare.durgadas,Durgadas,,Rannavare,durgadas.rannavare@esakal.com,,,Aurangabad, Aurangabad Main ,Editorial,Sr. Reporter,01.04.2010,25.06.1977,Editorial,201374,201374.jpg
+201375,balkhande.bhaskar,Bhaskar,,Balkhande,bhaskar.balkhande@esakal.com,,,Aurangabad, Jalna ,Editorial,Reporter,01.04.2010,01.12.1967,Editorial,201375,201375.jpg
+201378,yadav.shivaji,Shivaji,,Yadav,shivaji.yadav@esakal.com,9922413789,0231-2669020,Kolhapur, Kolhapur Main ,Editorial,Reporter,01.04.2010,20.02.1974,Editorial,201378,201378.jpg
+201379,deshmukh.sanjay,Sanjay,,Deshmukh,sanjaydeshmukh@esakal.com,,,Aurangabad, Jalna ,Editorial,Sub Editor,01.04.2010,06.01.1970,Editorial,201379,201379.jpg
+201380,warke.chandrakant,Chandrakant,,Warke,chandrakant.warke@esakal.com,,,Kolhapur, Kolhapur Main ,HR - Personnel & Admin,Sr. Executive (Office Administration),01.04.2010,12.03.1971,HR,201380,201380.jpg
+201382,jadhav.santosh,Santosh,,Jadhav,santoshjadhav@saamtv.com,9819978877,022-66843716,Pune, Pune - Belapur ,Production (TV),Production Head,01.04.2010,07.03.1975,TV,201382,201382.jpg
+201384,pradhan.kiran,Kiran,,Pradhan,kiran.pradhan@saamtv.com,9850204000,022-66843204,Pune, Pune - Belapur ,Light & Camera (TV),Director of Photography,01.04.2010,24.09.1979,TV,201384,201384.jpg
+201387,biradar.ramesh,Ramesh,,Biradar,ramesh.biradar@saamtv.com,8888849238,022- 66843303/3304,Pune, Pune - Belapur ,Technical & Broadcasting,Injest & Scheduling Incharge,01.04.2010,03.03.1977,TV,201387,201387.jpg
+201389,owhal.pravin,Pravin,,Owhal,pravin.owhal@saamtv.com,8888849115,022-66843372,Pune, Pune - Belapur ,Finance and Accounts,Asst. Manager (Production),01.04.2010,15.01.1985,TV,201389,201389.jpg
+201391,jadhav.bhagwan,Bhagwan,,Jadhav,bhagwan.jadhav@saamtv.com,9011087366,022-66843291,Pune, Pune - Belapur ,Advt - Scheduling & Support,Asst. Manager (Advt. Scheduling & Support),01.04.2010,17.04.1984,TV,201391,201391.jpg
+201394,powar.baburao,Baburao,,Powar,baburao.powar@esakal.com,,,Kolhapur, Kolhapur MIDC ,Production - Printing,Jr. Executive (Production),01.04.2010,05.01.1979,Production,201394,201394.jpg
+201395,ghatge.umesh,Umesh,,Ghatge,umesh.ghatge@esakal.com,,,Kolhapur, Kolhapur MIDC ,Production - Printing,Associate,01.04.2010,22.02.1980,Production,201395,201395.jpg
+201396,rane.ravikiran,Ravikiran,,Rane,ravikiran.rane@esakal.com,,,Goa, Panaji ,Advt - Scheduling & Support,Sr. Executive (Advt. Scheduling & Support),01.04.2010,19.12.1976,ADVT SCHEDULING,201396,201396.jpg
+201397,suryawanshi.vishwajeet,Vishwajeet,,Suryawanshi,vishwajeet.suryawanshi@esakal.com,,,Kolhapur, Kolhapur Main ,Advt - Scheduling & Support,Sr. Executive (Advt. Scheduling & Support),01.04.2010,20.11.1987,ADVT SCHEDULING,201397,201397.jpg
+201399,powar.sudhir,Sudhir,,Powar,sudhir.powar@esakal.com,,,Kolhapur, Belgaum ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.04.2010,31.10.1978,ADVT SALES,201399,201399.jpg
+201400,deshpande.sameer,Sameer,,Deshpande,sameer.deshpande@esakal.com,,,Kolhapur, Kolhapur MIDC ,Commercial Printing,Asst. Manager (Marketing),01.04.2010,16.02.1979,Commercial Print,201400,201400.jpg
+201401,nagargoje.balasaheb,Balasaheb,,Nagargoje,balasaheb.nagargoje@esakal.com,9850121007,0233-2323131,Kolhapur, Sangli ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),01.04.2010,31.05.1980,ADVT SALES,201401,201401.jpg
+201402,pisal.deepak,Deepak,,Pisal,deepak.pisal@esakal.com,,,Kolhapur, Kolhapur Main ,Advt - Scheduling & Support,Sr. Executive (Advt. Scheduling & Support),01.04.2010,10.02.1978,ADVT SCHEDULING,201402,201402.jpg
+201404,patil.bajirao,Bajirao,,Patil,bajirao.patil@esakal.com,9922507185,0231-2669020,Kolhapur, Kolhapur Main ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),01.04.2010,01.06.1968,ADVT SALES,201404,201404.jpg
+201405,ajrekar.rakesh,Rakesh,,Ajrekar,rakesh.ajrekar@esakal.com,996454611,0831-2424651,Kolhapur, Belgaum ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.04.2010,23.06.1985,ADVT SALES,201405,201405.jpg
+201406,kasar.sachin,Sachin,,Kasar,sachin.kasar@esakal.com,,,Kolhapur, Gadhinglaj ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.04.2010,29.07.1977,Circulation,201406,201406.jpg
+201408,hajaratbhai.samir,Samir,,Hajaratbhai,samir.hajaratbhai@esakal.com,9011557860,0230-2468383,Kolhapur, Kolhapur MIDC ,Purchase & Materials,Sr. Executive (Materials),01.04.2010,20.11.1987,Materials,201408,201408.jpg
+201409,patil.namdev,Namdev,,Patil,namdev.patil@esakal.com,,,Kolhapur, Kolhapur MIDC ,Commercial Printing,Associate (Commercial Printing),01.04.2010,21.06.1970,Commercial Print,201409,201409.jpg
+201410,sawant.sushant,Sushant,,Sawant,sushant.sawant@esakal.com,9921115522,0231-2669020,Kolhapur, Kolhapur Main ,Advt - Scheduling & Support,Jr. Executive (Advt. Scheduling & Support),01.04.2010,24.12.1978,ADVT SCHEDULING,201410,201410.jpg
+201411,patil.subhash,Subhash,,Patil,subhash.patil@esakal.com,9404114814,0231-2669020,Kolhapur, Kolhapur Main ,Production - Pagination,Sr. Executive (Pagination),01.04.2010,10.08.1965,IT,201411,201411.jpg
+201412,patil.shahaji,Shahaji,,Patil,shahaji.patil@esakal.com,9921960087,0231-2669020,Kolhapur, Kolhapur Main ,Production - Pagination,Jr. Executive (Pagination),01.04.2010,01.06.1970,IT,201412,201412.jpg
+201413,more.mangesh,Mangesh,,More,mangesh.more@esakal.com,,,Kolhapur, Ratnagiri ,Production - Pagination,Sr. Executive (Prepress),01.04.2010,01.04.1977,IT,201413,201413.jpg
+201421,madyale.ajit,Ajit,,Madyale,ajit.madyale@esakal.com,,,Kolhapur, Gadhinglaj ,Editorial,Reporter,01.04.2010,07.07.1977,Editorial,201421,201421.jpg
+201422,joshi.bhaskar,Bhaskar,,Joshi,bhaskar.joshi@esakal.com,,,Pune, Pune Main ,Editorial,Reporter,01.04.2010,04.02.1962,Editorial,201422,201422.jpg
+201423,tambe.nitesh,Nitesh,,Tambe,nitesh.tambe@esakal.com,,,Mumbai, Mumbai (Parel) ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.04.2010,29.03.1985,Circulation,201423,201423.jpg
+201424,khadke.manoj,Manoj,,Khadke,manoj.khadke@esakal.com,,,Nashik, Nashik Main ,Editorial - Proofreader,Proof Reader,01.04.2010,26.05.1977,Editorial,201424,201424.jpg
+201427,gade.manohar,Manohar,,Gade,manohar.gade@esakal.com,,,Aurangabad, Hingoli ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.04.2010,01.07.1975,Circulation,201427,201427.jpg
+201428,khandare.maruti,Maruti,,Khandare,maruti.khandare@esakal.com,,,Aurangabad, Nanded ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.04.2010,09.06.1974,Circulation,201428,201428.jpg
+201429,bhole.rajesh,Rajesh,,Bhole,rajesh.bhole@esakal.com,,,Aurangabad, Aurangabad Main ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.04.2010,17.07.1978,Circulation,201429,201429.jpg
+201430,ghanekar.ghanashyam,Ghanashyam,,Ghanekar,ghanashyam.ghanekar@esakal.com,,,Pune, Ahmednagar ,Admin - Locations,Branch Manager (Nagar),01.04.2010,02.04.1971,Admin. (Unit Admin.),201430,201430.jpg
+201432,kadam.gurunath,Gurunath,,Kadam,gurunath.kadam@esakal.com,,,Kolhapur, Savantwadi ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.04.2010,09.05.1974,Circulation,201432,201432.jpg
+201434,chavan.ganesh,Ganesh,,Chavan,ganesh.chavan@esakal.com,,,Pune, Pune Main ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.04.2010,01.06.1977,Circulation,201434,201434.jpg
+201435,shende.nilesh,Nilesh,,Shende,nilesh.shende@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor,01.04.2010,02.06.1984,Editorial,201435,201435.jpg
+201436,joshi.anand,Anand,,Joshi,anand.joshi@esakal.com,,,Aurangabad, Aurangabad Main ,Editorial,Sub Editor,01.04.2010,23.02.1976,Editorial,201436,201436.jpg
+201438,patil.madhavi,Madhavi,,Patil,madhavi.patil@esakal.com,9022775081/9773522784,022-66843532,Mumbai, Navi Mumbai ,Editorial,Sub Editor,01.04.2010,08.05.1984,Editorial,201438,201438.jpg
+201441,vyavahare.ashok,Ashok,,Vyavahare,ashok.vyavahare@saamtv.com,9881236522,022-66843214,Pune, Pune - Belapur ,Programming (TV),Executive Producer,01.05.2010,01.06.1981,TV,201441,201441.jpg
+201444,pramod.shrirang.pharande,Pramod,Shrirang,Pharande,pramod.pharande@esakal.com,,,Kolhapur, Kolhapur Main ,Editorial,Sub Editor,17.05.2010,12.03.1977,Editorial,201444,201444.jpg
+201445,yuvaraj.dattatray.ingawale,Yuvaraj,Dattatray,Ingawale,yuvaraj.ingawale@esakal.com,,,Kolhapur, Kolhapur Main ,Editorial,Sub Editor,15.05.2010,05.06.1977,Editorial,201445,201445.jpg
+201446,sarjerao.baliram.navale,Sarjerao,Baliram,Navale,sarjerao.navale@esakal.com,,,Kolhapur, Kolhapur Main ,Editorial,Sub Editor,15.05.2010,15.08.1972,Editorial,201446,201446.jpg
+201447,prakash.ramesh.nimbalkar,Prakash,Ramesh,Nimbalkar,prakash.nimbalkar@esakal.com,9552583285,0233-2323131,Kolhapur, Sangli ,Editorial,Sub Editor,01.06.2010,31.12.1978,Editorial,201447,201447.jpg
+201448,prasanna.girdhardas.devi,Prasanna,Girdhardas,Devi,prasanna.devi@esakal.com,9850992289,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Sr. Manager (Advt. Sales),11.06.2010,17.04.1975,Magazine,201448,201448.jpg
+201451,vidya.sachin.dodake,Vidya,Sachin,Dodake,vidya.dodake@esakal.com,,,Pune, Shivaji Nagar ,Young Buzz,Asst. Manager (Young Buzz),01.07.2010,02.05.1980,NIE / YB,201451,201451.jpg
+201456,ajay.shankar.kamate,Ajay,Shankar,Kamate,ajay.kamate@esakal.com,9921051199,020-24405654,Pune, Pune Main ,Circulation - Support,Asst. Manager (Circulation Accounts),01.07.2010,09.01.1974,Finance (Cir. Accounts),201456,201456.jpg
+201458,sagar.tukaram.lad,Sagar,Tukaram,Lad,sagar.lad@saamtv.com,8888849138,022-66843116,Pune, Pune - Belapur ,Make up,Sr. Executive (Make up),01.07.2010,31.12.1977,TV,201458,201458.jpg
+201459,sameer.ramchandra.bhosale,Sameer,Ramchandra,Bhosale,sameer.bhosale@saamtv.com,8097110039,022-66843720,Pune, Pune - Belapur ,Engineering (TV),Sr. Executive (Electrical),01.07.2010,02.03.1977,TV,201459,201459.jpg
+201461,suvarna.manohar.mujumdar,Suvarna,Manohar,Mujumdar,suvarna.mujumdar@esakal.com,8888801251,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),12.07.2010,03.01.1972,ADVT SALES,201461,201461.jpg
+201464,ajay.yashwant.mali,Ajay,Yashwant,Mali,ajay.mali@esakal.com,8380093839,0231-2669020,Kolhapur, Kolhapur Main ,Editorial - Proofreader,Proof Reader,15.07.2010,13.12.1965,Editorial,201464,201464.jpg
+201465,chandramohan.puppala,Chandramohan,,Puppala,chandramohan.puppala@esakal.com,9821128640,022-66843705,Pune, Pune - Belapur ,Admin - Locations,Business Head (SAAM TV) & Mumbai Unit,06.07.2010,24.06.1970,TV,201465,201465.jpg
+201486,turambekar.mahadev,Mahadev,,Turambekar,mahadev.turambekar@esakal.com,,,Kolhapur, Ratnagiri ,Editorial - Proofreader,Proof Reader,01.08.2010,20.05.1973,Editorial,201486,201486.jpg
+201487,sawant.bapu,Bapu,,Sawant,bapu.sawant@esakal.com,8888845516/9404444155,022-66843513,Mumbai, Navi Mumbai ,Editorial - Proofreader,Proof Reader,01.08.2010,17.03.1984,Editorial,201487,201487.jpg
+201488,samant.amol,Amol,,Samant,amol.samant@esakal.com,9527322986,0231-2669020,Kolhapur, Kolhapur Main ,Finance and Accounts,Sr. Executive (Accounts),01.08.2010,12.04.1980,Finance,201488,201488.jpg
+201489,g.srujan.veerender.reddy,G.Srujan,Veerender,Reddy,g.srujan.reddy@esakal.com,,,Pune, Hyderabad ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),06.09.2010,04.05.1981,ADVT SALES,201489,201489.jpg
+201496,surendra.ramnarayan.nag,Surendra,Ramnarayan,Nag,surendra.nag@saamtv.com,9920411872,022-66843219,Pune, Pune - Belapur ,Production (TV),Chief Video Editor,22.09.2010,13.10.1970,TV,201496,201496.jpg
+201499,avinash.madhav.chilekar,Avinash,Madhav,Chilekar,avinash.chilekar@esakal.com,9767992325,020-27420323,Pune, Pimpri ,Editorial,Associate Editor,23.09.2010,04.03.1964,Editorial,201499,201499.jpg
+201500,vikas.bhaskar.kamble,Vikas,Bhaskar,Kamble,vikas.kamble@esakal.com,9881191221,0231-2669020,Kolhapur, Kolhapur Main ,Editorial,Sr. Reporter,21.09.2010,03.02.1968,Editorial,201500,201500.jpg
+201507,deepak.nemichand.munot,Deepak,Nemichand,Munot,deepak.munot@esakal.com,,,Pune, Pune Main ,Editorial,Sr. Reporter,02.10.2010,23.08.1968,Editorial,201507,201507.jpg
+201509,siddhesh.krishna.desai,Siddhesh,Krishna,Desai,siddhesh.desai@esakal.com,,,Goa, Panaji ,Editorial,Sub Editor,01.10.2010,27.06.1985,Editorial,201509,201509.jpg
+201511,vihang.kishor.thakur,Vihang,Kishor,Thakur,vihang.thakur@saamtv.com,9930461344,022-66843242,Pune, Pune - Belapur ,News & Current Affairs (TV),Bulletin Producer,27.09.2010,14.06.1984,TV,201511,201511.jpg
+201513,vikrant.ashok.mate,Vikrant,Ashok,Mate,vikrant.mate@esakal.com,,,Nashik, Nashik Main ,Editorial,Reporter,01.10.2010,31.12.1975,Editorial,201513,201513.jpg
+201515,shekhar.vasant.joshi,Shekhar,Vasant,Joshi,shekhar.joshi@esakal.com,9921391800,0233-2323131,Kolhapur, Kolhapur Main ,Editorial,Associate Editor,09.10.2010,01.06.1969,Editorial,201515,201515.jpg
+201518,sandip.nehere,Sandip,,Nehere,sandip.nehere@esakal.com,9890292499,,Pune, Shivaji Nagar ,Commercial Events,Sr. Executive (Commercial Events),19.10.2010,12.06.1982,CORPORATE EVENT SALES,201518,201518.jpg
+201520,ashish.rameshchandra.vyas,Ashish,Rameshchandra,Vyas,ashish.vyas@saamtv.com,9821517676,022-26458901,Pune, Pune - Belapur ,"Advt - Sales, Marketing & Other",Regional Head (Advt. Sales) - Retail,19.10.2010,08.04.1970,TV,201520,201520.jpg
+201522,ashish.arun.tagade,Ashish,Arun,Tagade,ashish.tagade@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor (Newzine),19.10.2010,17.01.1973,Editorial,201522,201522.jpg
+201523,anil.vasant.shinde,Anil,Vasant,Shinde,anil.shinde@esakal.com,9880423931,0831-2424651,Kolhapur, Belgaum ,Editorial,Sub Editor,01.11.2010,10.08.1965,Editorial,201523,201523.jpg
+201531,maruti.shankar.jainak,Maruti,Shankar,Jainak,maruti.jainak@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor,25.11.2010,25.05.1974,Editorial,201531,201531.jpg
+201534,sandip.waman.wagh,Sandip,Waman,Wagh,sandip.wagh@esakal.com,,,Pune, Pune Main ,Circulation - Sales & Marketing,Asst. Manager (Circulation Sales),10.12.2010,25.10.1975,Circulation,201534,201534.jpg
+201535,sandeepkumar.ramchandra.kale,Sandeepkumar,Ramchandra,Kale,sandeepkumar.kale@esakal.com,,,Pune, Dive Ghat ,HR - Personnel & Admin,Asst. Manager (HR),10.12.2010,27.12.1981,HR,201535,201535.jpg
+201537,vinayak.limaye,Vinayak,,Limaye,vinayak.limaye@esakal.com,,,Pune, Pune Main ,Editorial,Sr. Sub Editor,15.12.2010,09.05.1969,Editorial,201537,201537.jpg
+201539,abhay.nivrutti.narawade,Abhay,Nivrutti,Narawade,abhay.narawade@esakal.com,9028883331,,Pune, Pimpri ,Circulation - Sales & Marketing,Manager (MIS),27.12.2010,10.01.1982,Circulation,201539,201539.jpg
+201542,abhijit.vishwanath.akolkar,Abhijit,Vishwanath,Akolkar,abhijit.akolkar@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor,01.01.2011,13.02.1970,Editorial,201542,201542.jpg
+201544,abhay.khairnar,Abhay,,Khairnar,abhay.khairnar@esakal.com,8888848891,,Pune, Shivaji Nagar ,Editorial,Special Correspondent,10.01.2011,06.07.1977,ST,201544,201544.jpg
+201545,rohan.bhumkar,Rohan,,Bhumkar,rohan.bhumkar@esakal.com,8888871173,,Pune, Shivaji Nagar ,Legal Department,Manager (Legal),10.01.2011,14.10.1984,Legal,201545,201545.jpg
+201546,vishal.vishwanath.gangawane,Vishal,Vishwanath,Gangawane,vishal.gangawane@esakal.com,9422082212,,Pune, Shivaji Nagar ,Editorial,Asst. News Editor,17.01.2011,05.07.1982,ST,201546,201546.jpg
+201549,sampat.laxman.nikam,Sampat,Laxman,Nikam,sampat.nikam@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Sr. Manager (Maintenance),17.01.2011,29.02.1972,Production,201549,201549.jpg
+201554,satish.maruti.ghaste,Satish,Maruti,Ghaste,satish.ghaste@esakal.com,8888849510,020-24405606,Pune, Pune Main ,Advt - Billing & Recovery,Manager (Advt. Recovery),21.02.2011,30.10.1969,Finance (Advt. Accounts),201554,201554.jpg
+201558,pankaj.wasudevrao.borkar,Pankaj,Wasudevrao,Borkar,pankaj.borkar@esakal.com,8888865415,"99881099413,2564116,2428052,99",Nagpur, Nagpur City ,Tanishka Forum,Asst. Manager (Tanishka Forum),25.02.2011,23.07.1985,Tanishka Forum,201558,201558.jpg
+201560,deepak.satish.gujar,Deepak,Satish,Gujar,deepak.gujar@esakal.com,8888849495,020-24405630,Pune, Pune Main ,Advt - Billing & Recovery,Sr. Executive (Advt. Recovery),01.03.2011,01.09.1982,Finance (Advt. Accounts),201560,201560.jpg
+201563,tatyaso.abaji.kharat,Tatyaso,Abaji,Kharat,tatyaso.kharat@esakal.com,8888400093/9821288622,022-66843760,Mumbai, Mumbai (Parel) ,Editorial,Special Correspondent,04.03.2011,06.01.1981,Editorial,201563,201563.jpg
+201567,yogesh.prakash.naik,Yogesh,Prakash,Naik,yogesh.naik@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor,15.03.2011,16.08.1975,Editorial,201567,201567.jpg
+201568,ganadhish.ramchandra.prabhudesai,Ganadhish,Ramchandra,Prabhudesai,ganadhish.prabhudesai@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor,01.04.2011,05.02.1973,Editorial,201568,201568.jpg
+201572,vijay.pundlik.bansode,Vijay,Pundlik,Bansode,vijay.bansode@esakal.com,9594999495,022-66843527,Mumbai, Navi Mumbai ,Editorial,Sr. Sub Editor,15.04.2011,09.10.1964,Editorial,201572,201572.jpg
+201576,sathe.pradeep,Pradeep,,Sathe,pradeep.sathe@esakal.com,,,Pune, Pune Main ,Editorial - Proofreader,Proof Reader,01.04.2011,17.02.1962,Editorial,201576,201576.jpg
+201577,barge.pandurang,Pandurang,,Barge,pandurang.barge@esakal.com,9881718829,,Satara, Satara Main ,Editorial,Sub Editor,01.04.2011,11.06.1967,Editorial,201577,201577.jpg
+201579,dattatray.mahadev.yedage,Dattatray,Mahadev,Yedage,dattatray.yedage@esakal.com,,,Solapur, Pandharpur ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.04.2011,01.03.1974,ADVT SALES,201579,201579.jpg
+201582,deshmukh.sachin,Sachin,,Deshmukh,sachin.deshmukh@esakal.com,,,Satara, Karad ,Editorial,Reporter,01.04.2011,02.07.1979,Editorial,201582,201582.jpg
+201583,nagrale.suresh,Suresh,,Nagrale,suresh.nagrale@esakal.com,,,Nagpur, Gadhchiroli ,Editorial,Reporter,01.04.2011,23.09.1971,Editorial,201583,201583.jpg
+201586,dhopte.pravin,Pravin,,Dhopte,pravin.dhopte@esakal.com,,,Nagpur, Wardha ,Editorial,Reporter,01.04.2011,15.08.1975,Editorial,201586,201586.jpg
+201587,kapse.sunil,Sunil,,Kapse,sunil.kapse@esakal.com,,,Pune, Pune Main ,Editorial - Proofreader,Proof Reader,01.04.2011,30.01.1966,Editorial,201587,201587.jpg
+201595,bhosale.ashwin,Ashwin,,Bhosale,ashwin.bhosale@esakal.com,9922416042,0231-2669020,Kolhapur, Kolhapur Main ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),01.04.2011,03.11.1982,ADVT SALES,201595,201595.jpg
+201596,polkar.ishwar,Ishwar,,Polkar,ishwar.polkar@esakal.com,9921403532,"99881099413,2564116,2428052,90",Nagpur, Nagpur City ,Editorial - Proofreader,Proof Reader,01.04.2011,16.06.1971,Editorial,201596,201596.jpg
+201597,chougule.rajkumar,Rajkumar,,Chougule,rajkumar.chougule@esakal.com,,,Kolhapur, Kolhapur Main ,Editorial,Reporter,01.04.2011,02.02.1980,Agrowon,201597,201597.jpg
+201598,kesarkar.deepak,Deepak,,Kesarkar,deepak.kesarkar@esakal.com,8904665264,0831-2424651,Kolhapur, Belgaum ,Production - Pagination,Jr. Executive (Pagination),01.04.2011,02.03.1975,IT,201598,201598.jpg
+201600,chibade.sanjay,Sanjay,,Chibade,sanjay.chibade@esakal.com,,,Satara, Karad ,Production - Pagination,Jr. Executive (Pagination),01.04.2011,05.12.1971,IT,201600,201600.jpg
+201601,jere.santosh,Santosh,,Jere,santosh.jere@esakal.com,,,Kolhapur, Ichalkaranji ,Production - Pagination,Jr. Executive (Pagination),01.04.2011,07.08.1976,IT,201601,201601.jpg
+201602,phule.milind,Milind,,Phule,milind.phule@esakal.com,,,Kolhapur, Ichalkaranji ,Circulation - Sales & Marketing,Jr. Executive (Circulation Sales),01.04.2011,09.07.1975,Circulation,201602,201602.jpg
+201603,sawant.nandadeep,Nandadeep,,Sawant,nandadeep.sawant@esakal.com,,,Kolhapur, Kankawali ,Production - Pagination,Jr. Executive (Pagination),01.04.2011,03.07.1973,IT,201603,201603.jpg
+201604,patil.dipak,Dipak,,Patil,dipakpatil@esakal.com,,,Jalgaon, Jalgaon Main ,Production,Jr. Executive (Production),01.04.2011,01.06.1978,Production,201604,201604.jpg
+201605,torane.pravin,Pravin,,Torane,pravin.torane@esakal.com,9689897462,,Jalgaon, Jalgaon Main ,Production - Process,Sr. Executive (Process),01.04.2011,01.07.1979,Production,201605,201605.jpg
+201606,tantarpale.raju,Raju,,Tantarpale,raju.tantarpale@esakal.com,,,Nagpur, Amravati ,Editorial - Proofreader,Sub Editor Cum Reporter,01.04.2011,17.05.1973,Editorial,201606,201606.jpg
+201607,pawar.hemant,Hemant,,Pawar,hemant.pawar@esakal.com,,,Satara, Karad ,Editorial,Reporter,01.04.2011,24.07.1978,Editorial,201607,201607.jpg
+201608,dukare.santosh,Santosh,,Dukare,santosh.dukare@esakal.com,,,Pune, Pune Main ,Editorial,Sr. Reporter,01.04.2011,28.07.1983,Agrowon,201608,201608.jpg
+201610,tonge.bharti,Bharti,,Tonge,bharti.tonge@esakal.com,,,Nagpur, Chandrapur ,Editorial - Proofreader,Sub Editor Cum Reporter,01.04.2011,08.11.1981,Editorial,201610,201610.jpg
+201611,kale.sambhaji,Sambhaji,,Kale,sambhaji.kale@esakal.com,,,Pune, Pune Main ,Production - Pagination,Jr. Executive (Pagination),01.04.2011,15.06.1978,IT,201611,201611.jpg
+201612,pathak.rajdatta,Rajdatta,,Pathak,rajdatta.pathak@esakal.com,9922109930,9922414265,Nagpur, Washim ,Editorial,Reporter,01.04.2011,07.02.1970,Editorial,201612,201612.jpg
+201614,kulkarni.santosh,Santosh,,Kulkarni,santosh.kulkarni@esakal.com,,,Satara, Karad ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.04.2011,13.04.1975,Circulation,201614,201614.jpg
+201615,patil.sachin,Sachin,,Patil,sachin.patil@esakal.com,9922507172,0231-2669020,Kolhapur, Kolhapur Main ,Information Technology,Sr. Executive (IT),01.04.2011,24.06.1982,IT,201615,201615.jpg
+201616,patil.abhijeet,Abhijeet,,Patil,abhijeet.patil@esakal.com,9922126060,0231-2669020,Kolhapur, Kolhapur Main ,Circulation - Support,Asst. Manager (Circulation Support),01.04.2011,22.12.1979,Finance (Cir. Accounts),201616,201616.jpg
+201619,sarade.kaluram,Kaluram,,Sarade,kaluram.sarade@esakal.com,,,Pune, Pune Main ,Production - Pagination,Jr. Executive (Pagination),01.04.2011,29.09.1976,IT,201619,201619.jpg
+201620,kalkhambkar.chandrakant,Chandrakant,,Kalkhambkar,chandrakant.kalkhambkar@esakal.com,9663087512,0831-2424651,Kolhapur, Belgaum ,Production - Pagination,Jr. Executive (Pagination),01.04.2011,01.01.1975,IT,201620,201620.jpg
+201621,chore.narendra,Narendra,,Chore,narendra.chore@esakal.com,9922649899,"99881099413,2564116,2428052,91",Nagpur, Nagpur City ,Editorial,Reporter,01.04.2011,26.04.1970,Editorial,201621,201621.jpg
+201622,gole.ashok,Ashok,,Gole,ashok.gole@esakal.com,,,Pune, Pune Main ,Production - Pagination,Sr. Executive (Prepress),01.04.2011,09.11.1974,IT,201622,201622.jpg
+201623,raut.vijay,Vijay,,Raut,vijay.raut@esakal.com,,,Nagpur, Nagpur City ,Editorial,Sub Editor,01.04.2011,01.05.1971,Editorial,201623,201623.jpg
+201625,fulbandhe.deepak,Deepak,,Fulbandhe,deepak.fulbandhe@esakal.com,,,Nagpur, Bhandara ,Editorial,Reporter,01.04.2011,04.09.1968,Editorial,201625,201625.jpg
+201629,gomase.mangesh,Mangesh,,Gomase,mangesh.gomase@esakal.com,9881103173,"99881099413,2564116,2428052,78",Nagpur, Nagpur City ,Editorial,Sr. Reporter,01.04.2011,02.07.1982,Editorial,201629,201629.jpg
+201630,khandekar.shivaji,Shivaji,,Khandekar,shivaji.khandekar@esakal.com,9922507177,0231-2669020,Kolhapur, Kolhapur Main ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),01.04.2011,09.12.1981,ADVT SALES,201630,201630.jpg
+201631,bhagat.vishal,Vishal,,Bhagat,vishal.bhagat@esakal.com,,,Pune, Pune Main ,Production - Pagination,Jr. Executive (Pagination),01.04.2011,05.08.1984,IT,201631,201631.jpg
+201634,jadhav.ajit,Ajit,,Jadhav,ajit.jadhav@esakal.com,,,Kolhapur, Sangli ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),01.04.2011,24.11.1980,ADVT SALES,201634,201634.jpg
+201636,ugale.dnyanesh,Dnyanesh,,Ugale,dnyanesh.ugale@esakal.com,,,Nashik, Nasik City Office ,Editorial,Reporter,01.04.2011,01.12.1975,Agrowon,201636,201636.jpg
+201653,pramod.bajirao.kakade,Pramod,Bajirao,Kakade,pramod.kakade@esakal.com,,,Nagpur, Chandrapur ,Editorial,Sr. Reporter,01.04.2011,03.11.1977,Editorial,201653,201653.jpg
+201654,falake.nilesh,Nilesh,,Falake,nilesh.falake@esakal.com,,,Nagpur, Yavatmal ,Editorial,Reporter,01.04.2011,26.06.1982,Editorial,201654,201654.jpg
+201655,sagar.babasaheb.patil,Sagar,Babasaheb,Patil,sagar.patil@esakal.com,9922913395,0230-2468383,Kolhapur, Kolhapur MIDC ,Production - Electrical,Sr. Executive (Electrical),01.04.2011,05.04.1987,IT,201655,201655.jpg
+201656,nitin.warmanrao.naigaonkar,Nitin,Warmanrao,Naigaonkar,nitin.naigaonkar@esakal.com,8380092136,"99881099413,2564116,2428052,76",Nagpur, Nagpur City ,Editorial,Sr. Reporter,01.04.2011,19.11.1983,Editorial,201656,201656.jpg
+201658,chavan.prashant,Prashant,,Chavan,prashant.chavan@esakal.com,9930644959,022-24104564/69/72,Mumbai, Mumbai (Parel) ,Editorial - Photographer,Photographer,01.04.2011,31.03.1982,Editorial,201658,201658.jpg
+201662,thite.prajakta,Prajakta,,Thite,prajakta.thite@esakal.com,,,Pune, Pune Main ,HR - Personnel & Admin,Sr. Executive (Personnel & HR),01.04.2011,01.02.1983,HR,201662,201662.jpg
+201666,satish.suresh.patil,Satish,Suresh,Patil,satish.patil4@esakal.com,7776994145,0231-2669020,Aurangabad, Osmanabad ,"Advt - Sales, Marketing & Other",Sr. Executive (Advt. Sales),01.04.2011,28.06.1973,ADVT SALES,201666,201666.jpg
+201668,tribhuvan.aseem,Aseem,,Tribhuvan,aseem.tribhuvan@esakal.com,9850020589,,Pune, Shivaji Nagar ,Editorial,Chief Sub Editor,01.04.2011,17.07.1979,ST,201668,201668.jpg
+201669,marwadi.anita,Anita,,Marwadi,anita.marwadi@esakal.com,9881098076,,Pune, Ahmednagar ,Admin - Locations,Sr. Executive (Office Administration),01.04.2011,11.09.1968,Admin. (Location),201669,201669.jpg
+201672,gaurav.achyut.divekar,Gaurav,Achyut,Divekar,gaurav.divekar@esakal.com,8888813402,,Pune, Pune Main ,Editorial,Chief Sub Editor,01.05.2011,14.11.1987,Editorial,201672,201672.jpg
+201673,sarang.mohaniraj.khanapurkar,Sarang,Mohaniraj,Khanapurkar,sarang.khanapurkar@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor,01.05.2011,03.10.1983,Editorial,201673,201673.jpg
+201675,sushruta.suhas.visal,Sushruta,Suhas,Visal,sushruta.visal@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor,01.05.2011,30.06.1987,NIE / YB,201675,201675.jpg
+201676,satpute.pravin,Pravin,,Satpute,pravin.satpute@esakal.com,9623233070,,Nashik, Nashik Main ,Finance and Accounts,Asst. Manager (Accounts),01.04.2011,19.05.1985,Finance,201676,201676.jpg
+201677,uday.bhanudas.nigade,Uday,Bhanudas,Nigade,uday.nigade@esakal.com,,,Pune, Pune Main ,Finance and Accounts,Sr. Executive (Accounts),01.04.2011,10.08.1986,Finance,201677,201677.jpg
+201678,nikhil.madhav.bhave,Nikhil,Madhav,Bhave,nikhil.bhave@esakal.com,9860647644,,Pune, Shivaji Nagar ,Editorial,Sr. Sub Editor,02.05.2011,29.03.1981,ST,201678,201678.jpg
+201679,nimbalkar.pandurang,Pandurang,,Nimbalkar,pandurang.nimbalkar@esakal.com,,,Pune, Pune Main ,Advt - Scheduling & Support,Sr. Executive (Advt. Scheduling & Support),01.05.2011,25.12.1982,ADVT SCHEDULING,201679,201679.jpg
+201680,somnath.baburao.garje,Somnath,Baburao,Garje,somnath.garje@esakal.com,,,Pune, Pune Main ,Editorial,Reporter,16.05.2011,03.06.1980,Editorial,201680,201680.jpg
+201682,saraph.vishal,Vishal,,Saraph,vishal.saraph@esakal.com,9922913473,,Pune, Pimpri ,NIE,Asst. Manager (NIE),01.05.2011,12.10.1981,CORPORATE EVENT SALES,201682,201682.jpg
+201685,ashok.shriram.jawale,Ashok,Shriram,Jawale,ashok.jawale@esakal.com,,,Pune, Pune Main ,Editorial,Sub Editor,01.05.2011,09.10.1981,Editorial,201685,201685.jpg
+201687,nitin.arun.thorat,Nitin,Arun,Thorat,nitin.thorat@esakal.com,8888849567,,Pune, Shivaji Nagar ,Editorial (Marketing Spl. Features),Sub Editor,01.05.2011,07.03.1984,MARKETING SPL. FEATURE,201687,201687.jpg
+201691,chandrashekhar.pralhad.shimpi,Chandrashekhar,Pralhad,Shimpi,chandrashekhar.shimpi@esakal.com,,,Nashik, Nashik Main ,Editorial,Sub Editor,15.06.2011,02.07.1975,Editorial,201691,201691.jpg
+201692,jayesh.jaywant.gaikwad,Jayesh,Jaywant,Gaikwad,jayesh.gaikwad@esakal.com,,,Pune, Dive Ghat ,Production - Printing,Sr. Manager (Production),16.06.2011,28.08.1974,Production,201692,201692.jpg
+201694,kunal.bhaurao.patil,Kunal,Bhaurao,Patil,kunal.patil@esakal.com,8308844380,022-66843780,Mumbai, Taloja ,Production - Printing,Manager (Production),16.06.2011,05.07.1982,Production,201694,201694.jpg
+201696,sunil.shankar.mali,Sunil,Shankar,Mali,sunil.mali@esakal.com,9822914580,020-24405726,Pune, Pune Main ,Editorial,Associate Editor (Pune City),02.07.2011,13.04.1963,Editorial,201696,201696.jpg
+201697,sharad.ravaba.dhatrak,Sharad,Ravaba,Dhatrak,sharad.dhatrak@esakal.com,,,Nashik, Nashik Main ,Commercial Events,Sr. Executive (Commercial Events),04.07.2011,22.09.1982,Commercial Events,201697,201697.jpg
+201699,dhruvakumar.rajaram.kulkarni,Dhruvakumar,Rajaram,Kulkarni,dhruvakumar.kulkarni@esakal.com,,,Pune, Pune Main ,Tanishka Forum,Chief Sub Editor,04.07.2011,14.07.1965,Tanishka Forum,201699,201699.jpg
+201700,sandeep.baban.ghise,Sandeep,Baban,Ghise,sandeep.ghise@esakal.com,8308844387,,Pune, Pimpri ,Editorial,Reporter,16.07.2011,21.12.1974,Editorial,201700,201700.jpg
+201702,dipesh.shantilal.surana,Dipesh,Shantilal,Surana,dipesh.surana@esakal.com,9767198014,,Pune, Pimpri ,Editorial,Reporter,18.07.2011,20.05.1979,Editorial,201702,201702.jpg
+201704,yogiraj.shrinivas.prabhune,Yogiraj,Shrinivas,Prabhune,yogiraj.prabhune@esakal.com,,,Pune, Pune Main ,Editorial,Sr. Reporter,26.07.2011,22.12.1978,Editorial,201704,201704.jpg
+201706,yogesh.subhash.shimpi,Yogesh,Subhash,Shimpi,yogesh.shimpi@esakal.com,9767103900,,Nashik, Nashik Main ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),01.08.2011,14.02.1985,Circulation,201706,201706.jpg
+201712,mahajan.ashok,Ashok,,Mahajan,ashok.mahajan@esakal.com,,,Jalgaon, Jalgaon Main ,Production - Printing,Associate,01.08.2011,25.07.1969,Production,201712,201712.jpg
+201713,piwal.shivaji,Shivaji,,Piwal,shivaji.piwal@esakal.com,,,Aurangabad, Jalna ,Production - Printing,Associate,01.08.2011,23.07.1974,Production,201713,201713.jpg
+201714,salunkhe.sunil,Sunil,,Salunkhe,sunil.salunkhe@esakal.com,9850209049,,Nashik, Nashik Main ,Production - Electrical,Asst. Manager (Electrical),01.08.2011,01.04.1975,IT,201714,201714.jpg
+201715,hiwarde.vinayak,Vinayak,,Hiwarde,vinayak.hiwarde@esakal.com,,,Aurangabad, Aurangabad Main ,IT - DTP,Jr. Executive (Pagination),01.08.2011,12.01.1976,IT,201715,201715.jpg
+201716,naik.anil,Anil,,Naik,anil.naik@esakal.com,,,Aurangabad, Aurangabad Main ,IT - DTP,Jr. Executive (Pagination),01.08.2011,05.06.1974,IT,201716,201716.jpg
+201719,sachin.bharat.nikam,Sachin,Bharat,Nikam,sachin.nikam@esakal.com,9890464630,,Pune, Pune Main ,Editorial,Sub Editor,29.08.2011,07.11.1984,Editorial,201719,201719.jpg
+201721,anil.kedari.sawale,Anil,Kedari,Sawale,anil.sawale@esakal.com,,,Pune, Pune Main ,Editorial,Principal Correspondent,01.09.2011,19.03.1971,Editorial,201721,201721.jpg
+201725,sambhaji.sampatrao.patil,Sambhaji,Sampatrao,Patil,sambhaji.patil@esakal.com,,,Pune, Pune Main ,Editorial,Chief Reporter,12.09.2011,20.06.1973,Editorial,201725,201725.jpg
+201727,dinesh.sunder.shetty,Dinesh,Sunder,Shetty,dinesh.shetty@saamtv.com,8888228555,022-66843712,Mumbai, Navi Mumbai ,Admin - Locations,Unit Manager (Mumbai Unit),15.09.2011,08.12.1972,Admin. (Unit Admin.),201727,201727.jpg
+201729,satish.sadashiv.kulkarni,Satish,Sadashiv,Kulkarni,satishkulkarni1@esakal.com,8888854450,,Pune, Ahmednagar ,Editorial,News Editor,19.09.2011,14.11.1964,Editorial,201729,201729.jpg
+201730,santosh.shrikrushna.takpire,Santosh,Shrikrushna,Takpire,santosh.takpire@esakal.com,,,Nagpur, Amravati ,Editorial,Reporter,01.09.2011,13.04.1971,Editorial,201730,201730.jpg
+201731,daniel.dinkar.kale,Daniel,Dinkar,Kale,daniel.kale@esakal.com,,,Kolhapur, Kolhapur Main ,Editorial,Reporter,22.09.2011,28.03.1976,Editorial,201731,201731.jpg
+201732,sunil.pandurang.patil,Sunil,Pandurang,Patil,sunil.patil7@esakal.com,9881098322,,Kolhapur, Kolhapur Main ,Editorial,Reporter,19.09.2011,01.08.1980,Editorial,201732,201732.jpg
+201734,melvin.baptist.d'mello,Melvin,Baptist,D'Mello,melvin.d'mello@esakal.com,,,Satara, Satara Main ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales),22.09.2011,04.12.1975,ADVT SALES,201734,201734.jpg
+201735,shreeram.ganpatrao.pachindre,Shreeram,Ganpatrao,Pachindre,shreeram.pachindre@esakal.com,,,Pune, Goa ,Editorial,Resident Editor (Daily Gomantak),28.09.2011,25.06.1962,Editorial,201735,201735.jpg
+201740,ajay.mahadeorao.petkar,Ajay,Mahadeorao,Petkar,ajay.petkar@saamtv.com,7350000925,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Asst. Manager (Advt. Sales TV),12.10.2011,09.06.1981,TV,201740,201740.jpg
+201742,debarati.amitav.palit,Debarati,Amitav,Palit,debarati.palit@esakal.com,8806797437,,Pune, Shivaji Nagar ,Editorial,Principal Correspondent,17.10.2011,23.09.1982,ST,201742,201742.jpg
+201749,ranjan.haripada.dasgupta,Ranjan,Haripada,Dasgupta,ranjan.dasgupta@esakal.com,9881460228,,Pune, Shivaji Nagar ,Editorial,Assistant Editor,01.11.2011,25.08.1964,ST,201749,201749.jpg
+201751,abhay.dattatraya.diwanji,Abhay,Dattatraya,Diwanji,abhay.diwanji@esakal.com,9850931525,0217-2600896/97,Solapur, Solapur City ,Editorial,Associate Editor (Solapur Edition),01.11.2011,16.10.1967,Editorial,201751,201751.jpg
+201753,sanjay.bhaskarrao.deshmukh,Sanjay,Bhaskarrao,Deshmukh,sanjay.deshmukh@esakal.com,,,Nagpur, Amravati ,Editorial,Sr. Reporter,15.11.2011,28.12.1967,Editorial,201753,201753.jpg
+201754,k.ponnuvel.krishnan,K,Ponnuvel,Krishnan,k.krishnan@esakal.com,,,Pune, Pune - Chennai ,"Advt - Sales, Marketing & Other",Manager (Advt. Sales),14.11.2011,05.03.1978,ADVT SALES,201754,201754.jpg
+201755,manoj.balraj.salunkhe,Manoj,Balraj,Salunkhe,manoj.salunkhe@esakal.com,8308599500,0231-2669020,Kolhapur, Kolhapur Main ,Editorial,Executive Editor (Kolhapur Edition),29.11.2011,11.09.1963,Editorial,201755,201755.jpg
+201756,sanjay.ranganath.warkad,Sanjay,Ranganath,Warkad,sanjay.warkad@esakal.com,9764444001,,Aurangabad, Aurangabad Main ,Editorial,Executive Editor (Aurangabad Edition),01.12.2011,15.08.1971,Editorial,201756,201756.jpg
+201758,balasaheb.jagannath.bothe-patil,Balasaheb,Jagannath,Bothe-Patil,balasaheb.bothe-patil@esakal.com,,,Pune, Ahmednagar ,Editorial,Resident Editor (Nagar Edition),06.12.2011,01.06.1971,Editorial,201758,201758.jpg
+201771,shivaji.balaso.bhosale,Shivaji,Balaso,Bhosale,shivaji.bhosale@saamtv.com,9870904050,022-66843707,Pune, Pune - Belapur ,Technical & Broadcasting,Technical Head,05.03.2012,05.08.1977,TV,201771,201771.jpg
+201774,anand.dattatraya.ambekar,Anand,Dattatraya,Ambekar,anand.ambekar@esakal.com,9527002188,(0257) 2273053,Jalgaon, Jalgaon Main ,Editorial,Resident Editor (Jalgaon Unit),10.03.2012,30.04.1976,Editorial,201774,201774.jpg
+201778,sandeep.rajaram.pednekar,Sandeep,Rajaram,Pednekar,sandeep.pednekar@esakal.com,,,Goa, Panaji ,Circulation - Sales & Marketing,Sr. Executive (Circulation Sales),11.03.2012,26.11.1966,Circulation,201778,201778.jpg
+201781,s..devarajan,S.,,Devarajan,s.devarajan@esakal.com,,,Pune, Pune Main ,Circulation - Sales & Marketing,Dy. General Manager (Circulation Sales),12.03.2012,20.08.1965,Circulation,201781,201781.jpg
+201782,sarita.surendra.jagtap,Sarita,Surendra,Jagtap,sarita.jagtap@esakal.com,9822811607,020-24405623,Pune, Pune Main ,Advt - Scheduling & Support,Sr. Executive (Advt. Scheduling & Support),21.03.2012,24.11.1975,ADVT SCHEDULING,201782,201782.jpg
+201783,sandeep.bhagwatiprasad.soni,Sandeep,Bhagwatiprasad,Soni,sandeep.soni@esakal.com,9922930168,"99881099413,2564116,2428052,91",Nagpur, Nagpur City ,Editorial - Photographer,Sr. Photographer,17.03.2012,27.04.1973,Editorial,201783,201783.jpg
+201784,rohit.santangopal,Rohit,,Santangopal,rohit.santangopal@esakal.com,,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Chief Manager (Advt. Sales),02.04.2012,05.03.1984,ADVT SALES,201784,201784.jpg
+201787,nikhil.ashokrao.shelote,Nikhil,Ashokrao,Shelote,nikhil.shelote@esakal.com,,020-24405625,Pune, Pune Main ,Advt - Scheduling & Support,Sr. Executive (Advt. Scheduling & Support),10.04.2012,25.01.1985,ADVT SCHEDULING,201787,201787.jpg
+201788,vinay.karthikeyan.nair,Vinay,Karthikeyan,Nair,vinay.nair@esakal.com,9767113344/9821341432,26458901,Mumbai, Fountain ,"Advt - Sales, Marketing & Other",Vice President – Advt. Sales (South & West),12.04.2012,24.07.1972,ADVT SALES,201788,201788.jpg
+201790,kulkarni.anup,Anup,,Kulkarni,anup.kulkarni@saamtv.com,9870904178,022-24104564/69/72,Pune, Pune - Belapur ,Light & Camera (TV),Cameraman (News),01.04.2012,12.04.1973,TV,201790,201790.jpg
+201791,gamare.rajendra,Rajendra,,Gamare,rajendra.gamare@saamtv.com,9920830841,022-24104564/69/72,Pune, Pune - Belapur ,Light & Camera (TV),Cameraman (News),01.04.2012,29.06.1972,TV,201791,201791.jpg
+201793,thakare.anil,Anil,,Thakare,anil.thakare@saamtv.com,,,Pune, Pune - Chandrap ,Light & Camera (TV),Cameraman (News),01.04.2012,25.06.1985,TV,201793,201793.jpg
+201794,aglawe.manoj,Manoj,,Aglawe,manoj.aglawe@saamtv.com,9822652577,"99881099413,2564116,2428052,87",Pune, Pune - Nagpur ,Light & Camera (TV),Cameraman (News),01.04.2012,15.04.1980,TV,201794,201794.jpg
+201800,dattaram.baburao.vharavadekar,Dattaram,Baburao,Vharavadekar,dattaram.vharavadekar@saamtv.com,9833992866,022-66843210,Pune, Pune - Belapur ,Production (TV),Smoke Artist,01.04.2012,29.04.1978,TV,201800,201800.jpg
+201803,rajesh.rambhauji.praykar,Rajesh,Rambhauji,Praykar,rajesh.praykar@esakal.com,9552747900,"99881099413,2564116,2428052,77",Nagpur, Nagpur City ,Editorial,Sr. Reporter,17.04.2012,26.09.1974,Editorial,201803,201803.jpg
+201811,bawdekar.vinayak,Vinayak,,Bawdekar,vinayak.bawdekar@esakal.com,9689911086,,Pune, Shivaji Nagar ,"Advt - Sales, Marketing & Other",Asst. Manager (Events),01.04.2012,10.06.1982,CORPORATE EVENT SALES,201811,201811.jpg
+201815,ranjit.charandas.shahare,Ranjit,Charandas,Shahare,ranjit.shahare@esakal.com,,,Aurangabad, Aurangabad Main ,Advt - Scheduling & Support,Sr. Executive (Advt. Scheduling & Support),01.04.2012,30.08.1980,ADVT SCHEDULING,201815,201815.jpg

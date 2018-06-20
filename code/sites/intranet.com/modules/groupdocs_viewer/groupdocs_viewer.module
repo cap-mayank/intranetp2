@@ -1,0 +1,249 @@
+<?php
+
+/**
+ * @file
+ * GroupDocs module.
+ */
+
+/**
+ * Implements hook_menu().
+ *
+ * groupdocs_viewer/config - config page with api private and public keys
+ * groupdocs_viewer/upload_file - file uploading form for iframe
+ */
+function groupdocs_viewer_menu() {
+  $items = array();
+
+  $items['admin/groupdocs_viewer/config'] = array(
+    'title' => 'GD Viewer',
+    'description' => 'Configuration for groupdocs_viewer module. Allow you to set Client ID and API Key. You can find them in your GroupDocs account.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('groupdocs_viewer_config_form'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['groupdocs_viewer/upload_file'] = array(
+    'title' => 'Groupdocs uploading',
+    'description' => 'Groupdocs uploading',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('groupdocs_viewer_uploading_form'),
+    'access arguments' => array('access administration pages'),
+    'file' => 'groupdocs_viewer.admin.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['groupdocs_viewer/treeviewer'] = array(
+    'title' => 'Groupdocs treeviewer',
+    'description' => 'Groupdocs treeviewer',
+    'page callback' => 'groupdocs_viewer_treeviewer_page',
+    'page arguments' => array(''),
+    'access arguments' => array('access administration pages'),
+    'file' => 'groupdocs_viewer.admin.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+/**
+ * Implements hook_page_alter().
+ *
+ * To remove admin toolbar on iframe page
+ */
+function groupdocs_viewer_page_alter(&$page) {
+  if (strpos(request_uri(), '/groupdocs_viewer/upload_file/') !== false) {
+    unset($page['page_top']['toolbar']);
+  }
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function groupdocs_viewer_theme_registry_alter(&$theme_registry) {
+  $mod_path = drupal_get_path('module', 'groupdocs_viewer') . '/templates';
+  $theme_registry_copy = $theme_registry;
+  _theme_process_registry($theme_registry_copy, 'phptemplate', 'theme_engine', 'pow', $mod_path);
+  $theme_registry += array_diff_key($theme_registry_copy, $theme_registry);
+  $hooks = array('node');
+  foreach ($hooks as $h) {
+    _groupdocs_viewer_insert_after_first_element($theme_registry[$h]['theme paths'], $mod_path);
+  }
+}
+
+/**
+ * Helper function for re-ordering arrays (needed by theme_registry_alter).
+ */
+function _groupdocs_viewer_insert_after_first_element(&$a, $element) {
+  if (is_array($a)) {
+    $first_element = array_shift($a);
+    array_unshift($a, $first_element, $element);
+  }
+}
+
+/**
+ * Form constructor for the module config form.
+ *
+ * Page arguments: Current posts settings
+ *
+ * @see groupdocs_viewer_menu()
+ */
+function groupdocs_viewer_config_form($form, &$form_state) {
+
+  $form = array();
+
+  $form['groupdocs_client_login'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Client Login'),
+    '#default_value' => variable_get('groupdocs_client_login'),
+    '#size' => 32,
+    '#maxlength' => 32,
+    '#description' => t("Public Client Login needed to get access to the GroupDocs API."),
+    '#required' => TRUE,
+  );
+
+  $form['groupdocs_client_password'] = array(
+    '#type' => 'password',
+    '#title' => t('Client Password'),
+    '#default_value' => variable_get('groupdocs_client_password'),
+    '#size' => 32,
+    '#maxlength' => 32,
+    '#description' => t("A combination of public Client Login and private Client Password give you access to the GroupDocs API."),
+    '#required' => TRUE,
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_field_info().
+ *
+ * Provides the description of the field.
+ */
+function groupdocs_viewer_field_info() {
+  return array(
+    // We name our field as the associative name of the array.
+    'groupdocs_embedded_code' => array(
+      'label' => t('GD Viewer'),
+      'description' => t('Add embedded documents to your Drupal nodes.'),
+      'default_widget' => 'groupdocs_file_uploading',
+      'default_formatter' => 'groupdocs_iframe',
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ *
+ * This formatter just displays groupdocs iframe
+ *
+ * @see groupdocs_viewer_field_formatter_view()
+ */
+function groupdocs_viewer_field_formatter_info() {
+  return array(
+    'groupdocs_iframe' => array(
+      'label' => t('Embedded Groupdocs viewer'),
+      'field types' => array('groupdocs_embedded_code'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ *
+ * Renders the ouput of an 'Embedded Groupdocs viewer'
+ * formatted field within an iframe that
+ * pulls in the Groupdocs viewer to display the file inline.
+ */
+function groupdocs_viewer_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+    $groupdocsphp_path = libraries_get_path('groupdocs-php');
+
+    include_once $groupdocsphp_path . '/APIClient.php';
+    include_once $groupdocsphp_path . '/StorageApi.php';
+    include_once $groupdocsphp_path . '/GroupDocsRequestSigner.php';
+    include_once $groupdocsphp_path . '/FileStream.php';
+
+
+  $element = array();
+  switch ($display['type']) {
+    // This formatter outputs the field within an iframe.
+    case 'groupdocs_iframe':
+      foreach ($items as $delta => $item) {
+        $guid = $item['groupdocs_embedded_code'];
+          $signer = new GroupDocsRequestSigner('123');
+          $url = "https://apps.groupdocs.com/document-viewer/embed/{$guid}?referer=drupal-viewer/1.8";
+          $url = $signer->signUrl($url);
+        $element[$delta]['#markup'] = "<iframe src='$url' frameborder='0' width='600' height='700'></iframe>";
+      }
+      break;
+  }
+  return $element;
+}
+
+/**
+ * Implements hook_field_widget_info().
+ *
+ * This widget type will add fancybox (jQuery plugin)
+ * and link to open iframe with form for file uploadin
+ *
+ * @see groupdocs_viewer_field_widget_form()
+ */
+function groupdocs_viewer_field_widget_info() {
+  return array(
+    'groupdocs_file_uploading' => array(
+      'label' => t('Upload file or enter embedded code'),
+      'field types' => array('groupdocs_embedded_code'),
+    ),
+  );
+}
+/**
+ * Implements hook_field_widget_form().
+ *
+ * This hook add one text input for uploaded file guid
+ * link to iframe with upload file form
+ * and attached fancybox (jQuery plugin)
+ */
+function groupdocs_viewer_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  $value = isset($items[$delta]['groupdocs_embedded_code']) ? $items[$delta]['groupdocs_embedded_code'] : '';
+
+  $widget = $element;
+  $widget['#delta'] = $delta;
+
+  switch ($instance['widget']['type']) {
+
+    case 'groupdocs_file_uploading':
+      $widget += array(
+        '#suffix' => l(t('Choose file GD Viewer'), 'groupdocs_viewer/upload_file/lightbox2', array(
+                              'attributes' => array(
+                                'class' => array('groupdocs_upload_link'),
+                                'rel' => array('lightframe[|width:600px;height:500px;scrolling: auto;]'),
+                              ))),
+
+        '#attributes' => array('class' => array('edit-groupdocs_viewer-fileupload')),
+      );
+
+      $widget += array(
+        '#type' => 'textfield',
+        '#default_value' => $value,
+        // Allow a slightly larger size that the field length to allow for some
+        // configurations where all characters won't fit in input field.
+        '#size' => 104,
+        '#maxlength' => 104,
+      );
+      break;
+  }
+
+  $element['groupdocs_embedded_code'] = $widget;
+  return $element;
+}
+
+
+/**
+ * Implements hook_field_is_empty().
+ *
+ * hook_field_is_emtpy() is where Drupal asks us if this field is empty.
+ * Return TRUE if it does not contain data, FALSE if it does. This lets
+ * the form API flag an error when required fields are empty.
+ */
+function groupdocs_viewer_field_is_empty($item, $field) {
+  return empty($item['groupdocs_embedded_code']);
+}

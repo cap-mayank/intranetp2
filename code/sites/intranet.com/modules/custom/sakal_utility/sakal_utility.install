@@ -1,0 +1,499 @@
+<?php
+
+/**
+ * @file
+ * This file automatically enables the features provided in module list.
+ */
+ 
+/**
+ * Implements hook_install().
+ */
+function sakal_utility_install() {
+  $module_list = array(
+    'company_news',
+    'announcement',
+    'quote_of_the_day',
+    'cxo_s_messages',
+    'document_store',
+    'photo_gallery',
+    'quick_link',
+    'quote_of_the_day',
+    'sakal_homebox',
+  );
+
+  //TRUE signifies dependency will be automatically enabled.
+  module_enable($module_list, TRUE);
+}
+ 
+/**
+ * Implements hook_update_N().
+ * To Revert CXO-message , All Application  & Photo gallery feature
+ */
+function sakal_utility_update_7001() {
+  $fetqures = array(
+    'cxo_s_messages',
+    'photo_gallery'
+  );
+  features_revert($fetqures);  
+ }
+
+/**
+ * Implements hook_update_N().
+ */
+function sakal_utility_update_7002() {
+  $style = image_style_save(array('name' => 'header_banner'));
+  $effect = array(
+    'name' => 'image_scale_and_crop',
+    'data' => array(
+      'width' => 1230,
+      'height' => 95,
+      'upscale' => FALSE,
+    ),
+    'isid' => $style['isid'],
+  );
+  image_effect_save($effect);
+  $style = image_style_save(array('name' => 'footer_banner'));
+  $effect = array(
+    'name' => 'image_scale_and_crop',
+    'data' => array(
+      'width' => 1230,
+      'height' => 245,
+      'upscale' => FALSE,
+    ),
+    'isid' => $style['isid'],
+  );
+  image_effect_save($effect);
+  $style = image_style_save(array('name' => 'all_application'));
+  $effect = array(
+    'name' => 'scale',
+    'data' => array(
+      'width' => 90,
+      'height' => 90,
+      'upscale' => FALSE,
+    ),
+    'isid' => $style['isid'],
+  );
+  image_effect_save($effect);
+  $style = image_style_save(array('name' => 'announcement_icon'));
+  $effect = array(
+    'name' => 'scale',
+    'data' => array(
+      'width' => 50,
+      'height' => 50,
+      'upscale' => FALSE,
+    ),
+    'isid' => $style['isid'],
+  );
+  image_effect_save($effect);
+  
+  // Uninstall unused module.
+  if (module_exists('quick_link')) {
+    module_disable(array('quick_link'));
+    drupal_uninstall_modules(array('quick_link'));
+  }
+  
+  // Enable cluster of link for all application and other link type
+  // of link widget. 
+  $module_list = array(
+    'cluster_of_link',
+    'event',
+  );
+  module_enable($module_list, TRUE); 
+  
+  // Revert fetaures.
+  $features = array(
+    'company_news',
+    'announcement',
+    'quote_of_the_day',
+    'cxo_s_messages',
+    'photo_gallery'
+  );
+  features_revert($features);
+}
+
+/**
+ * Implements hook_update_N().
+ * To enable event calendar & holiday calendar module.
+ * To revert company news feature.
+ * CXO-message : removed unencessary field from view
+ * Document store made changes in widget view & display page view
+ * To revert company news feature.
+ */
+function sakal_utility_update_7003() {
+  // Enable event feature widget. 
+  $module_list = array(
+    'event',
+    'holiday_calendar',
+  );
+  module_enable($module_list, TRUE); 
+  
+  // Revert fetaures.
+  $features = array(
+    'company_news',
+    'cxo_s_messages',
+    'document_store',
+  );
+  features_revert($features);
+}
+
+/**
+ * Implements hook_update_N().
+ * To enable Sakal Properties,birthdays module.  
+ * To enable Anniversary feature.
+ * To revert photo gallery,All Application,comapny news,announcement, holiday calendar feature.
+ */
+function sakal_utility_update_7004() {
+  // Enable Sakal Properties feature widget. 
+  $module_list = array(
+    'sakal_properties',
+    'birthdays',
+    'anniversary',
+  );
+  module_enable($module_list, TRUE); 
+  // Revert fetaures.
+  $features = array(
+    'cluster_of_link',
+    'photo_gallery',
+    'company_news',
+    'announcement',
+    'holiday_calendar',
+    'document_store',
+    'event',
+  );
+  features_revert($features);
+
+}
+/**
+ * Implements hook_update_N().
+ * To enable pchart module for poll widets
+ * Also disabled module charts_graphs,charts_google,charts
+ * To Revert sakal property widget
+ */
+function sakal_utility_update_7005() {
+  // Enable Sakal Properties feature widget. 
+  $module_list = array(
+    'pchart'
+  );
+  module_enable($module_list, TRUE); 
+    // Uninstall unused module.
+  if (module_exists('charts_graphs')) {
+    module_disable(array('charts_graphs'));
+    drupal_uninstall_modules(array('charts_graphs'));
+  }
+  if (module_exists('charts_google')) {
+    module_disable(array('charts_google'));
+    drupal_uninstall_modules(array('charts_google'));
+  }
+  if (module_exists('charts')) {
+    module_disable(array('charts'));
+    drupal_uninstall_modules(array('charts'));
+  }
+   // Revert fetaures.
+  $features = array(
+    'sakal_properties',
+  );
+  features_revert($features);
+}
+/**
+ * Implements hook_update_N().
+ * To Revert Document Store widget
+ */
+function sakal_utility_update_7006() {
+   // Revert fetaures.
+  $features = array(
+    'document_store',
+  );
+  features_revert($features);
+}
+/**
+ * Implements hook_update_N().
+ * To Revert Document Store widget  add fetaure display role base file listing
+ * To enable Ticker Widget
+ */
+function sakal_utility_update_7007() {
+   // Revert fetaures.
+  $features = array(
+    'document_store',
+  );
+  features_revert($features);
+  // Enable Ticker widget. 
+  $module_list = array(
+    'ticker',
+    'smtp'
+  );
+  module_enable($module_list, TRUE); 
+}
+/**
+ * Implements hook_update_N().
+ * Create new table * 
+ */
+function sakal_utility_update_7008() {
+$schema['sakal_utility_whistle_blower_comment'] = array(
+    'description' => ('Custome table to store all users comment for whistle blower'),
+    'fields'      => array(
+      'wid' => array(
+        'description' => ('serial id'),
+        'type'        => 'serial',
+        'size'        => 'medium',
+        'not null'    => TRUE,
+      ),
+      'uid'         => array(
+        'description' => ('User Id : comment posted by this user'),
+        'type'        => 'int',
+        'size'        => 'medium',
+        'not null'    => TRUE,
+        'default'     => 0,
+      ),
+      'department_id'         => array(
+        'description' => ('Department Id with the reference of taxonomy vid'),
+        'type'        => 'int',
+        'not null'    => TRUE,
+        'default'     => 0,
+      ),   
+      'comment' => array(
+        'description' => ('Users comment!'),
+        'type'        => 'text',
+        'size'        => 'big',
+      ), 
+    ),
+    'primary key' => array(
+      0 => 'wid',
+    ),
+    'indexes' => array(
+      'wid' => 
+      array(
+        0 => 'wid',
+        1 => 'uid',
+      ),
+    ),
+  );
+  db_create_table('sakal_utility_whistle_blower_comment', $schema['sakal_utility_whistle_blower_comment']);
+   
+}
+
+/**
+ * Implements hook_update_N().
+ * To Revert photo gallery display images 6 in a block
+ */
+function sakal_utility_update_7009() {
+  // Revert fetaures.
+  $features = array(
+    'photo_gallery',
+  );
+
+  features_revert($features);
+  variable_set('whistle_blower_title', 'Whistle Blower');
+  variable_set('whistle_blower_content', 'A whistleblower (whistle-blower or whistle blower) is a person who exposes any kind of information or activity that is deemed illegal, unethical, or not correct within an organization that is either private or public.');
+  variable_set('whistle_blower_to_email', 'admin@intranet.com');
+  variable_set('whistle_blower_report_incident_content', 'AN ACT to establish a mechanism to receive complaints relating to disclosure on any allegation of corruption or wilful misuse of power or wilful misuse of discretion against any public servant and to inquire or cause an inquiry into such disclosure and to provide adequate safeguards against victimisation of the person making such complaint and for matters connected therewith and incidental thereto.');
+}
+
+
+/**
+ * Implements hook_update_N().
+ * To Revert features
+ */
+function sakal_utility_update_7010() {
+// Revert fetaures.
+  $features = array(
+    'cluster_of_link',
+    'photo_gallery',
+    'sakal_properties',
+    'cxo_s_messages',
+    'document_store',
+    'ticker',
+  );
+  features_revert($features);
+}
+/**
+ * Implements hook_update_N().
+ * Enable pdf module 
+ * To Revert Document store feature
+ */
+function sakal_utility_update_7011() {
+// Enable PDF modulefor Document store widget. 
+  $module_list = array(
+    'pdf'
+  );
+  module_enable($module_list, TRUE); 
+// Revert fetaures.
+  $features = array(
+    'document_store',
+  );
+  features_revert($features);
+}
+/**
+ * Implements hook_update_N().
+ * To Revert CXO message feature
+ */
+function sakal_utility_update_7012() {
+  // Revert fetaures.
+  $features = array(
+    'cxo_s_messages',
+  );
+  features_revert($features);
+}
+
+/**
+ * Implements hook_update_N().
+ * To Enable Vedio Gallery & dependent module 
+ */
+function sakal_utility_update_7013() {
+  // Enable PDF modulefor Document store widget. 
+  $module_list = array(
+    'file_resup', 
+    'mediaelement', 
+    'video_gallery',
+  );
+  module_enable($module_list, TRUE);
+  // Revert fetaures.
+  $features = array(
+    'document_store',
+    'photo_gallery'
+  );
+  features_revert($features);
+}
+/**
+ * Implements hook_update_N().
+ * Revert the feature
+ */
+function sakal_utility_update_7014() {
+  // Revert fetaures.
+  $features = array(
+    'document_store', 
+    'video_gallery', 
+    'photo_gallery'
+  );
+  features_revert($features);
+}
+/**
+ * Implements hook_update_N().
+ * Revert the feature
+ */
+function sakal_utility_update_7015() {
+  // Revert fetaures.
+  $features = array(
+    'photo_gallery',
+    'units'
+  );
+  features_revert($features);
+}
+/*
+ * Utility to change the max length of a text field
+ */
+function sakal_utility_change_text_field_max_length($field_name, $new_length) {
+  $field_table = 'field_data_' . $field_name;
+  $field_revision_table = 'field_revision_' . $field_name;
+  $field_column = $field_name . '_value';
+ 
+  // Alter value field length in fields table
+  db_query("UPDATE `{$field_table}` SET field_photo_location_value=SUBSTRING(field_photo_location_value, 1, 20)");
+  db_query("ALTER TABLE `{$field_table}` CHANGE `{$field_column}` `{$field_column}` VARCHAR( {$new_length} )");
+  // Alter value field length in fields revision table
+  db_query("UPDATE `{$field_revision_table}` SET field_photo_location_value=SUBSTRING(field_photo_location_value, 1, 20)");
+  db_query("ALTER TABLE `{$field_revision_table}` CHANGE `{$field_column}` `{$field_column}` VARCHAR( {$new_length} )");
+ 
+  // Update field config with new max length
+  $result = db_query("SELECT CAST(`data` AS CHAR(10000) CHARACTER SET utf8) FROM `field_config` WHERE field_name = '{$field_name}'");
+  $config = $result->fetchField();
+  $config_array = unserialize($config);
+  $config_array['settings']['max_length'] = $new_length;
+  $config = serialize($config_array);
+  db_update('field_config')
+    ->fields(array('data' => $config))
+    ->condition('field_name', $field_name)
+    ->execute();
+}
+/**
+ * Implements hook_update_N().
+ * Reverted the feature & update maxlength of photo gallery location
+ */
+function sakal_utility_update_7016() {
+  //update maxlength limit for photo gallery location field
+  sakal_utility_change_text_field_max_length('field_photo_location', 20);
+  // Revert fetaures.
+  $features = array(
+    'document_store',
+    'photo_gallery',
+    'announcement',
+  );
+  features_revert($features);
+}
+/**
+ * Implements hook_update_N().
+ * Reverted the feature 
+ */
+function sakal_utility_update_7017() {
+  // Revert fetaures.
+  $features = array(
+    'ticker',
+  );
+  features_revert($features);
+}
+
+function  sakal_utility_update_7018() {
+  $style = image_style_save(array('name' => 'unit_image_style'));
+  $effect = array(
+    'name' => 'image_scale_and_crop',
+    'data' => array(
+      'width' => 300,
+      'height' => 150,
+      'upscale' => FALSE,
+    ),
+    'isid' => $style['isid'],
+  );
+  image_effect_save($effect);
+}
+/**
+ * Implements hook_update_N().
+ * Reverted the feature 
+ */
+function sakal_utility_update_7019() {
+  // Revert fetaures.
+  $features = array(
+    'photo_gallery',
+    'video_gallery',
+  );
+  features_revert($features);
+}
+/**
+ * Implements hook_update_N().
+ * Reverted the feature 
+ */
+function sakal_utility_update_7020() {
+  // Revert fetaures.
+  $features = array(
+    'photo_gallery',
+    'event',
+  );
+  features_revert($features);
+}
+/**
+ * Implements hook_update_N().
+ * To apply new Layout changes
+ */
+function sakal_utility_update_7021() {
+  // Enable PDF modulefor Document store widget. 
+  $module_list = array(
+    'file_field_icons',
+  );
+  module_enable($module_list, TRUE);
+  // Revert fetaures.
+  $features = array(    
+    'company_news',
+    'announcement',
+    'cxo_s_messages',
+    'quote_of_the_day',
+    'birthdays',
+    'anniversary',
+    'awards_recognitions',
+    'holiday_calendar',
+    'cluster_of_link',
+    'units',
+    'sakal_properties',
+    'photo_gallery',
+    'event',
+    'document_store',   
+  );
+  features_revert($features);
+}
